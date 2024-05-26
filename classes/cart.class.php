@@ -34,12 +34,13 @@
 
       public function AddCart()
       {
-         $sql = "INSERT INTO `tblcartitem` (`ID`, `Customer`, `Product`, `Quantity`, `Price`) VALUES (NULL, :cid, :pid, :quantity, :amount)";
+         $sql = "INSERT INTO `tblcartitem` (`ID`, `Customer`, `Product`, `Quantity`, `Price`,`Subtotal`) VALUES (NULL, :cid, :pid, :quantity, :amount, :subtotal)";
          $stmt = $this->dConn->prepare($sql);
          $stmt->bindParam(':cid',$this->cid);
          $stmt->bindParam(':pid',$this->productId);
          $stmt->bindParam(':quantity',$this->quantity);
          $stmt->bindParam(':amount',$this->price);
+         $stmt->bindParam(':subtotal',$this->price*$this->quantity);
 
          try{
             if($stmt->execute()){
@@ -61,5 +62,66 @@
          $cartItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
          return $cartItems;
       }
+      public function getCartByID()
+      {
+         $sql = "SELECT * FROM `tblcartitem` WHERE ID= :id";
+         $stmt = $this->dConn->prepare($sql);
+         $stmt->bindParam('id', $this->id);
+         $stmt->execute();
+         $cartItems = $stmt->fetch(PDO::FETCH_ASSOC);
+         return $cartItems;
+      }
+      public function getCartItemsById()
+      {
+         $sql = "SELECT 
+             tblcartitem.ID as CartID,
+             tblcartitem.Customer,
+             tblcartitem.Quantity,
+             tblcartitem.Price as CartPrice,
+             tblproduct.ID as ProductID,
+             tblproduct.ProductName,
+             tblproduct.Description,
+             tblproduct.Category,
+             tblproduct.DateCreated,
+             tblproduct.UpdatedDate,
+             tblproduct.Status,
+             tblproduct.Type,
+             tblproduct.Color,
+             tblproduct.Size,
+             tblproduct.Price as ProductPrice,
+             tblcartitem.Subtotal
+         FROM 
+             tblcartitem
+         JOIN 
+             tblproduct 
+         ON 
+             tblcartitem.Product = tblproduct.ID
+         WHERE 
+             tblcartitem.Customer = :customerID
+         ";
+         $stmt = $this->dConn->prepare($sql);
+         $stmt->bindParam(':customerID',$this->cid);
+         $stmt->execute();
+         $cartItem = $stmt->fetchAll(PDO::FETCH_ASSOC);
+         return $cartItem;
+      }
+
+      public function CartUpdateByID()
+      {
+          // Prepared statement with placeholders to prevent SQL injection
+         $sql = "UPDATE tblcartitem SET Quantity = :quantity, Subtotal=Quantity*Price   WHERE ID = :id";
+         $stmt = $this->dConn->prepare($sql);
+          
+          // Bind parameters to the prepared statement
+         $stmt->bindParam(':quantity', $this->quantity, PDO::PARAM_INT);
+         $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
+         try{
+            $stmt->execute();
+            return "success";
+         }catch (Exception $e){
+            return $e->getMessage();
+         }
+      }
+
    }
 ?>

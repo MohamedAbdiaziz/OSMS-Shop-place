@@ -7,14 +7,12 @@ session_start();
 		require '../classes/workshop.class.php';
 		require '../classes/customer.class.php';
 		require '../classes/cart.class.php';
+		$objworkshop = new workshop();
+		$objCustomer = new customer();
+		$objcart = new cart();
 		switch ($_POST['action']) {
 			case 'add':	
-				// all objects
-				$objworkshop = new workshop();
-				$objCustomer = new customer();
-				$objcart = new cart();
-
-
+				// all objects				
 				$objworkshop->setId($_POST['pID']);
 				// echo $objworkshop->getId();
 
@@ -35,12 +33,46 @@ session_start();
 				else{
 					echo json_encode(["status"=>0,"msg"=>"Failed to add cart"]);
 					exit;					
-				}
-				
-
-             	
+				}				           
 				break;
-			
+
+			case 'update':	
+				// all objects				
+				// $objworkshop->setId($_POST['cartID']);
+				// echo $objworkshop->getId();
+
+				$objcart->setCid($_SESSION['customer']);	
+				// echo $objcart->getCid();
+				$objcart->setID($_POST['cartID']);	
+				// echo $objcart->getID();
+				$objcart->setQuantity($_POST['quantity']);	
+				// echo $objcart->getQuantity();
+				// $prod = $objworkshop->getProductById();
+				// $objcart->setPrice($prod['Price']);	
+				// // echo $objcart->getPrice();
+
+				if($objcart->CartUpdateByID() == "success"){
+					
+					$cartItems = $objcart->getAllCartItems();
+          $subtotal = 0;
+          $total = 0;
+          foreach ($cartItems as $key => $product) { 
+          	$subtotal	+= $product['Price'] * $product['Quantity'];
+          }
+
+          $cartprice = $objcart->getCartByID();
+          // echo $cartprice['Subtotal'];
+          // echo	$subtotal;
+          $data = ["subtotal"=>$cartprice['Subtotal'],"total"=>$subtotal];
+          echo json_encode(["status"=>1,"msg"=>"Added to Cart","data"=>$data]);
+				}else{
+					echo "Quantity is Greater Than available quantity or Anything Else";
+				}						         
+				break;
+
+
+
+
 			default:
 				// code...
 				break;

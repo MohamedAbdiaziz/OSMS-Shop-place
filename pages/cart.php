@@ -15,30 +15,50 @@
 
   <section id="cart" class="my-5 py-5">
     <div class="container">
+
       <div class="row g-md-5">
+
         <div class="col-md-8 pe-md-5">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col" class="card-title text-uppercase">Product</th>
                 <th scope="col" class="card-title text-uppercase">Quantity</th>
+                <th scope="col" class="card-title text-uppercase">Price</th>
                 <th scope="col" class="card-title text-uppercase">Subtotal</th>
                 <th scope="col" class="card-title text-uppercase"></th>
               </tr>
             </thead>
             <tbody>
+              <?php
+
+                require_once '../classes/customer.class.php';
+                require_once '../classes/cart.class.php';
+                $objCartItem = new cart();
+                $objCartItem->setCid("Mohamed3882");
+                // $customer = $objCustomer->getCustomerById();
+
+                // $_SESSION['customer']=$objCustomer->getUsername();
+
+                require_once '../classes/workshop.class.php';
+                // $objProducts = new workshop();
+                $cartItems = $objCartItem->getCartItemsById();
+                $subtotal = 0;
+                $total = 0;
+                foreach ($cartItems as $key => $product) {                          
+              ?>
               <tr>
                 <td scope="row" class="py-4">
                   <div class="cart-info d-flex flex-wrap align-items-center ">
                     <div class="col-lg-3">
                       <div class="card-image">
-                        <img src="images/item1.jpg" alt="cloth" class="img-fluid">
+                        <img src="../images/item1.jpg" alt="cloth" class="img-fluid">
                       </div>
                     </div>
                     <div class="col-lg-9">
                       <div class="card-detail ps-3">
                         <h5 class="card-title">
-                          <a href="#" class="text-decoration-none">Grey Hoodie</a>
+                          <a href="#" class="text-decoration-none"><?=$product['ProductName'];?></a>
                         </h5>
                       </div>
                     </div>
@@ -46,31 +66,37 @@
                 </td>
                 <td class="py-4 align-middle">
                   <div class="input-group product-qty align-items-center w-50">
-                    <span class="input-group-btn">
+                    <!-- <span class="input-group-btn">
                       <button type="button" class="quantity-left-minus btn btn-light btn-number" data-type="minus">
                         <svg width="16" height="16">
                           <use xlink:href="#minus"></use>
                         </svg>
                       </button>
-                    </span>
-                    <input type="text" id="quantity" name="quantity" class="form-control input-number text-center p-2 mx-1" value="1">
-                    <span class="input-group-btn">
+                    </span> -->
+
+                    <input type="text" onchange="updateCart(<?= $product['CartID'];?>)" id="quantity_<?= $product['CartID'];?>" name="quantity" class="form-control input-number text-center p-2 mx-1" value="<?=$product['Quantity'];?>">
+                    <!-- <span class="input-group-btn">
                       <button type="button" class="quantity-right-plus btn btn-light btn-number" data-type="plus" data-field="">
                         <svg width="16" height="16">
                           <use xlink:href="#plus"></use>
                         </svg>
                       </button>
-                    </span>
+                    </span> -->
                   </div>
                 </td>
                 <td class="py-4 align-middle">
                   <div class="total-price">
-                    <span class="secondary-font fw-medium">$150.00</span>
+                    <span class="secondary-font fw-medium"><?= number_format($product['CartPrice'], 2);?></span>
+                  </div>
+                </td>
+                <td class="py-4 align-middle">
+                  <div class="total-price">
+                    <span class="secondary-font fw-medium" id="subtotal_<?= $product['CartID'];?>"><?= number_format($product['Subtotal'], 2)?></span>
                   </div>
                 </td>
                 <td class="py-4 align-middle">
                   <div class="cart-remove">
-                    <a href="#">
+                    <a href="#" onclick="removeCartItem(<?= $product['CartID'];?>)">
                       <svg width="24" height="24">
                         <use xlink:href="#trash"></use>
                       </svg>
@@ -78,108 +104,12 @@
                   </div>
                 </td>
               </tr>
-              <tr>
-                <td scope="row" class="py-4">
-                  <div class="cart-info d-flex flex-wrap align-items-center ">
-                    <div class="col-lg-3">
-                      <div class="card-image">
-                        <img src="images/item9.jpg" alt="cloth" class="img-fluid">
-                      </div>
-                    </div>
-                    <div class="col-lg-9">
-                      <div class="card-detail ps-3">
-                        <h5 class="card-title">
-                          <a href="#" class="text-decoration-none">Dog Food</a>
-                        </h5>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td class="py-4 align-middle">
-                  <div class="input-group product-qty align-items-center w-50">
-                    <span class="input-group-btn">
-                      <button type="button" class="quantity-left-minus btn btn-light btn-number" data-type="minus">
-                        <svg width="16" height="16">
-                          <use xlink:href="#minus"></use>
-                        </svg>
-                      </button>
-                    </span>
-                    <input type="text" id="quantity" name="quantity" class="form-control input-number text-center p-2 mx-1" value="1">
-                    <span class="input-group-btn">
-                      <button type="button" class="quantity-right-plus btn btn-light btn-number" data-type="plus" data-field="">
-                        <svg width="16" height="16">
-                          <use xlink:href="#plus"></use>
-                        </svg>
-                      </button>
-                    </span>
-                  </div>
-                </td>
-                <td class="py-4 align-middle">
-                  <div class="total-price">
-                    <span class="secondary-font fw-medium">$90.00</span>
-                  </div>
-                </td>
-                <td class="py-4 align-middle">
-                  <div class="cart-remove">
-                    <a href="#">
-                      <svg width="24" height="24">
-                        <use xlink:href="#trash"></use>
-                      </svg>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td scope="row" class="py-4">
-                  <div class="cart-info d-flex flex-wrap align-items-center ">
-                    <div class="col-lg-3">
-                      <div class="card-image">
-                        <img src="images/item5.jpg" alt="cloth" class="img-fluid">
-                      </div>
-                    </div>
-                    <div class="col-lg-9">
-                      <div class="card-detail ps-3">
-                        <h5 class="card-title">
-                          <a href="#" class="text-decoration-none">Cat Home</a>
-                        </h5>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td class="py-4 align-middle">
-                  <div class="input-group product-qty align-items-center w-50">
-                    <span class="input-group-btn">
-                      <button type="button" class="quantity-left-minus btn btn-light btn-number" data-type="minus">
-                        <svg width="16" height="16">
-                          <use xlink:href="#minus"></use>
-                        </svg>
-                      </button>
-                    </span>
-                    <input type="text" id="quantity" name="quantity" class="form-control input-number text-center p-2 mx-1" value="1">
-                    <span class="input-group-btn">
-                      <button type="button" class="quantity-right-plus btn btn-light btn-number" data-type="plus" data-field="">
-                        <svg width="16" height="16">
-                          <use xlink:href="#plus"></use>
-                        </svg>
-                      </button>
-                    </span>
-                  </div>
-                </td>
-                <td class="py-4 align-middle">
-                  <div class="total-price">
-                    <span class="secondary-font fw-medium">$260.00</span>
-                  </div>
-                </td>
-                <td class="py-4 align-middle">
-                  <div class="cart-remove">
-                    <a href="#">
-                      <svg width="24" height="24">
-                        <use xlink:href="#trash"></use>
-                      </svg>
-                    </a>
-                  </div>
-                </td>
-              </tr>
+              <?= $subtotal += number_format($product['CartPrice'] * $product['Quantity'], 2);
+              
+              ?>
+              <?php } ?>
+              
+              
 
             </tbody>
           </table>
@@ -195,17 +125,26 @@
                     <td data-title="Subtotal">
                       <span class="price-amount amount text-dark ps-5">
                         <bdi>
-                          <span class="price-currency-symbol">$</span>1,500.00
+                          <span class="price-currency-symbol">$</span><span id="subtotal_total"><?php echo $subtotal;?></span>
                         </bdi>
                       </span>
                     </td>
                   </tr>
+                  <!-- <tr class="order-total pt-2 pb-2 border-bottom">
+                    <th>Discount</th>
+                    <td data-title="Total">
+                      <span class="price-amount amount text-dark ps-5">
+                        <bdi><?php echo $dicount = 2;?>
+                          <span class="price-currency-symbol">%</span></bdi>
+                      </span>
+                    </td>
+                  </tr> -->
                   <tr class="order-total pt-2 pb-2 border-bottom">
                     <th>Total</th>
                     <td data-title="Total">
                       <span class="price-amount amount text-dark ps-5">
                         <bdi>
-                          <span class="price-currency-symbol">$</span>1,500.00</bdi>
+                          <span class="price-currency-symbol">$</span><span id="subtotal_alltotal"><?php echo $total=$subtotal;?></span></bdi>
                       </span>
                     </td>
                   </tr>
@@ -213,9 +152,9 @@
               </table>
             </div>
             <div class="button-wrap row g-2">
-              <div class="col-md-6"><button class="btn btn-dark btn-lg rounded-1 fs-6 p-3 w-100">Update Cart</button>
+              <div class="col-md-6"><button class="btn btn-dark btn-lg rounded-1 fs-6 p-3 w-100" onclick="location.reload();alert('updated');">Update Cart</button>
               </div>
-              <div class="col-md-6"><button class="btn btn-dark btn-lg rounded-1 fs-6 p-3 w-100">Continue To
+              <div class="col-md-6"><button class="btn btn-dark btn-lg rounded-1 fs-6 p-3 w-100" onclick="window.history.back();">Continue To
                   Shop</button></div>
               <div class="col-md-12"><a href="checkout.html" class="btn btn-primary p-3 text-uppercase rounded-1 w-100">Proceed to checkout</a>
               </div>

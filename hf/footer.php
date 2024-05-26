@@ -133,6 +133,32 @@
       }
     })
   }
+
+  function updateCart(cartID) {
+    console.log(cartID+$('#quantity_'+cartID).val());
+    $.ajax({
+      url: "../backend/action.php",
+      data: "cartID=" + cartID + "&action=update&quantity="+$('#quantity_'+cartID).val(),
+      method: "post"
+    }).done(function (response) {
+      try {
+        var data = JSON.parse(response);
+
+        if (data.status == 1) {
+          $('#subtotal_'+cartID).text(data.data.subtotal);
+          $('#subtotal_total').html(data.data.total);
+          $('#subtotal_alltotal').text(data.data.total);
+          
+          
+        }
+         
+      } catch (e) {
+        location.reload();
+        alert("Sorry!! Quantity is Greater Than available quantity or Anything Else")
+      }
+    })
+  }
+
 </script>
 
 </body>

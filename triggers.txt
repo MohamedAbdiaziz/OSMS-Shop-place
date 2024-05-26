@@ -1,0 +1,67 @@
+DELIMITER //
+
+CREATE TRIGGER check_cart_quantity
+BEFORE INSERT ON tblcartitem
+FOR EACH ROW
+BEGIN
+    DECLARE stock_quantity INT;
+
+    -- Fetch the stock quantity for the product
+    SELECT s.Quantity INTO stock_quantity
+    FROM tblstock s
+    WHERE s.Product = NEW.Product;
+
+    -- Check if the new cart quantity is greater than the stock quantity
+    IF NEW.Quantity > stock_quantity THEN
+        SIGNAL SQLSTATE '45000' 
+        SET MESSAGE_TEXT = 'Error: Cart quantity is greater than available stock quantity';
+    END IF;
+END //
+
+DELIMITER ;
+
+
+DELIMITER //
+
+CREATE TRIGGER check_cart_quantity_before_update
+BEFORE UPDATE ON tblcartitem
+FOR EACH ROW
+BEGIN
+    DECLARE stock_quantity INT;
+
+    -- Fetch the stock quantity for the product
+    SELECT s.Quantity INTO stock_quantity
+    FROM tblstock s
+    WHERE s.Product = NEW.Product;
+
+    -- Check if the new cart quantity is greater than the stock quantity
+    IF NEW.Quantity > stock_quantity THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Error: Cart quantity is greater than available stock quantity';
+    END IF;
+END //
+
+DELIMITER ;
+
+-- Create BEFORE INSERT trigger
+DELIMITER //
+
+CREATE TRIGGER check_duplicate_product_in_cart
+BEFORE INSERT ON tblcartitem
+FOR EACH ROW
+BEGIN
+    DECLARE existing_count INT;
+
+    -- Check if the product is already in the cart for the same user
+    SELECT COUNT(*) INTO existing_count
+    FROM tblcartitem
+    WHERE Product = NEW.Product AND Customer = NEW.Customer;
+
+    -- If the count is greater than 0, it means the product is already in the cart
+    IF existing_count > 0 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Error: Product already in the cart for this customer';
+    END IF;
+END //
+
+DELIMITER ;

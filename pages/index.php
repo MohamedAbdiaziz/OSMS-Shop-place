@@ -8,7 +8,7 @@
           <div class="swiper-slide py-5">
             <div class="row banner-content align-items-center">
               <div class="img-wrapper col-md-5">
-                <img src="images/op/ew4.jpg" class="img-fluid">
+                <img src="../images/op/ew4.jpg" class="img-fluid">
               </div>
               <div class="content-wrapper col-md-7 p-5 mb-5">
                 <!-- <div class="secondary-font text-primary text-uppercase mb-4">Save 10 - 20 % off</div> -->
@@ -27,7 +27,7 @@
           <div class="swiper-slide py-5">
             <div class="row banner-content align-items-center">
               <div class="img-wrapper col-md-5">
-                <img src="images/banner-img3.png" class="img-fluid">
+                <img src="../images/banner-img3.png" class="img-fluid">
               </div>
               <div class="content-wrapper col-md-7 p-5 mb-5">
                 <!-- <div class="secondary-font text-primary text-uppercase mb-4">Save 10 - 20 % off</div> -->
@@ -87,7 +87,7 @@
               New
             </div>
             <div class="card position-relative">
-              <a href="single-product.html"><img src="images/item1.jpg" class="img-fluid rounded-4" alt="image"></a>
+              <a href="single-product.html"><img src="../images/item1.jpg" class="img-fluid rounded-4" alt="image"></a>
               <div class="card-body p-0">
                 <a href="single-product.html">
                   <h3 class="card-title pt-4 m-0">Grey hoodie</h3>
@@ -124,7 +124,7 @@
               New
             </div> -->
             <div class="card position-relative">
-              <a href="single-product.html"><img src="images/item2.jpg" class="img-fluid rounded-4" alt="image"></a>
+              <a href="single-product.html"><img src="../images/item2.jpg" class="img-fluid rounded-4" alt="image"></a>
               <div class="card-body p-0">
                 <a href="single-product.html">
                   <h3 class="card-title pt-4 m-0">Grey hoodie</h3>
@@ -160,7 +160,7 @@
               -10%
             </div>
             <div class="card position-relative">
-              <a href="single-product.html"><img src="images/item3.jpg" class="img-fluid rounded-4" alt="image"></a>
+              <a href="single-product.html"><img src="../images/item3.jpg" class="img-fluid rounded-4" alt="image"></a>
               <div class="card-body p-0">
                 <a href="single-product.html">
                   <h3 class="card-title pt-4 m-0">Grey hoodie</h3>
@@ -230,7 +230,7 @@
             New
           </div> -->
           <div class="card position-relative">
-            <a href="single-product.html"><img src="images/item9.jpg" class="img-fluid rounded-4" alt="image"></a>
+            <a href="single-product.html"><img src="../images/item9.jpg" class="img-fluid rounded-4" alt="image"></a>
             <div class="card-body p-0">
               <a href="single-product.html">
                 <h3 class="card-title pt-4 m-0">Grey hoodie</h3>
@@ -296,7 +296,7 @@
               New
             </div> -->
             <div class="card position-relative">
-              <a href="single-product.html"><img src="images/item5.jpg" class="img-fluid rounded-4" alt="image"></a>
+              <a href="single-product.html"><img src="../images/item5.jpg" class="img-fluid rounded-4" alt="image"></a>
               <div class="card-body p-0">
                 <a href="single-product.html">
                   <h3 class="card-title pt-4 m-0">Grey hoodie</h3>
@@ -339,7 +339,7 @@
     </div>
   </section>
 
-  <section id="register" style="background: url('images/background-img.png') no-repeat;">
+  <section id="register" style="background: url('../images/background-img.png') no-repeat;">
     <div class="container ">
       <div class="row my-5 py-5">
         <div class="offset-md-3 col-md-6 my-5 ">
