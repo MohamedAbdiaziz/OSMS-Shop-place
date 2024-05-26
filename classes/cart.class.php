@@ -34,13 +34,13 @@
 
       public function AddCart()
       {
-         $sql = "INSERT INTO `tblcartitem` (`ID`, `Customer`, `Product`, `Quantity`, `Price`,`Subtotal`) VALUES (NULL, :cid, :pid, :quantity, :amount, :subtotal)";
+         $sql = "INSERT INTO `tblcartitem` (`ID`, `Customer`, `Product`, `Quantity`, `Price`,`Subtotal`) VALUES (NULL, '$this->cid', '$this->productId', '$this->quantity', $this->price, $this->price*$this->quantity)";
          $stmt = $this->dConn->prepare($sql);
-         $stmt->bindParam(':cid',$this->cid);
-         $stmt->bindParam(':pid',$this->productId);
-         $stmt->bindParam(':quantity',$this->quantity);
-         $stmt->bindParam(':amount',$this->price);
-         $stmt->bindParam(':subtotal',$this->price*$this->quantity);
+         // $stmt->bindParam(':cid',$this->cid);
+         // $stmt->bindParam(':pid',$this->productId);
+         // $stmt->bindParam(':quantity',$this->quantity);
+         // $stmt->bindParam(':amount',$this->price);
+         // $stmt->bindParam(':subtotal',$this->price*$this->quantity);
 
          try{
             if($stmt->execute()){
@@ -120,6 +120,32 @@
             return "success";
          }catch (Exception $e){
             return $e->getMessage();
+         }
+      }
+
+      public function removeByID()
+      {
+         $sql = "DELETE from tblcartitem WHERE ID= :id and Customer = :cid";
+         $stmt = $this->dConn->prepare($sql);
+         $stmt->bindParam(':id',$this->id, PDO::PARAM_INT);
+         $stmt->bindParam(':cid',$this->cid);
+         if($stmt->execute()){
+            return true;
+         }else{
+            return false;
+         }
+      }
+
+      public function revomeAll()
+      {
+         $sql = "DELETE from tblcartitem WHERE Customer = :cid";
+         $stmt = $this->dConn->prepare($sql);
+         
+         $stmt->bindParam(':cid',$this->cid);
+         if($stmt->execute()){
+            return true;
+         }else{
+            return false;
          }
       }
 

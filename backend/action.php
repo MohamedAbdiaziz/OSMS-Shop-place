@@ -70,7 +70,42 @@ session_start();
 				}						         
 				break;
 
+			case 'remove':
+				$objcart->setCid($_SESSION['customer']);	
+				$objcart->setID($_POST['CartID']);	
+				
+				if($objcart->removeByID()){
+					$cartItems = $objcart->getAllCartItems();
+          $subtotal = 0;
+          $total = 0;
+          foreach ($cartItems as $key => $product) { 
+          	$subtotal	+= $product['Price'] * $product['Quantity'];
+          }
 
+          
+          $data = ["total"=>$subtotal];
+          echo json_encode(["status"=>1,"msg"=>"Added to Cart","data"=>$data]);
+				}
+				else{
+					echo json_encode(["status"=>0,"msg"=>"Failed to Cart"]);
+				}
+
+
+				break;
+
+			case 'removeall':
+				$objcart->setCid($_SESSION['customer']);	
+				
+				
+				if($objcart->revomeAll()){					
+          echo json_encode(["status"=>1,"msg"=>"Added to Cart"]);
+				}
+				else{
+					echo json_encode(["status"=>0,"msg"=>"Failed to Cart"]);
+				}
+
+
+				break;
 
 
 			default:

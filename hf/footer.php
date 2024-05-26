@@ -129,13 +129,13 @@
           myToast.show();
         }
       } catch (e) {
-        console.error('Failed to parse JSON response: ', response);
+        alert('Failed to parse JSON response: '+response);
       }
     })
   }
 
   function updateCart(cartID) {
-    console.log(cartID+$('#quantity_'+cartID).val());
+    // console.log(cartID+$('#quantity_'+cartID).val());
     $.ajax({
       url: "../backend/action.php",
       data: "cartID=" + cartID + "&action=update&quantity="+$('#quantity_'+cartID).val(),
@@ -157,6 +157,50 @@
         alert("Sorry!! Quantity is Greater Than available quantity or Anything Else")
       }
     })
+  }
+
+  function removeCartItem(CartID){
+    $.ajax({
+      url: "../backend/action.php",
+      data: "CartID=" + CartID + "&action=remove",
+      method: "post"
+    }).done(function (response) {
+        // console.log(response);
+        var data = JSON.parse(response);
+        if (data.status == 1) {
+          // $('#subtotal_'+CartID).text(data.data.subtotal);
+          $('#subtotal_total').html(data.data.total);
+          $('#subtotal_alltotal').text(data.data.total);          
+          $('#row_'+CartID).text("");
+        }
+
+        
+        // console.log(element.textContent);
+    })
+  }
+  function  removeAllCartItems(){
+    if(confirm("Are you Sure to Clear All Cart Items?")){
+      $.ajax({
+        url: "../backend/action.php",
+        data: "action=removeall",
+        method: "post"
+      }).done(function (response) {
+          console.log(response);
+          var data = JSON.parse(response);
+          if (data.status == 1) {
+            // $('#subtotal_'+CartID).text(data.data.subtotal);
+            location.reload();
+            alert('Cleared');
+          }
+          else{
+            alert("Failed To Remove all Cart Items :)");
+          }
+
+          
+          // console.log(element.textContent);
+      })
+    }
+    
   }
 
 </script>

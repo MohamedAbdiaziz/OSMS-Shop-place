@@ -32,7 +32,7 @@
             <tbody>
               <?php
 
-                require_once '../classes/customer.class.php';
+                
                 require_once '../classes/cart.class.php';
                 $objCartItem = new cart();
                 $objCartItem->setCid("Mohamed3882");
@@ -47,7 +47,7 @@
                 $total = 0;
                 foreach ($cartItems as $key => $product) {                          
               ?>
-              <tr>
+              <tr id="row_<?= $product['CartID'];?>">
                 <td scope="row" class="py-4">
                   <div class="cart-info d-flex flex-wrap align-items-center ">
                     <div class="col-lg-3">
@@ -96,11 +96,11 @@
                 </td>
                 <td class="py-4 align-middle">
                   <div class="cart-remove">
-                    <a href="#" onclick="removeCartItem(<?= $product['CartID'];?>)">
+                    <button  onclick="removeCartItem(<?= $product['CartID'];?>)">
                       <svg width="24" height="24">
                         <use xlink:href="#trash"></use>
                       </svg>
-                    </a>
+                    </button>
                   </div>
                 </td>
               </tr>
@@ -134,7 +134,7 @@
                     <th>Discount</th>
                     <td data-title="Total">
                       <span class="price-amount amount text-dark ps-5">
-                        <bdi><?php echo $dicount = 2;?>
+                        <bdi>
                           <span class="price-currency-symbol">%</span></bdi>
                       </span>
                     </td>
@@ -152,9 +152,9 @@
               </table>
             </div>
             <div class="button-wrap row g-2">
-              <div class="col-md-6"><button class="btn btn-dark btn-lg rounded-1 fs-6 p-3 w-100" onclick="location.reload();alert('updated');">Update Cart</button>
+              <div class="col-md-6"><button class="btn btn-danger btn-lg rounded-1 fs-6 p-3 w-100" onclick="removeAllCartItems()">Clear Cart</button>
               </div>
-              <div class="col-md-6"><button class="btn btn-dark btn-lg rounded-1 fs-6 p-3 w-100" onclick="window.history.back();">Continue To
+              <div class="col-md-6"><button class="btn btn-dark btn-lg rounded-1 fs-6 p-3 w-100" onclick="if(window.history.back() == true){window.history.back()}else{window.location.href('shop.php')}">Continue To
                   Shop</button></div>
               <div class="col-md-12"><a href="checkout.html" class="btn btn-primary p-3 text-uppercase rounded-1 w-100">Proceed to checkout</a>
               </div>
