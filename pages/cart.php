@@ -1,5 +1,6 @@
 <?php include_once("../hf/header.php");?>
 
+
   <section id="banner" class="py-3" style="background: #F9F3EC;">
     <div class="container">
       <div class="hero-content py-5 my-3">
@@ -35,7 +36,7 @@
                 
                 require_once '../classes/cart.class.php';
                 $objCartItem = new cart();
-                $objCartItem->setCid("Mohamed3882");
+                $objCartItem->setCid("Yussuf488");
                 // $customer = $objCustomer->getCustomerById();
 
                 // $_SESSION['customer']=$objCustomer->getUsername();
@@ -44,7 +45,7 @@
                 // $objProducts = new workshop();
                 $cartItems = $objCartItem->getCartItemsById();
                 $subtotal = 0;
-                $total = 0;
+                $total;
                 foreach ($cartItems as $key => $product) {                          
               ?>
               <tr id="row_<?= $product['CartID'];?>">
@@ -52,7 +53,7 @@
                   <div class="cart-info d-flex flex-wrap align-items-center ">
                     <div class="col-lg-3">
                       <div class="card-image">
-                        <img src="../images/item1.jpg" alt="cloth" class="img-fluid">
+                        <img src="../images/Category/<?= $product['Image'];?>" alt="cloth" class="img-fluid">
                       </div>
                     </div>
                     <div class="col-lg-9">
@@ -104,7 +105,7 @@
                   </div>
                 </td>
               </tr>
-              <?= $subtotal += number_format($product['CartPrice'] * $product['Quantity'], 2);
+              <?php $subtotal += number_format($product['CartPrice'] * $product['Quantity'], 2);
               
               ?>
               <?php } ?>
@@ -156,7 +157,9 @@
               </div>
               <div class="col-md-6"><button class="btn btn-dark btn-lg rounded-1 fs-6 p-3 w-100" onclick="if(window.history.back() == true){window.history.back()}else{window.location.href('shop.php')}">Continue To
                   Shop</button></div>
-              <div class="col-md-12"><a href="checkout.html" class="btn btn-primary p-3 text-uppercase rounded-1 w-100">Proceed to checkout</a>
+              <div class="col-md-12">
+                <!-- <button class="btn btn-primary p-3 text-uppercase rounded-1 w-100" id="checkout-button">Proceed to checkout</button> -->
+                <button class="btn btn-primary p-3 text-uppercase rounded-1 w-100" id="checkout-button">Checkout</button>
               </div>
             </div>
           </div>
@@ -164,6 +167,8 @@
       </div>
     </div>
   </section>
+
+
 
 
 

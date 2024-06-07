@@ -1,7 +1,12 @@
 <?php
   session_save_path('../db');
   ini_set('session.gc_probability', 1);
+  error_reporting(E_ALL);
+ini_set('display_errors', 1);
   session_start();
+  header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
 ?>
 
 <!DOCTYPE html>
@@ -317,7 +322,7 @@
                   <?php
                     require_once '../classes/customer.class.php';
                       $objCustomer = new customer();
-                      $objCustomer->setUsername("Mohamed3882");
+                      $objCustomer->setUsername("Yussuf488");
                       $_SESSION['customer']=$objCustomer->getUsername();
 
                       require_once '../classes/cart.class.php';

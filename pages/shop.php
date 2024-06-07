@@ -14,7 +14,13 @@
       </div>
     </div>
   </section>
+<?php 
+    if(isset($_SESSION['py_success'])){
+        echo $_SESSION['py_success'];
+        unset($_SESSION['py_success']);
+    }
 
+?>
   <div class="shopify-grid">
     <div class="container py-5 my-5">
       <div class="row g-md-5 mb-5">
@@ -27,7 +33,7 @@
 
               require_once '../classes/customer.class.php';
               $objCustomer = new customer();
-              $objCustomer->setUsername("Mohamed3882");
+              $objCustomer->setUsername("Yussuf488");
               $customer = $objCustomer->getCustomerById();
 
               $_SESSION['customer']=$objCustomer->getUsername();
@@ -42,7 +48,7 @@
                   New
                 </div> -->
                 <div class="card position-relative">
-                  <a href="single-product.php?id=<?= $product['ID'];?>"><img src="../images/item7.jpg" class="img-fluid rounded-4" alt="image"></a>
+                  <a href="single-product.php?id=<?= $product['ID'];?>"><img src="../images/Category/<?= $product['Image'];?>" class="img-fluid rounded-4" alt="image"></a>
                   <div class="card-body p-0">
                     <a href="single-product.html">
                       <h3 class="card-title pt-4 m-0"><?= $product['ProductName'];?></h3>

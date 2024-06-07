@@ -101,6 +101,8 @@
 <script src="../js/plugins.js"></script>
 <script src="../js/script.js"></script>
 <script src="../js/iconify.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+
 <script type="text/javascript">
   function addToCart(pID, btnID) {
     var myToastEl = document.getElementById('myToast');
@@ -204,6 +206,36 @@
   }
 
 </script>
+<script>
+        const stripe = Stripe('pk_test_51PMXeh08OHR1fd54PgSByK6jF9WIWJY3hOwuxqU5gVpTBRCNNjb2spzeRMCAuuEZOall4UILV5JLvENXkX9KgsUQ00xpPqhEUh');
+
+        document.getElementById('checkout-button').addEventListener('click', async () => {
+            // const response = await fetch('../backend/create-checkout-session.php', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            // });
+            
+            // const session = await response.json();
+            // // stripe.redirectToCheckout({ sessionId: session.id });
+            $.ajax({
+              url: "../backend/create-checkout-session.php",
+              data: "action=removeall",
+              method: "post"
+            }).done(function (response) {
+                console.log(response);
+                const session = response;
+                console.log(session);
+                stripe.redirectToCheckout({sessionId: session.id });
+
+                
+
+                
+                // console.log(element.textContent);
+            })
+        });
+    </script>
 
 </body>
 

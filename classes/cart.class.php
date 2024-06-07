@@ -85,6 +85,7 @@
              tblproduct.DateCreated,
              tblproduct.UpdatedDate,
              tblproduct.Status,
+             tblproduct.Image,
              tblproduct.Type,
              tblproduct.Color,
              tblproduct.Size,
@@ -149,5 +150,18 @@
          }
       }
 
+      public function GetCartSubtotalSum()
+      {
+         $sql = "SELECT SUM(Subtotal) as sum FROM `tblcartitem` WHERE Customer = :cid";
+         $stmt = $this->dConn->prepare($sql);
+         $stmt->bindParam(':cid',$this->cid);
+
+         if($stmt->execute()){
+            $sum = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $sum;
+         }else{
+            return false;
+         }
+      }
    }
 ?>
