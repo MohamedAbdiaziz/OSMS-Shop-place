@@ -155,8 +155,9 @@
         }
          
       } catch (e) {
+        
+        alert("Sorry!! Quantity is Greater Than available quantity(see in signle product page) or Anything Else");
         location.reload();
-        alert("Sorry!! Quantity is Greater Than available quantity or Anything Else")
       }
     })
   }

@@ -50,7 +50,7 @@
                 <div class="card position-relative">
                   <a href="single-product.php?id=<?= $product['ID'];?>"><img src="../images/Category/<?= $product['Image'];?>" class="img-fluid rounded-4" alt="image"></a>
                   <div class="card-body p-0">
-                    <a href="single-product.html">
+                    <a href="single-product.php?id=<?= $product['ID'];?>">
                       <h3 class="card-title pt-4 m-0"><?= $product['ProductName'];?></h3>
                     </a>
 

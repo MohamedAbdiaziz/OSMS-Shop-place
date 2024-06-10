@@ -8,7 +8,9 @@ ini_set('display_errors', 1);
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 ?>
-
+<?php
+  $current_page = basename($_SERVER['PHP_SELF']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -195,7 +197,7 @@ header("Access-Control-Allow-Headers: Content-Type");
 
   <header>
     <div class="container py-2">
-      <div class="row py-4 pb-0 pb-sm-4 align-items-center ">
+      <div class="row py-2 pb-0 pb-sm-4 align-items-center ">
 
         <div class="col-sm-4 col-lg-3 text-center text-sm-start">
           <div class="main-logo">
@@ -285,25 +287,24 @@ header("Access-Control-Allow-Headers: Content-Type");
 
             <ul class="navbar-nav menu-list list-unstyled d-flex gap-md-3 mb-0">
               <li class="nav-item">
-                <a href="index.php" class="nav-link active">Home</a>
+                  <a href="index.php" class="nav-link <?php echo ($current_page == 'index.php') ? 'active' : ''; ?>">Home</a>
               </li>
-             
               <li class="nav-item">
-                <a href="shop.php" class="nav-link">Shop</a>
+                  <a href="category.php" class="nav-link <?php echo ($current_page == 'category.php') ? 'active' : ''; ?>">Categories</a>
               </li>
-
               <li class="nav-item">
-                <a href="#" class="nav-link">About us</a>
+                  <a href="shop.php" class="nav-link <?php echo ($current_page == 'shop.php') ? 'active' : ''; ?>">Shop</a>
               </li>
-              
               <li class="nav-item">
-                <a href="#" class="nav-link">Contact</a>
+                  <a href="about.php" class="nav-link <?php echo ($current_page == 'about.php') ? 'active' : ''; ?>">About us</a>
               </li>
-              
               <li class="nav-item">
-                <a href="#" class="nav-link fw-bold text-dark" target="_blank">FAQs</a>
+                  <a href="contact.php" class="nav-link <?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>">Contact</a>
               </li>
-            </ul>
+              <li class="nav-item">
+                  <a href="faqs.php" class="nav-link fw-bold text-dark <?php echo ($current_page == 'faqs.php') ? 'active' : ''; ?>" target="_blank">FAQs</a>
+              </li>
+          </ul>
 
             <div class="d-none d-lg-flex align-items-end">
               <ul class="d-flex justify-content-end list-unstyled m-0">
