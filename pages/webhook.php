@@ -73,7 +73,8 @@ switch ($event->type) {
         $objCart->setCid("Yussuf488");
         $objTrans->UpdateTransaction();
         $objTrans->TransSession(1);
-        $objCart->revomeAll();
+        $objCart->removeAll();
+        
 
 
 

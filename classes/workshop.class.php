@@ -7,6 +7,7 @@
     private $price;
     private $cid;
     private $createdOn;
+    private $query;
     public $dConn;
 
     function setId($id){$this->id = $id;}
@@ -23,6 +24,8 @@
     function getCreatedOn(){return $this->createdOn;}
     function setCId($cid){$this->cid = $cid;}
     function getCId(){return $this->cid;}
+    function setQuery($query){$this->query = $query;}
+    function getQuery(){return $this->query;}
 
     public function __construct()
     {
@@ -47,12 +50,33 @@
       $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
       return $products;
     }
+    public function GetTopSell()
+    {
+      $sql = "SELECT ID, ProductName, Price, Image 
+        FROM tblproduct
+        ORDER BY SalesCount DESC
+        LIMIT 10";
+      $stmt = $this->dConn->prepare($sql);
+      $stmt->execute();
+      $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      return $products;
+    }
 
     public function getProductById()
     {
       $sql = "SELECT * FROM `tblproduct` WHERE ID= :pid";
       $stmt = $this->dConn->prepare($sql);
       $stmt->bindParam('pid', $this->id);
+      $stmt->execute();
+      $products = $stmt->fetch(PDO::FETCH_ASSOC);
+      return $products;
+    }
+    public function SearchProduct()
+    {
+      $stmt = $dbconn->prepare("SELECT * FROM tblproduct WHERE ProductName LIKE :searchQuery");
+      $stmt = $this->dConn->prepare($sql);
+       
+      $stmt->bindValue(':searchQuery', '%' . $this->query . '%');
       $stmt->execute();
       $products = $stmt->fetch(PDO::FETCH_ASSOC);
       return $products;

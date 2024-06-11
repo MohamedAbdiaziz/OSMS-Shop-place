@@ -57,6 +57,7 @@ try {
     //     ':stripe_session_id' => $session->id,
     //     ':amount' => array_sum(array_column($cartItems, 'ProductPrice'))
     // ]);
+
     $objtrans = new Transaction();
     $objtrans->setCid("Mohamed3882");
     $objtrans->setAmount(array_sum(array_column($cartItems, 'Subtotal')));
@@ -66,7 +67,7 @@ try {
     // echo "</br>";
     // echo $objtrans->getAmount();
     // echo $objtrans->getStripeSessionId();
-    $objtrans->AddTransaction();
+    $objtrans->AddTransaction($cartItems);
 
     echo json_encode(['id' => $session->id]);
 } catch (Exception $e) {

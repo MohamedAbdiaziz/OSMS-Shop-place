@@ -112,7 +112,8 @@ session_start();
 				// code...
 				break;
 		}
-	}else{
+	}
+	else{
 		header('location: ../pages/index.php');
 		// echo $_SESSION['customer'];
 	}

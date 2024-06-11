@@ -149,6 +149,49 @@
             return false;
          }
       }
+      public function clearAllandUpdateStock()
+      {
+         try {
+           // Start transaction
+           $this->dConn->beginTransaction();
+
+           // Retrieve cart items and their quantities
+           $sql = "SELECT Product, Quantity FROM tblcartitem WHERE Customer = :cid";
+           $stmt = $this->dConn->prepare($sql);
+           $stmt->bindParam(':cid', $this->cid);
+           $stmt->execute();
+           $cartItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+           // Update stock for each product
+           foreach ($cartItems as $item) {
+               $updateStockSql = "UPDATE tblstock SET Quantity = Quantity + :quantity WHERE Product = :productId";
+               $updateStockStmt = $this->dConn->prepare($updateStockSql);
+               $updateStockStmt->bindParam(':quantity', $item['Quantity']);
+               $updateStockStmt->bindParam(':productId', $item['Product']);
+               $updateStockStmt->execute();
+           }
+
+           // Delete all items from the cart
+           $deleteCartSql = "DELETE FROM tblcartitem WHERE Customer = :cid";
+           $deleteCartStmt = $this->dConn->prepare($deleteCartSql);
+           $deleteCartStmt->bindParam(':cid', $this->cid);
+
+           if ($deleteCartStmt->execute()) {
+               // Commit transaction
+               $this->dConn->commit();
+               return true;
+           } else {
+               // Rollback transaction in case of error
+               $this->dConn->rollBack();
+               return false;
+           }
+         } catch (Exception $e) {
+           // Rollback transaction in case of exception
+           $this->dConn->rollBack();
+           return false;
+         }
+      }
+
 
       public function GetCartSubtotalSum()
       {

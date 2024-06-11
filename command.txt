@@ -1,0 +1,3 @@
+cd F:\lampp\mysql\data
+del aria_log.*
+stripe listen --forward-to localhost:8082/osm/pages/webhook.php

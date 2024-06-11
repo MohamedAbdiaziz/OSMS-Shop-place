@@ -153,7 +153,7 @@
               </table>
             </div>
             <div class="button-wrap row g-2">
-              <div class="col-md-6"><button class="btn btn-danger btn-lg rounded-1 fs-6 p-3 w-100" onclick="removeAllCartItems()">Clear Cart</button>
+              <div class="col-md-6"><button class="btn btn-danger btn-lg rounded-1 fs-6 p-3 w-100" onclick="clearAllandUpdateStock()">Clear Cart</button>
               </div>
               <div class="col-md-6"><button class="btn btn-dark btn-lg rounded-1 fs-6 p-3 w-100" onclick="if(window.history.back() == true){window.history.back()}else{window.location.href('shop.php')}">Continue To
                   Shop</button></div>

@@ -29,7 +29,7 @@ require_once("../classes/workshop.class.php");?>
           <div class="swiper-slide py-5">
             <div class="row banner-content align-items-center">
               <div class="img-wrapper col-md-5">
-                <img src="../images/banner-img3.png" class="img-fluid">
+                <img src="../images/op/ew5.jpg" class="img-fluid">
               </div>
               <div class="content-wrapper col-md-7 p-5 mb-5">
                 <!-- <div class="secondary-font text-primary text-uppercase mb-4">Save 10 - 20 % off</div> -->
@@ -121,12 +121,20 @@ require_once("../classes/workshop.class.php");?>
                                     </span>
                                     <h3 class="secondary-font text-primary">$<?php echo number_format($product['Price'], 2); ?></h3>
                                     <div class="d-flex flex-wrap mt-3">
-                                        <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
-                                            <h5 class="text-uppercase m-0">Add to Cart</h5>
-                                        </a>
-                                        <a href="#" class="btn-wishlist px-4 pt-3 ">
-                                            <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
-                                        </a>
+                                      <?php
+                                        $cartItems = $objCart->getAllCartItems();
+                                        $cartProductIds = array_column($cartItems, 'Product');
+                                        $disabled = "";
+                                        if (in_array($product['ID'], $cartProductIds)) {
+                                            $disabled = "disabled";
+                                        }
+                                      ?>
+                                      <button id="cartBtn_<?= $product['ID'];?>" role="button" class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?= $product['ID'];?>,this.id);" <?php echo $disabled;?>>
+                                        <h5 class="text-uppercase m-0" >Add to Cart</h5>
+                                      </button>
+                                      <a href="#" class="btn-wishlist px-4 pt-3 ">
+                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                      </a>
                                     </div>
                                 </div>
                             </div>
@@ -138,74 +146,72 @@ require_once("../classes/workshop.class.php");?>
     </div>
 </section>
 
+<?php
+    $bestSellingProducts = $objProduct->GetTopSell();
+?>
 
-
-  <section id="bestselling" class="my-5 overflow-hidden">
+ <section id="bestselling" class="my-5 overflow-hidden">
     <div class="container py-5 mb-5">
 
-      <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
-        <h2 class="display-3 fw-normal">Best selling products</h2>
-        <div>
-          <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
-            shop now
-            <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
-              <use xlink:href="#arrow-right"></use>
-            </svg></a>
-        </div>
-      </div>
-
-      <div class=" swiper bestselling-swiper">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <!-- <div class="z-1 position-absolute rounded-3 m-3 px-3 border border-dark-subtle">
-              New
-            </div> -->
-            <div class="card position-relative">
-              <a href="single-product.html"><img src="../images/item5.jpg" class="img-fluid rounded-4" alt="image"></a>
-              <div class="card-body p-0">
-                <a href="single-product.html">
-                  <h3 class="card-title pt-4 m-0">Grey hoodie</h3>
+        <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+            <h2 class="display-3 fw-normal">Best Selling Products</h2>
+            <div>
+                <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                    Shop Now
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
                 </a>
-
-                <div class="card-text">
-                  <span class="rating secondary-font">
-                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
-                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
-                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
-                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
-                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
-                    5.0</span>
-
-                  <h3 class="secondary-font text-primary">$18.00</h3>
-
-                  <div class="d-flex flex-wrap mt-3">
-                    <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
-                      <h5 class="text-uppercase m-0">Add to Cart</h5>
-                    </a>
-                    <a href="#" class="btn-wishlist px-4 pt-3 ">
-                      <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
-                    </a>
-                  </div>
-
-
-                </div>
-
-              </div>
             </div>
-          </div>
-         
-
-
         </div>
-      </div>
-      <!-- / category-carousel -->
 
+        <div class="swiper bestselling-swiper">
+            <div class="swiper-wrapper">
+
+                <?php foreach ($bestSellingProducts as $product): ?>
+                    <div class="swiper-slide">
+                        <div class="card position-relative">
+                            <a href="single-product.php?id=<?php echo $product['ID']; ?>">
+                                <img src="../images/Category/<?php echo $product['Image']; ?>" class="img-fluid rounded-4" alt="image">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="single-product.php?id=<?php echo $product['ID']; ?>">
+                                    <h3 class="card-title pt-4 m-0"><?php echo $product['ProductName']; ?></h3>
+                                </a>
+
+                                <div class="card-text">
+                                    <h3 class="secondary-font text-primary">$<?php echo number_format($product['Price'], 2); ?></h3>
+
+                                    <div class="d-flex flex-wrap mt-3">
+                                      <?php
+                                        $cartItems = $objCart->getAllCartItems();
+                                        $cartProductIds = array_column($cartItems, 'Product');
+                                        $disabled = "";
+                                        if (in_array($product['ID'], $cartProductIds)) {
+                                            $disabled = "disabled";
+                                        }
+                                      ?>
+                                      <button id="cartBtn_<?= $product['ID'];?>" role="button" class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?= $product['ID'];?>,this.id);" <?php echo $disabled;?>>
+                                        <h5 class="text-uppercase m-0" >Add to Cart</h5>
+                                      </button>
+                                      <a href="#" class="btn-wishlist px-4 pt-3 ">
+                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                      </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
+        </div>
+        <!-- / category-carousel -->
 
     </div>
-  </section>
+</section>
 
-  <section id="register" style="background: url('../images/background-img.png') no-repeat;">
+<!--   <section id="register" style="background: url('../images/background-img.png') no-repeat;">
     <div class="container ">
       <div class="row my-5 py-5">
         <div class="offset-md-3 col-md-6 my-5 ">
@@ -232,14 +238,14 @@ require_once("../classes/workshop.class.php");?>
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
 
   <section id="service">
     <div class="container py-5 my-5">
       <div class="row g-md-5 pt-4">
-       
+       <div class="col-md-4 my-4"></div>
         <div class="col-md-4 my-4">
           <div class="card">
             <div>
@@ -251,6 +257,7 @@ require_once("../classes/workshop.class.php");?>
             </div>
           </div>
         </div>
+        <!-- 
         <div class="col-md-4 my-4">
           <div class="card">
             <div>
@@ -272,7 +279,7 @@ require_once("../classes/workshop.class.php");?>
               <p class="blog-paragraph fs-6"></p>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
