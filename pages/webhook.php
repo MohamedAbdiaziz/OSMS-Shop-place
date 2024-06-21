@@ -70,9 +70,9 @@ switch ($event->type) {
         $objTrans = new Transaction();
         $objCart = new Cart();
         $objTrans->setStripeSessionId($session->id);
-        $objCart->setCid("Yussuf488");
+        $objCart->setCid($_SESSION['customer']);
         $objTrans->UpdateTransaction();
-        $objTrans->TransSession(1);
+        // $objTrans->TransSession();
         $objCart->removeAll();
         
 

@@ -78,7 +78,7 @@
 		            }
 
 		            // Update the stock
-		            $sql = "UPDATE tblstock SET Quantity = Quantity - :quantity	 WHERE Product  = :productID";
+		            $sql = "UPDATE tblstock SET Quantity = Quantity - :quantity	 WHERE Product  = :productID AND Quantity > 0 AND :quantity<Quantity; ";
 		            $stmt = $this->dbconn->prepare($sql);
 		            $stmt->bindParam(':quantity', $item['Quantity']);
 		            $stmt->bindParam(':productID', $item['ProductID']);

@@ -7,6 +7,7 @@
     private $createdOn;
     private $email;
     private $password;
+    private $newPassword;
     public $dConn;
 
     public function setId($id){$this->id = $id;}
@@ -23,6 +24,8 @@
     public function getEmail(){return $this->email;}
     public function setPassword($password){$this->password = $password;}
     public function getPassword(){return $this->password;}
+    public function setNewPassword($newPassword){$this->newPassword = $newPassword;}
+    // public function setPassword($password){$this->password = $password;}
     
 
     public function __construct()
@@ -41,6 +44,39 @@
       $Customer = $stmt->fetch(PDO::FETCH_ASSOC);
       
       return $Customer;
+    }
+    public function change_password()
+    {
+      $sql = "SELECT Password FROM tblcustomer WHERE Username = :username";
+      $stmt = $this->dConn->prepare($sql);
+      $stmt->bindParam(':username', $this->username);
+      $stmt->execute();
+      $result = $stmt->fetch(PDO::FETCH_ASSOC);
+      $hashedPassword = md5($this->newPassword);
+      
+      if (md5($this->password) != $result['Password']) {
+          $_SESSION['error'] = "Current password is incorrect.";
+          
+          header("Location: ../pages/change_password.php");
+          exit();
+      }
+
+      // Hash the new password
+      
+
+      // Update the password in the database
+      $sql = "UPDATE tblcustomer SET Password = :newPassword WHERE Username = :username";
+      $stmt = $this->dConn->prepare($sql);
+      $stmt->bindParam(':newPassword', $hashedPassword);
+      $stmt->bindParam(':username', $this->username);
+
+      if ($stmt->execute()) {
+          $_SESSION['success'] = "Password changed successfully.";
+      } else {
+          $_SESSION['error'] = "Failed to change password. Please try again.";
+      }
+
+      header("Location: ../pages/change_password.php");
     }
 
     public function registercustomer()

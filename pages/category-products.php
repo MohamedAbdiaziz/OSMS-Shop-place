@@ -41,7 +41,7 @@ if (isset($_GET['id'])) {
                                     <a href="single-product.php?id=<?php echo $product['ID']; ?>"><?php echo $product['ProductName']; ?></a>
                                 </h4>
                                 <h5>$<?php echo $product['Price']; ?></h5>
-                                <p class="card-text"><?php echo $product['Description']; ?></p>
+                                <!-- <p class="card-text"><?php echo $product['Description']; ?></p> -->
                             </div>
                         </div>
                     </div>

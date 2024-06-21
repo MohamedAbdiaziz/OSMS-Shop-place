@@ -3,10 +3,11 @@
 session_save_path('../db');
   ini_set('session.gc_probability', 1);
 session_start();
+	require '../classes/workshop.class.php';
+	require '../classes/customer.class.php';
+	require '../classes/cart.class.php';
 	if (isset($_POST['action'])) {
-		require '../classes/workshop.class.php';
-		require '../classes/customer.class.php';
-		require '../classes/cart.class.php';
+		
 		$objworkshop = new workshop();
 		$objCustomer = new customer();
 		$objcart = new cart();
@@ -112,6 +113,28 @@ session_start();
 				// code...
 				break;
 		}
+	}
+	elseif(isset($_POST['change_password'])){
+		$_SESSION['customer_id'] = "Yussuf488";
+		$objCustomer = new customer();
+		$objCustomer->setUsername ($_SESSION['customer_id']);
+		$objCustomer->setPassword($_POST['currentPassword']);
+		$newPassword = $_POST['newPassword'];
+		$objCustomer->setNewPassword($_POST['newPassword']);
+		$confirmPassword = $_POST['confirmPassword'];
+
+		// Validate new password and confirmation
+		if ($newPassword !== $confirmPassword) {
+		    $_SESSION['error'] = "New password and confirmation do not match.";
+		    header("Location: ../pages/change_password.php");
+		    exit();
+		}
+		echo md5($objCustomer->getPassword());
+		echo "   ";
+		$objCustomer->change_password();
+		
+		
+
 	}
 	else{
 		header('location: ../pages/index.php');

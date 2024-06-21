@@ -51,9 +51,9 @@ if (isset($_GET['id'])) {
                             </div>
                         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                     </div>
-                    <div class="col-md-12 mt-2">
+                    <!-- <div class="col-md-12 mt-2"> -->
                         <!-- product-thumbnail-slider -->
-                        <div thumbsslider="" class="swiper product-thumbnail-slider swiper-initialized swiper-horizontal swiper-free-mode swiper-watch-progress swiper-backface-hidden swiper-thumbs">
+                        <!-- <div thumbsslider="" class="swiper product-thumbnail-slider swiper-initialized swiper-horizontal swiper-free-mode swiper-watch-progress swiper-backface-hidden swiper-thumbs">
                             <div class="swiper-wrapper" id="swiper-wrapper-ba702457cd9b4469" aria-live="polite">
                                 <?php
                                 foreach ($images as $image) {
@@ -64,7 +64,7 @@ if (isset($_GET['id'])) {
                                 ?>
                             </div>
                         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-6 mt-5">
@@ -86,7 +86,7 @@ if (isset($_GET['id'])) {
                         <strong class="text-primary display-6 fw-bold">$<?php echo htmlspecialchars($product['Price']); ?></strong>
                         <!-- <del class="ms-2">$<?php echo htmlspecialchars($product['old_price']); ?></del> -->
                     </div>
-                    <p><?php echo htmlspecialchars($product['Description']); ?></p>
+                    <!-- <p><?php echo htmlspecialchars($product['Description']); ?></p> -->
                     <div class="cart-wrap">
                         <div class="color-options product-select">
                             <div class="color-toggle pt-2" data-option-index="0">
@@ -119,36 +119,37 @@ if (isset($_GET['id'])) {
                         <div class="product-quantity pt-2">
                             <div class="stock-number text-dark"><em><?php echo htmlspecialchars($product['stock_quantity']); ?> in stock</em></div>
                             <div class="stock-button-wrap">
-                                
-                                <div class="d-flex flex-wrap pt-4">
-                                    <?php
-                                    $_SESSION['customer'] = "Yussuf488";
-                                    $objCart = new cart();
-                                    $objCart->setCid($_SESSION['customer']);
-                                      $cartItems = $objCart->getAllCartItems();
-                                      $cartProductIds = array_column($cartItems, 'Product');
-                                      $disabled = "";
-                                      if (in_array($product['ID'], $cartProductIds)) {
-                                          $disabled = "disabled";
-                                      }
-                                    ?>
-                                    <button id="cartBtn_<?= $product['ID'];?>" role="button" class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?= $_GET['id'];?>,this.id);" <?php echo $disabled;?>>
-                                      <h5 class="text-uppercase m-0" >Add to Cart</h5>
-                                    </button><!-- 
-                                    <a href="#" class="btn-wishlist px-4 pt-3">
-                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
-                                    </a> -->
-                                </div>
+                                <?php if(isset($_SESSION['customer'])){?>
+                                    <div class="d-flex flex-wrap pt-4">
+                                        <?php
+                                        
+                                        $objCart = new cart();
+                                        $objCart->setCid($_SESSION['customer']);
+                                          $cartItems = $objCart->getAllCartItems();
+                                          $cartProductIds = array_column($cartItems, 'Product');
+                                          $disabled = "";
+                                          if (in_array($product['ID'], $cartProductIds)) {
+                                              $disabled = "disabled";
+                                          }
+                                        ?>
+                                        <button id="cartBtn_<?= $product['ID'];?>" role="button" class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?= $_GET['id'];?>,this.id);" <?php echo $disabled;?>>
+                                          <h5 class="text-uppercase m-0" >Add to Cart</h5>
+                                        </button><!-- 
+                                        <a href="#" class="btn-wishlist px-4 pt-3">
+                                            <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                        </a> -->
+                                    </div>
+                                <?php }?>
                             </div>
                         </div>
                     </div>
                     <div class="meta-product pt-4">
-                        <div class="meta-item d-flex align-items-baseline">
+                        <!-- <div class="meta-item d-flex align-items-baseline">
                             <h6 class="item-title fw-bold no-margin pe-2">SKU:</h6>
                             <ul class="select-list list-unstyled d-flex">
                                 <li data-value="S" class="select-item">.</li>
                             </ul>
-                        </div>
+                        </div> -->
                         <div class="meta-item d-flex align-items-baseline">
                             <h6 class="item-title fw-bold no-margin pe-2">Category:</h6>
                             <ul class="select-list list-unstyled d-flex">

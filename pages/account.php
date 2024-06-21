@@ -1,87 +1,119 @@
-<?php include_once("../hf/header.php"); ?>
+<?php 
+// session_start();
+include_once("../hf/header.php");
+require_once("../classes/customer.class.php");
+require_once("../classes/order.class.php");
 
-    <section id="banner" class="py-3" style="background: #F9F3EC;">
-        <div class="container">
-            <div class="hero-content py-5 my-3">
-                <h2 class="display-1 mt-3 mb-0">Account</h2>
-                <nav class="breadcrumb">
-                    <a class="breadcrumb-item nav-link" href="#">Home</a>
-                    <a class="breadcrumb-item nav-link" href="#">Pages</a>
-                    <span class="breadcrumb-item active" aria-current="page">Account</span>
-                </nav>
-            </div>
+// $_SESSION['customerID'] = "Yussuf488";
+
+if (!isset($_SESSION['customer'])) {
+    echo "<script>window.location.href = 'login.php';</script>";
+    exit();
+}
+
+
+
+$customerID = $_SESSION['customer'];
+
+$objCustomer = new Customer();
+$objOrder = new Order();
+$objCustomer->setUsername($customerID);
+$customer = $objCustomer->getCustomerById();
+
+$objOrder->setCustomer($customerID);
+$orders = $objOrder->getOrderById();
+?>
+
+<section id="banner" class="py-3" style="background: #F9F3EC;">
+    <div class="container">
+        <div class="hero-content py-5 my-3">
+            <h2 class="display-1 mt-3 mb-0">Account</h2>
+            <nav class="breadcrumb">
+                <a class="breadcrumb-item nav-link" href="#">Home</a>
+                <a class="breadcrumb-item nav-link" href="#">Pages</a>
+                <span class="breadcrumb-item active" aria-current="page">Account</span>
+            </nav>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="login-tabs padding-large">
-        <div class="container my-5 py-5">
-            <div class="row">
-                <div class="tabs-listing">
-                    <nav>
-                        <div class="nav nav-tabs d-flex justify-content-center border-dark-subtle mb-3" id="nav-tab" role="tablist">
-                            <button class="nav-link mx-3 fs-3 border-bottom border-dark-subtle border-0 text-uppercase" id="nav-sign-in-tab" data-bs-toggle="tab" data-bs-target="#nav-sign-in" type="button" role="tab" aria-controls="nav-sign-in" aria-selected="false" tabindex="-1">Log In</button>
-                            <button class="nav-link mx-3 fs-3 border-bottom border-dark-subtle border-0 text-uppercase active" id="nav-register-tab" data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register" aria-selected="true">Sign Up</button>
-                        </div>
-                    </nav>
-                    <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade" id="nav-sign-in" role="tabpanel" aria-labelledby="nav-sign-in-tab">
-                            <div class="col-lg-8 offset-lg-2 mt-5">
-                                
-                                <p class="mb-0">Log-In With Email</p>
-                                <hr class="my-1">
-
-                                <form id="form1" class="form-group flex-wrap ">
-                                    <div class="form-input col-lg-12 my-4">
-
-                                        <input type="text" id="exampleInputUsername1" name="username" placeholder="Enter Username" class="form-control mb-3 p-4">
-                                        <input type="password" id="inputPassword1" placeholder="Enter password" class="form-control mb-3 p-4" aria-describedby="passwordHelpBlock">
-
-                                        <label class="py-3 d-flex flex-wrap justify-content-between">
-                                            
-                                            <div id="passwordHelpBlock" class="form-text ">
-                                                <a href="#" class="text-primary  fw-bold"> Forgot Password?</a>
-                                            </div>
-                                        </label>
-                                        <div class="d-grid my-3">
-                                            <a href="#" class="btn btn-dark btn-lg rounded-1">Log In</a>
-                                        </div>
-
-                                    </div>
-                                </form>
-
-                            </div>
-
-                        </div>
-                        <div class="tab-pane fade active show" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab">
-                            <div class="col-lg-8 offset-lg-2 mt-5">
-                                                        
-                                <p class="mb-0">Sign-Up With Email</p>
-                                <hr class="my-1">
-
-                                <form id="form1" class="form-group flex-wrap ">
-                                    <div class="form-input col-lg-12 my-4">
-
-                                        <input type="text" id="exampleInputName" name="email" placeholder="Your full name" class="form-control mb-3 p-4">
-                                        <input type="text" id="exampleInputUsername1" name="username" placeholder="Your Username" class="form-control mb-3 p-4">
-                                        <input type="email" id="exampleInputEmail1" name="email" placeholder="Your email address" class="form-control mb-3 p-4">
-                                        <input type="password" id="inputPassword1" placeholder="Set your password" class="form-control mb-3 p-4" aria-describedby="passwordHelpBlock">
-                                        <input type="password" id="inputPassword2" placeholder="Retype your password" class="form-control mb-3 p-4" aria-describedby="passwordHelpBlock">
-
-                                        
-                                        <div class="d-grid my-3">
-                                            <a href="#" class="btn btn-dark btn-lg rounded-1">Sign Up</a>
-                                        </div>
-
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
+<section class="account-info padding-large">
+    <div class="container my-5 py-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Profile</h3>
+                    </div>
+                    <div class="card-body">
+                        <?php if($customer['profile_image'] != ""){?>
+                            <img src="../images/Category/<?= $customer['profile_image'] ?>" alt="Profile Image" class="img-thumbnail mb-3">
+                        <?php }?>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Name</th>
+                                <td><?= $customer['Name'] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td><?= $customer['Email'] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Username</th>
+                                <td><?= $customer['Username'] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Phone</th>
+                                <td><?= $customer['Mobile'] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Address</th>
+                                <td><?= $customer['Address'] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Change Password</th>
+                                <td><a href="./change_password.php" class="btn btn-info">Change</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Your Orders</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Total</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($orders as $order): ?>
+                                <tr>
+                                    <td><?= $order['ID'] ?></td>
+                                    <td><?= $order['Order_Date'] ?></td>
+                                    <td><?= $order['Status'] ?></td>
+                                    <td>$<?= $order['Order_Date'] ?></td>
+                                    <td><a href="../../osmsadmin/page/generate_invoice.php?order_id=<?= $order['ID'] ?>" class="btn btn-primary btn-sm">View</a></td>
+                                </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    
 <?php include_once("../hf/footer.php"); ?>
+
+
+

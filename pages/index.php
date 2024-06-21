@@ -87,14 +87,7 @@ require_once("../classes/workshop.class.php");?>
                     <?php } ?>
                 </p>
             </div>
-            <div>
-                <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
-                    shop now
-                    <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </a>
-            </div>
+            
         </div>
 
         <div class="isotope-container row">
@@ -120,22 +113,24 @@ require_once("../classes/workshop.class.php");?>
                                         5.0
                                     </span>
                                     <h3 class="secondary-font text-primary">$<?php echo number_format($product['Price'], 2); ?></h3>
-                                    <div class="d-flex flex-wrap mt-3">
-                                      <?php
-                                        $cartItems = $objCart->getAllCartItems();
-                                        $cartProductIds = array_column($cartItems, 'Product');
-                                        $disabled = "";
-                                        if (in_array($product['ID'], $cartProductIds)) {
-                                            $disabled = "disabled";
-                                        }
-                                      ?>
-                                      <button id="cartBtn_<?= $product['ID'];?>" role="button" class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?= $product['ID'];?>,this.id);" <?php echo $disabled;?>>
-                                        <h5 class="text-uppercase m-0" >Add to Cart</h5>
-                                      </button>
-                                      <a href="#" class="btn-wishlist px-4 pt-3 ">
-                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
-                                      </a>
-                                    </div>
+                                    <?php if(isset($_SESSION['customer'])){?>
+                                        <div class="d-flex flex-wrap mt-3">
+                                          <?php
+                                            $cartItems = $objCart->getAllCartItems();
+                                            $cartProductIds = array_column($cartItems, 'Product');
+                                            $disabled = "";
+                                            if (in_array($product['ID'], $cartProductIds)) {
+                                                $disabled = "disabled";
+                                            }
+                                          ?>
+                                          <button id="cartBtn_<?= $product['ID'];?>" role="button" class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?= $product['ID'];?>,this.id);" <?php echo $disabled;?>>
+                                            <h5 class="text-uppercase m-0" >Add to Cart</h5>
+                                          </button>
+                                          <a href="#" class="btn-wishlist px-4 pt-3 ">
+                                            <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                          </a>
+                                        </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
@@ -181,23 +176,25 @@ require_once("../classes/workshop.class.php");?>
 
                                 <div class="card-text">
                                     <h3 class="secondary-font text-primary">$<?php echo number_format($product['Price'], 2); ?></h3>
+                                    <?php if(isset($_SESSION['customer'])){?>
+                                        <div class="d-flex flex-wrap mt-3">
+                                          <?php
+                                            $cartItems = $objCart->getAllCartItems();
+                                            $cartProductIds = array_column($cartItems, 'Product');
+                                            $disabled = "";
+                                            if (in_array($product['ID'], $cartProductIds)) {
+                                                $disabled = "disabled";
+                                            }
+                                          ?>
+                                          <button id="cartBtn_<?= $product['ID'];?>" role="button" class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?= $product['ID'];?>,this.id);" <?php echo $disabled;?>>
+                                            <h5 class="text-uppercase m-0" >Add to Cart</h5>
+                                          </button>
+                                          <a href="#" class="btn-wishlist px-4 pt-3 ">
+                                            <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                          </a>
+                                        </div>
+                                    <?php }?>
 
-                                    <div class="d-flex flex-wrap mt-3">
-                                      <?php
-                                        $cartItems = $objCart->getAllCartItems();
-                                        $cartProductIds = array_column($cartItems, 'Product');
-                                        $disabled = "";
-                                        if (in_array($product['ID'], $cartProductIds)) {
-                                            $disabled = "disabled";
-                                        }
-                                      ?>
-                                      <button id="cartBtn_<?= $product['ID'];?>" role="button" class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?= $product['ID'];?>,this.id);" <?php echo $disabled;?>>
-                                        <h5 class="text-uppercase m-0" >Add to Cart</h5>
-                                      </button>
-                                      <a href="#" class="btn-wishlist px-4 pt-3 ">
-                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
-                                      </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -1,12 +1,6 @@
 <?php
-  session_save_path('../db');
-  ini_set('session.gc_probability', 1);
-  error_reporting(E_ALL);
-ini_set('display_errors', 1);
-  session_start();
-  header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type");
+  include_once('../db/session.php');
+  unset($_SESSION['customer']);
 ?>
 <?php
   $current_page = basename($_SERVER['PHP_SELF']);
@@ -322,22 +316,30 @@ header("Access-Control-Allow-Headers: Content-Type");
             <div class="d-none d-lg-flex align-items-end">
               <ul class="d-flex justify-content-end list-unstyled m-0">
                 <li>
+                  <?php  if(!isset($_SESSION['customer'])){?>
+
+                  <a href="login.php" class="mx-3">
+                    <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
+                  </a>
+                <?php }else{?>
                   <a href="account.php" class="mx-3">
                     <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
                   </a>
+                <?php } ?>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="wishlist.html" class="mx-3">
                     <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>
                   </a>
-                </li>
+                </li> -->
+                <?php if(isset($_SESSION['customer'])){?>
 
                 <li class="">
                   <?php
                     require_once '../classes/customer.class.php';
                       $objCustomer = new customer();
-                      $objCustomer->setUsername("Yussuf488");
-                      $_SESSION['customer']=$objCustomer->getUsername();
+                      $objCustomer->setUsername($_SESSION['customer']);
+                      // $_SESSION['customer']=$objCustomer->getUsername();
 
                       require_once '../classes/cart.class.php';
                       $objCart = new cart();
@@ -352,6 +354,7 @@ header("Access-Control-Allow-Headers: Content-Type");
                     </span>
                   </a>
                 </li>
+              <?php } ?>
               </ul>
 
             </div>

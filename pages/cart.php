@@ -59,7 +59,7 @@
                     <div class="col-lg-9">
                       <div class="card-detail ps-3">
                         <h5 class="card-title">
-                          <a href="#" class="text-decoration-none"><?=$product['ProductName'];?></a>
+                          <a href="single-product.php?id=<?= $product['ProductID'];?>" class="text-decoration-none"><?=$product['ProductName'];?></a>
                         </h5>
                       </div>
                     </div>
@@ -153,7 +153,7 @@
               </table>
             </div>
             <div class="button-wrap row g-2">
-              <div class="col-md-6"><button class="btn btn-danger btn-lg rounded-1 fs-6 p-3 w-100" onclick="clearAllandUpdateStock()">Clear Cart</button>
+              <div class="col-md-6"><button class="btn btn-danger btn-lg rounded-1 fs-6 p-3 w-100" onclick="removeAllCartItems()">Clear Cart</button>
               </div>
               <div class="col-md-6"><button class="btn btn-dark btn-lg rounded-1 fs-6 p-3 w-100" onclick="if(window.history.back() == true){window.history.back()}else{window.location.href('shop.php')}">Continue To
                   Shop</button></div>
@@ -174,3 +174,4 @@
 
 
   <?php include_once("../hf/footer.php");?>
+  
