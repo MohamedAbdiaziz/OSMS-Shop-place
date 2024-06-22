@@ -1,7 +1,9 @@
 <?php
+include_once('../db/session.php');
+
 require '../vendor/autoload.php';
 require '../classes/cart.class.php';
-session_start();
+
 
 \Stripe\Stripe::setApiKey('sk_test_51PMXeh08OHR1fd54KU9RT8xau5XfcvVcn4yqoc4aPjZBp0x7v9HxtzuG3556RjQW6NvjG0H8rcgfkQtF1mQ9UEpt002EeA0Cwl');
 

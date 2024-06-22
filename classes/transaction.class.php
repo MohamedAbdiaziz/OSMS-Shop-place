@@ -1,4 +1,6 @@
 <?php
+include_once('../db/session.php');
+
 
 	/**
 	 * 
@@ -78,7 +80,7 @@
 		            }
 
 		            // Update the stock
-		            $sql = "UPDATE tblstock SET Quantity = Quantity - :quantity	 WHERE Product  = :productID AND Quantity > 0 AND :quantity<Quantity; ";
+		            $sql = "UPDATE tblstock SET Quantity = Quantity - :quantity	 WHERE Product  = :productID;";
 		            $stmt = $this->dbconn->prepare($sql);
 		            $stmt->bindParam(':quantity', $item['Quantity']);
 		            $stmt->bindParam(':productID', $item['ProductID']);
@@ -86,6 +88,20 @@
 		            if(!$stmt->execute()){
 		                throw new Exception("Failed to update stock for productID: " . $item['ProductID']);
 		            }
+		            // Check the new stock quantity
+				    $sqlCheck = "SELECT Quantity FROM tblstock WHERE Product = :productID;";
+				    $stmtCheck = $dbconn->prepare($sqlCheck);
+				    $stmtCheck->bindParam(':productID', $item['ProductID']);
+				    $stmtCheck->execute();
+				    $result = $stmtCheck->fetch(PDO::FETCH_ASSOC);
+
+				    // If quantity is zero, delete from cartitems
+				    if ($result['Quantity'] == 0) {
+				        $sqlDelete = "DELETE FROM tblcartitem WHERE Product = :productID;";
+				        $stmtDelete = $dbconn->prepare($sqlDelete);
+				        $stmtDelete->bindParam(':productID', $item['ProductID']);
+				        $stmtDelete->execute();
+				    }
 		        }
 
 		        // Commit transaction
@@ -109,7 +125,13 @@
         	
         	try{
 	        	if($stmt->execute()){
-	               return true;
+	        		require_once('./cart.class.php');
+	        		$objCart = new Cart();
+	        		$objCart->setCid($this->customer_id);
+	        		if($objCart->clearAllandUpdateStock()){
+	        			return true;
+	        		}
+	            	return false;
 	            }
 	            else{
 	               return false;

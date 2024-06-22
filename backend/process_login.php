@@ -1,26 +1,31 @@
 <?php
-session_start();
+include_once('../db/session.php');
+
 require_once("../db/DbConnect.php");
 
-$email = $_POST['email'];
+$username = $_POST['username'];
 $password = $_POST['password'];
+// echo "Hello ".$username.$password;
+// $_SESSION['error'] = "Invalid username or password.";
+//         header("Location: ../pages/login.php");
+// exit();
 
 try {
     $db = new DbConnect();
     $dbConn = $db->connect();
 
-    $sql = "SELECT * FROM tblcustomer WHERE Email = :email";
+    $sql = "SELECT * FROM tblcustomer WHERE Username = :username";
     $stmt = $dbConn->prepare($sql);
-    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':username', $username);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user && password_verify($password, $user['Password'])) {
-        $_SESSION['customer_id'] = $user['ID'];
+        $_SESSION['customer'] = $user['Username'];
         $_SESSION['customer_name'] = $user['Name'];
         header("Location: ../pages/account.php");
     } else {
-        $_SESSION['error'] = "Invalid email or password.";
+        $_SESSION['error'] = "Invalid username or password.";
         header("Location: ../pages/login.php");
     }
 } catch (PDOException $e) {

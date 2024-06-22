@@ -1,4 +1,9 @@
-<?php include_once("../hf/header.php"); ?>
+
+<?php
+include_once('../db/session.php');
+ include_once("../hf/header.php"); 
+    
+?>
 
 <section id="banner" class="py-3" style="background: #F9F3EC;">
     <div class="container">
@@ -15,6 +20,16 @@
 
 <section class="login-tabs padding-large">
     <div class="container my-5 py-5">
+        <?php
+            if (isset($_SESSION['success'])) {
+                echo "<div class='alert alert-success'>" . $_SESSION['success'] . "</div>";
+                unset($_SESSION['success']);
+            }
+            if (isset($_SESSION['error'])) {
+                echo "<div class='alert alert-danger'>" . $_SESSION['error'] . "</div>";
+                unset($_SESSION['error']);
+            }
+        ?>
         <div class="row">
             <div class="tabs-listing">
                 <nav>
@@ -26,11 +41,11 @@
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade" id="nav-sign-in" role="tabpanel" aria-labelledby="nav-sign-in-tab">
                         <div class="col-lg-8 offset-lg-2 mt-5">
-                            <p class="mb-0">Log-In With Email</p>
+                            <p class="mb-0">Log-In With Username</p>
                             <hr class="my-1">
-                            <form id="loginForm" class="form-group flex-wrap" method="POST" action="../backend/process_login.php">
+                            <form class="form-group flex-wrap" method="POST" action="../backend/process_login.php">
                                 <div class="form-input col-lg-12 my-4">
-                                    <input type="email" id="loginEmail" name="email" placeholder="Enter Email" class="form-control mb-3 p-4" required>
+                                    <input type="text" id="loginUsername" name="username" placeholder="Enter Username" class="form-control mb-3 p-4" required>
                                     <input type="password" id="loginPassword" name="password" placeholder="Enter Password" class="form-control mb-3 p-4" required>
                                     <label class="py-3 d-flex flex-wrap justify-content-between">
                                         <div id="passwordHelpBlock" class="form-text">
@@ -38,7 +53,7 @@
                                         </div>
                                     </label>
                                     <div class="d-grid my-3">
-                                        <button type="submit" class="btn btn-dark btn-lg rounded-1">Log In</button>
+                                        <button type="submit" name="Login" class="btn btn-dark btn-lg rounded-1">Log In</button>
                                     </div>
                                 </div>
                             </form>

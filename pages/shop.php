@@ -23,6 +23,29 @@
 ?>
   <div class="shopify-grid">
     <div class="container py-5 my-5">
+      <?php
+            if (isset($_SESSION['success'])) {
+                echo '<div class="alert alert-success">' . $_SESSION['success'] . '</div>';
+                unset($_SESSION['success']);
+            }
+            if (isset($_SESSION['error'])) {
+                echo '<div class="alert alert-danger">' . $_SESSION['error'] . '</div>';
+                unset($_SESSION['error']);
+            }
+            
+            if (isset($_GET['success'])) {
+                echo '<div class="alert alert-success">' . $_GET['success'] . '</div>';
+                unset($_GET['success']);
+                require_once '../classes/cart.class.php';
+                $objCart = new cart();
+                $objCart->setCid("Hassan123@D");
+                $objCart->revomeAll();
+
+
+            }
+           
+        
+        ?>
       <div class="row g-md-5 mb-5">
 
         <main class="col-md-12">
@@ -33,7 +56,7 @@
 
               require_once '../classes/customer.class.php';
               $objCustomer = new customer();
-              $objCustomer->setUsername("Yussuf488");
+              $objCustomer->setUsername($_SESSION['customer']);
               $customer = $objCustomer->getCustomerById();
 
               // $_SESSION['customer']=$objCustomer->getUsername();

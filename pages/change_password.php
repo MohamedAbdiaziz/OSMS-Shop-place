@@ -1,7 +1,7 @@
 <?php
-// session_start();
-$_SESSION['customer_id'] = "Yussuf488";
-if (!isset($_SESSION['customer_id'])) {
+include_once('../db/session.php');
+
+if (!isset($_SESSION['customer'])) {
     header("Location: login.php");  // Redirect to login if not logged in
     exit();
 }

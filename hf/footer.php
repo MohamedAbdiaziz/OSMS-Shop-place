@@ -211,7 +211,7 @@
         const stripe = Stripe('pk_test_51PMXeh08OHR1fd54PgSByK6jF9WIWJY3hOwuxqU5gVpTBRCNNjb2spzeRMCAuuEZOall4UILV5JLvENXkX9KgsUQ00xpPqhEUh');
 
         document.getElementById('checkout-button').addEventListener('click', async () => {
-          confirm("Are you Sure to Clear All Cart Items?");
+          // confirm("Are you Sure to Clear All Cart Items?");
             // const response = await fetch('../backend/create-checkout-session.php', {
             //     method: 'POST',
             //     headers: {
@@ -229,7 +229,7 @@
                 console.log(response);
                 const session = response;
                 console.log(session);
-confirm("Are you Sure to Clear All Cart Items?");
+// confirm("Are you Sure to Clear All Cart Items?");
                 stripe.redirectToCheckout({sessionId: session.id });
 
                 
@@ -237,7 +237,7 @@ confirm("Are you Sure to Clear All Cart Items?");
                 
                 // console.log(element.textContent);
             });
-            confirm("Are you Sure to Clear All Cart Items?")
+            // confirm("Are you Sure to Clear All Cart Items?")
         });
     </script>
 

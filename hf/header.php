@@ -1,6 +1,6 @@
 <?php
   include_once('../db/session.php');
-  unset($_SESSION['customer']);
+  
 ?>
 <?php
   $current_page = basename($_SERVER['PHP_SELF']);

@@ -1,4 +1,6 @@
-<?php include_once("../hf/header.php"); ?>
+<?php 
+include_once('../db/session.php');
+include_once("../hf/header.php"); ?>
 
 <?php
 require_once("../classes/workshop.class.php");

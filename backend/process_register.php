@@ -1,5 +1,5 @@
 <?php
-session_start();
+include_once('../db/session.php');
 require_once("../db/DbConnect.php");
 
 $name = $_POST['name'];
@@ -22,7 +22,7 @@ try {
     $db = new DbConnect();
     $dbConn = $db->connect();
 
-    $sql = "INSERT INTO tblcustomer (Name, Username, Email, Password, Mobile, Address) VALUES (:name, :username, :email, :password, :mobile, :address)";
+    $sql = "INSERT INTO tblcustomer (Name, Username, Email, Password, Mobile, Address, Status) VALUES (:name, :username, :email, :password, :mobile, :address,'Active')";
     $stmt = $dbConn->prepare($sql);
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':username', $username);
@@ -36,10 +36,19 @@ try {
         header("Location: ../pages/login.php");
     } else {
         $_SESSION['error'] = "Registration failed. Please try again.";
-        header("Location: ../pages/register.php");
+        header("Location: ../pages/login.php");
     }
 } catch (PDOException $e) {
-    $_SESSION['error'] = "Error: " . $e->getMessage();
-    header("Location: ../pages/register.php");
+    $errorMsg = $e->getMessage();
+    // Extract the relevant part of the error message
+    if (strpos($errorMsg, 'Duplicate entry') !== false) {
+        $start = strpos($errorMsg, 'Duplicate entry');
+        $errorMessage = substr($errorMsg, $start);
+    } else {
+        $errorMessage = "An error occurred. Please try again.";
+    }
+    $_SESSION['error'] = $errorMessage;
+    header("Location: ../pages/login.php");
+    exit();
 }
 ?>

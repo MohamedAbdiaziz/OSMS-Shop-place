@@ -1,4 +1,6 @@
-<?php include_once("../hf/header.php");
+<?php 
+include_once('../db/session.php');
+include_once("../hf/header.php");
 
 $customer = $objCustomer->getCustomerById();
 $cart = $objCart->GetCartSubtotalSum();

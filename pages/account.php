@@ -1,5 +1,8 @@
 <?php 
 // session_start();
+
+include_once('../db/session.php');
+
 include_once("../hf/header.php");
 require_once("../classes/customer.class.php");
 require_once("../classes/order.class.php");
@@ -74,6 +77,10 @@ $orders = $objOrder->getOrderById();
                                 <th>Change Password</th>
                                 <td><a href="./change_password.php" class="btn btn-info">Change</a></td>
                             </tr>
+                            <tr>
+                                
+                                <td colspan="2"><a href="./logout.php" class="btn btn-danger">Logout</a></td>
+                            </tr>
                         </table>
                     </div>
                 </div>
@@ -100,7 +107,7 @@ $orders = $objOrder->getOrderById();
                                     <td><?= $order['ID'] ?></td>
                                     <td><?= $order['Order_Date'] ?></td>
                                     <td><?= $order['Status'] ?></td>
-                                    <td>$<?= $order['Order_Date'] ?></td>
+                                    <td>$<?= $order['Total_Amount'] ?></td>
                                     <td><a href="../../osmsadmin/page/generate_invoice.php?order_id=<?= $order['ID'] ?>" class="btn btn-primary btn-sm">View</a></td>
                                 </tr>
                                 <?php endforeach; ?>

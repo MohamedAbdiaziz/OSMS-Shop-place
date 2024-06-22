@@ -1,4 +1,10 @@
-<?php include_once("../hf/header.php");?>
+<?php 
+include_once('../db/session.php');
+include_once("../hf/header.php");
+if (!isset($_SESSION['customer'])) {
+    echo "<script>window.location.href = 'login.php';</script>";
+    exit();
+}?>
 
 
   <section id="banner" class="py-3" style="background: #F9F3EC;">
@@ -33,10 +39,10 @@
             <tbody>
               <?php
 
-                
+                $cid = $_SESSION['customer'];
                 require_once '../classes/cart.class.php';
                 $objCartItem = new cart();
-                $objCartItem->setCid("Yussuf488");
+                $objCartItem->setCid($cid);
                 // $customer = $objCustomer->getCustomerById();
 
                 // $_SESSION['customer']=$objCustomer->getUsername();

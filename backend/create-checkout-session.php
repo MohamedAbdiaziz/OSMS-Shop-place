@@ -1,8 +1,14 @@
 <?php
+include_once('../db/session.php');
+
+ $cid = $_SESSION['customer'];
 require '../vendor/autoload.php';
 require_once '../classes/cart.class.php';
 require_once '../classes/transaction.class.php';
-
+if (!isset($_SESSION['customer'])) {
+    echo "<script>window.location.href = 'login.php';</script>";
+    exit();
+}
 \Stripe\Stripe::setApiKey('sk_test_51PMXeh08OHR1fd54KU9RT8xau5XfcvVcn4yqoc4aPjZBp0x7v9HxtzuG3556RjQW6NvjG0H8rcgfkQtF1mQ9UEpt002EeA0Cwl');
 
 error_reporting(E_ALL);
@@ -18,7 +24,7 @@ header('Content-Type: application/json');
 
 // Example customer ID
 $objCart = new Cart();
-$objCart->setCid("Yussuf488");
+$objCart->setCid($cid);
 try {
     // Retrieve cart items from the database
     $cartItems = $objCart->getCartItemsById();
@@ -47,7 +53,7 @@ try {
         'line_items' => $lineItems,
         'mode' => 'payment',
         'success_url' => 'http://localhost:8082/osm/pages/shop.php',
-        'cancel_url' => 'http://localhost:8082/osm/pages/cart.php',
+        'cancel_url' => 'http://localhost:8082/osm/pages/cart.php?error=failed to Make payment',
     ]);
 
     // Store the session ID in the database (you may want to store additional data)
@@ -59,7 +65,7 @@ try {
     // ]);
 
     $objtrans = new Transaction();
-    $objtrans->setCid("Yussuf488");
+    $objtrans->setCid($cid);
     $objtrans->setAmount(array_sum(array_column($cartItems, 'Subtotal')));
     $objtrans->setStripeSessionId($session->id);
 
