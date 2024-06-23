@@ -36,7 +36,7 @@ if (isset($_GET['id'])) {
             <?php if (!empty($products)): ?>
                 <?php foreach ($products as $product): ?>
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
+                        <div class="card h-100 shadow-sm border">
                             <img class="card-img-top" src="../images/Category/<?php echo $product['Image']; ?>" alt="<?php echo $product['ProductName']; ?>">
                             <div class="card-body">
                                 <h4 class="card-title">

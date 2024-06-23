@@ -90,7 +90,7 @@ include_once('../db/session.php');
 		            }
 		            // Check the new stock quantity
 				    $sqlCheck = "SELECT Quantity FROM tblstock WHERE Product = :productID;";
-				    $stmtCheck = $dbconn->prepare($sqlCheck);
+				    $stmtCheck = $this->dbconn->prepare($sqlCheck);
 				    $stmtCheck->bindParam(':productID', $item['ProductID']);
 				    $stmtCheck->execute();
 				    $result = $stmtCheck->fetch(PDO::FETCH_ASSOC);
@@ -98,7 +98,7 @@ include_once('../db/session.php');
 				    // If quantity is zero, delete from cartitems
 				    if ($result['Quantity'] == 0) {
 				        $sqlDelete = "DELETE FROM tblcartitem WHERE Product = :productID;";
-				        $stmtDelete = $dbconn->prepare($sqlDelete);
+				        $stmtDelete = $this->dbconn->prepare($sqlDelete);
 				        $stmtDelete->bindParam(':productID', $item['ProductID']);
 				        $stmtDelete->execute();
 				    }
@@ -117,29 +117,45 @@ include_once('../db/session.php');
 		    }
 		}
 
-		public function UpdateTransaction(){
-			$sql = "UPDATE transactions SET status = 'completed' WHERE stripe_session_id = :stripe_session_id";
-        	$stmt = $this->dbconn->prepare($sql);
-        	$stmt->bindParam(':stripe_session_id', $this->stripe_session_id);
+		public function updateTransaction()
+		{
+		    try {
+		        // Fetch customer ID based on stripe session ID
+		        $sql = "SELECT customer_id FROM transactions WHERE stripe_session_id = :stripe_session_id";
+		        $stmt = $this->dbconn->prepare($sql);
+		        $stmt->bindParam(':stripe_session_id', $this->stripe_session_id);
+		        $stmt->execute();
+		        $transaction = $stmt->fetch(PDO::FETCH_ASSOC);
+		        
+		        if (!$transaction) {
+		            throw new Exception('Transaction not found.');
+		        }
 
-        	
-        	try{
-	        	if($stmt->execute()){
-	        		require_once('./cart.class.php');
-	        		$objCart = new Cart();
-	        		$objCart->setCid($this->customer_id);
-	        		if($objCart->clearAllandUpdateStock()){
-	        			return true;
-	        		}
-	            	return false;
-	            }
-	            else{
-	               return false;
-	            }
-        	}catch(Exception $e){
-	        	echo $e->getMessage();
-	        } 
+		        $cid = $transaction['customer_id'];
+
+		        // Update transaction status
+		        $sql = "UPDATE transactions SET status = 'completed' WHERE stripe_session_id = :stripe_session_id";
+		        $stmt = $this->dbconn->prepare($sql);
+		        $stmt->bindParam(':stripe_session_id', $this->stripe_session_id);
+
+		        if ($stmt->execute()) {
+		             $sql = "DELETE FROM tblcartitem where Customer = :customerID";
+			        $stmt = $this->dbconn->prepare($sql);
+			        $stmt->bindParam(':customerID', $cid);
+			        
+			        
+			        if(!$stmt->execute()){
+			            throw new Exception("Failed to insert into tblorders");
+			        }
+		        } else {
+		            throw new Exception('Failed to update transaction status.');
+		        }
+		    } catch (Exception $e) {
+		        error_log($e->getMessage());
+		        return false;
+		    }
 		}
+
 		public function TransSession()
 		{
 			$sql = "DELETE FROM transactions WHERE stripe_session_id = :stripe_session_id";

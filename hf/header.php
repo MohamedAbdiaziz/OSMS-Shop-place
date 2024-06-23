@@ -246,34 +246,45 @@
         <div class="d-flex d-lg-none align-items-end mt-3">
           <ul class="d-flex justify-content-end list-unstyled m-0">
             <li>
-              <a href="account.html" class="mx-3">
-                <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
-              </a>
-            </li>
-            <li>
-              <a href="wishlist.html" class="mx-3">
-                <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>
-              </a>
-            </li>
+                  <?php  if(!isset($_SESSION['customer'])){?>
 
-            <li>
-              
-              <a href="#" class="mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                aria-controls="offcanvasCart">
-                <iconify-icon icon="mdi:cart" class="fs-4 position-relative"></iconify-icon>
-                <span class="position-absolute translate-middle badge rounded-circle bg-primary pt-2">
-                  03
-                </span>
-              </a>
-            </li>
+                  <a href="login.php" class="mx-3">
+                    <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
+                  </a>
+                <?php }else{?>
+                  <a href="account.php" class="mx-3">
+                    <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
+                  </a>
+                <?php } ?>
+                </li>
+                <!-- <li>
+                  <a href="wishlist.html" class="mx-3">
+                    <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>
+                  </a>
+                </li> -->
+                <?php if(isset($_SESSION['customer'])){?>
 
-            <li>
-              <a href="#" class="mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"
-                aria-controls="offcanvasSearch">
-                <iconify-icon icon="tabler:search" class="fs-4"></iconify-icon>
-                </span>
-              </a>
-            </li>
+                <li class="">
+                  <?php
+                    require_once '../classes/customer.class.php';
+                      $objCustomer = new customer();
+                      $objCustomer->setUsername($_SESSION['customer']);
+                      // $_SESSION['customer']=$objCustomer->getUsername();
+
+                      require_once '../classes/cart.class.php';
+                      $objCart = new cart();
+                      $objCart->setCid($_SESSION['customer']);
+                      $cartItems = $objCart->getAllCartItems();
+
+                  ?>
+                  <a href="cart.php" class="mx-3">
+                    <iconify-icon icon="mdi:cart" class="fs-4 position-relative"></iconify-icon>
+                    <span id="itemCount" class="position-absolute translate-middle badge rounded-circle bg-primary pt-2">
+                      <?php echo count($cartItems); ?>
+                    </span>
+                  </a>
+                </li>
+              <?php } ?>
           </ul>
 
         </div>

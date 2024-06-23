@@ -28,7 +28,7 @@ $categories = $objcategories->getCategories();
             <?php if (!empty($categories)): ?>
                 <?php foreach ($categories as $category): ?>
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
+                        <div class="card h-100 shadow-sm border">
                             <img src="../images/Category/<?php echo htmlspecialchars($category['Image']); ?>" class="card-img-top" alt="<?php echo htmlspecialchars($category['name']); ?>">
                             <div class="card-body">
                                 <h4 class="card-title">

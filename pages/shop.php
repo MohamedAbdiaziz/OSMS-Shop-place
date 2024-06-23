@@ -66,11 +66,11 @@
               $products = $objProducts->getAllProducts();
               foreach ($products as $key => $product) {                          
             ?>
-              <div class="col-md-4 my-4">
+              <div class="col-md-3 my-3">
                 <!-- <div class="z-1 position-absolute rounded-3 m-3 px-3 border border-dark-subtle">
                   New
                 </div> -->
-                <div class="card position-relative">
+                <div class="card position-relative shadow-sm border">
                   <a href="single-product.php?id=<?= $product['ID'];?>"><img src="../images/Category/<?= $product['Image'];?>" class="img-fluid rounded-4" alt="image"></a>
                   <div class="card-body p-0">
                     <a href="single-product.php?id=<?= $product['ID'];?>">
@@ -95,9 +95,9 @@
                           <button id="cartBtn_<?= $product['ID'];?>" role="button" class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?= $product['ID'];?>,this.id);" <?php echo $disabled;?>>
                             <h5 class="text-uppercase m-0" >Add to Cart</h5>
                           </button>
-                          <a href="#" class="btn-wishlist px-4 pt-3 ">
+                          <!-- <a href="#" class="btn-wishlist px-4 pt-3 ">
                             <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
-                          </a>
+                          </a> -->
                         </div>
                       <?php } ?>
                     </div>

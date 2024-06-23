@@ -94,7 +94,7 @@ require_once("../classes/workshop.class.php");?>
             <?php foreach ($categoryProducts as $categoryID => $products) { ?>
                 <?php foreach ($products as $product) { ?>
                     <div class="item cat-<?php echo $categoryID; ?> col-md-4 col-lg-3 my-4">
-                        <div class="card position-relative">
+                        <div class="card position-relative shadow-sm border">
                             <a href="single-product.php?id=<?php echo $product['ID']; ?>">
                                 <img src="../images/Category/<?php echo $product['Image']; ?>" class="img-fluid rounded-4" alt="<?php echo $product['ProductName']; ?>">
                             </a>
@@ -126,9 +126,9 @@ require_once("../classes/workshop.class.php");?>
                                           <button id="cartBtn_<?= $product['ID'];?>" role="button" class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?= $product['ID'];?>,this.id);" <?php echo $disabled;?>>
                                             <h5 class="text-uppercase m-0" >Add to Cart</h5>
                                           </button>
-                                          <a href="#" class="btn-wishlist px-4 pt-3 ">
+                                          <!-- <a href="#" class="btn-wishlist px-4 pt-3 ">
                                             <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
-                                          </a>
+                                          </a> -->
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -165,7 +165,7 @@ require_once("../classes/workshop.class.php");?>
 
                 <?php foreach ($bestSellingProducts as $product): ?>
                     <div class="swiper-slide">
-                        <div class="card position-relative">
+                        <div class="card position-relative shadow-sm border ">
                             <a href="single-product.php?id=<?php echo $product['ID']; ?>">
                                 <img src="../images/Category/<?php echo $product['Image']; ?>" class="img-fluid rounded-4" alt="image">
                             </a>
@@ -189,9 +189,9 @@ require_once("../classes/workshop.class.php");?>
                                           <button id="cartBtn_<?= $product['ID'];?>" role="button" class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?= $product['ID'];?>,this.id);" <?php echo $disabled;?>>
                                             <h5 class="text-uppercase m-0" >Add to Cart</h5>
                                           </button>
-                                          <a href="#" class="btn-wishlist px-4 pt-3 ">
+                                          <!-- <a href="#" class="btn-wishlist px-4 pt-3 ">
                                             <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
-                                          </a>
+                                          </a> -->
                                         </div>
                                     <?php }?>
 

@@ -10100,3 +10100,6500 @@ ated
 2024-06-22 22:27:27 - Session customer ID: Not set
 2024-06-22 22:27:31 - Webhook event type: charge.updated
 2024-06-22 22:27:31 - Received unknown event type: charge.updated
+2024-06-23 20:48:58 - Received webhook with payload: {
+  "id": "evt_3PUvT108OHR1fd541Vs2o5kK",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719168529,
+  "data": {
+    "object": {
+      "id": "pi_3PUvT108OHR1fd541C35Watp",
+      "object": "payment_intent",
+      "amount": 32800,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 32800,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUvT108OHR1fd541C35Watp_secret_J8slbhlRGSY9jLMECnESUw1zh",
+      "confirmation_method": "automatic",
+      "created": 1719168527,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUvT108OHR1fd541jA4qUp2",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUvSx08OHR1fd54CshMfI0L",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_xcIloL94vjfwbR",
+    "idempotency_key": "ec8f3f22-bce0-492c-aea3-d935dd858b39"
+  },
+  "type": "payment_intent.succeeded"
+}
+       "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "39yaCvojB22Q9qP3",
+          "funding": "credit",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 32800,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KJHc4bMGMgY7dCW6ZGs6LBZL0CV-t7_iO2j9S5ilGQ3b0fZxoalw4bG1tE-ScDqbx13zt05rDaQo_N6N",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_xcIloL94vjfwbR",
+    "idempotency_key": "ec8f3f22-bce0-492c-aea3-d935dd858b39"
+  },
+  "type": "charge.succeeded"
+}
+2024-06-23 20:48:58 - Session customer ID: Not set
+2024-06-23 20:48:58 - Session customer ID: Not set
+2024-06-23 20:48:58 - Received webhook with payload: {
+  "id": "evt_3PUvT108OHR1fd541IOrLJV5",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719168531,
+  "data": {
+    "object": {
+      "id": "ch_3PUvT108OHR1fd541jA4qUp2",
+      "object": "charge",
+      "amount": 32800,
+      "amount_captured": 32800,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3PUvT108OHR1fd541akDRKl1",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Hassan Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719168528,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 6,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUvT108OHR1fd541C35Watp",
+      "payment_method": "pm_1PUvSx08OHR1fd54CshMfI0L",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 32800,
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "39yaCvojB22Q9qP3",
+          "funding": "credit",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 32800,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KJPc4bMGMgaUzfpDi-46LBaugouZ2RowTEn5SjsaMgrqPqzvdkCIP2iMplVDk77eXUocAATNDs1Ax8KV",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "previous_attributes": {
+      "balance_transaction": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KJPc4bMGMgYR2-iOIlQ6LBbyEvjNg_wVzYIDBPy2FLzp7V0FZ6buXpohAhEVUrrH-qug_fc6NWOvmKgg"
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "charge.updated"
+}
+2024-06-23 20:48:58 - Session customer ID: Not set
+2024-06-23 20:48:58 - Received webhook with payload: {
+  "id": "evt_3PUvT108OHR1fd541RSFlklW",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719168527,
+  "data": {
+    "object": {
+      "id": "pi_3PUvT108OHR1fd541C35Watp",
+      "object": "payment_intent",
+      "amount": 32800,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUvT108OHR1fd541C35Watp_secret_J8slbhlRGSY9jLMECnESUw1zh",
+      "confirmation_method": "automatic",
+      "created": 1719168527,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_xcIloL94vjfwbR",
+    "idempotency_key": "ec8f3f22-bce0-492c-aea3-d935dd858b39"
+  },
+  "type": "payment_intent.created"
+}
+2024-06-23 20:48:58 - Session customer ID: Not set
+2024-06-23 20:49:11 - Webhook event type: payment_intent.succeeded
+2024-06-23 20:49:11 - Webhook event type: charge.updated
+_intent.succeeded
+2024-06-23 20:49:11 - Received unknown event type: payment_intent.created
+2024-06-23 20:49:11 - Received unknown event type: charge.updated
+2024-06-23 20:49:11 - Webhook event type: checkout.session.completed
+2024-06-23 20:49:11 - Handling checkout.session.completed for session: cs_test_b1WVxiCYezKMb9TM7tZvhQIAr0k92PR4mA9aNrhN3NzBOInD7cjsCMZ4h3
+2024-06-23 20:49:11 - Webhook event type: charge.succeeded
+2024-06-23 20:49:11 - Received unknown event type: charge.succeeded
+2024-06-23 21:32:41 - Received webhook with payload: {
+  "id": "evt_1PUw9U08OHR1fd54Tlf9OYfy",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719171160,
+  "data": {
+    "object": {
+      "id": "cs_test_a1S7Dp1TSvoofMYXCz4TPPohjCysGetvOImmt0bv5Sv3wdJPMLKIvugHo5",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 450,
+      "amount_total": 450,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719084759,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": null,
+      "customer_email": null,
+      "expires_at": 1719171159,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": null,
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "unpaid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "expired",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php?success=Payment success",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.expired"
+}
+2024-06-23 21:32:41 - Session customer ID: Not set
+2024-06-23 21:32:44 - Webhook event type: checkout.session.expired
+2024-06-23 21:32:44 - Handling checkout.session.expired for session: cs_test_a1S7Dp1TSvoofMYXCz4TPPohjCysGetvOImmt0bv5Sv3wdJPMLKIvugHo5
+2024-06-23 21:32:44 - Transaction session handled for expired session: cs_test_a1S7Dp1TSvoofMYXCz4TPPohjCysGetvOImmt0bv5Sv3wdJPMLKIvugHo5
+2024-06-23 22:06:02 - Received webhook with payload: {
+  "id": "evt_1PUwfl08OHR1fd54E5p6PAS1",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719173161,
+  "data": {
+    "object": {
+      "id": "cs_test_b1qOIBb4dwgKj0cJzO6Pje5H0C9CcRAlFjGdSJc0OHM7xcVwKCp5q2EIRj",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 533,
+      "amount_total": 533,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719086753,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": null,
+      "customer_email": null,
+      "expires_at": 1719173153,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": null,
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "unpaid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "expired",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.expired"
+}
+2024-06-23 22:06:02 - Session customer ID: Not set
+2024-06-23 22:06:02 - Webhook event type: checkout.session.expired
+2024-06-23 22:06:02 - Handling checkout.session.expired for session: cs_test_b1qOIBb4dwgKj0cJzO6Pje5H0C9CcRAlFjGdSJc0OHM7xcVwKCp5q2EIRj
+2024-06-23 22:06:02 - Transaction session handled for expired session: cs_test_b1qOIBb4dwgKj0cJzO6Pje5H0C9CcRAlFjGdSJc0OHM7xcVwKCp5q2EIRj
+2024-06-23 22:21:25 - Received webhook with payload: {
+  "id": "evt_1PUwue08OHR1fd54pRCq1lH1",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174084,
+  "data": {
+    "object": {
+      "id": "cs_test_b1JGdc3RGzyhppj5ukmswoeQfa9wRdP49sG6f2GjtimkufDjUTNpJBlvt5",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 26900,
+      "amount_total": 26900,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719173447,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Hassan Abdiaziz",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1719259847,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3PUwud08OHR1fd540QvKUNHg",
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2024-06-23 22:21:25 - Session customer ID: Not set
+2024-06-23 22:21:25 - Webhook event type: checkout.session.completed
+2024-06-23 22:21:25 - Handling checkout.session.completed for session: cs_test_b1JGdc3RGzyhppj5ukmswoeQfa9wRdP49sG6f2GjtimkufDjUTNpJBlvt5
+2024-06-23 22:21:25 - Received webhook with payload: {
+  "id": "evt_3PUwud08OHR1fd540nzq9Y1A",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174083,
+  "data": {
+    "object": {
+      "id": "pi_3PUwud08OHR1fd540QvKUNHg",
+      "object": "payment_intent",
+      "amount": 26900,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUwud08OHR1fd540QvKUNHg_secret_Um06sb7VNxhDRxZkFgDSLYPVD",
+      "confirmation_method": "automatic",
+      "created": 1719174083,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_HwWWJEUrvcIk8z",
+    "idempotency_key": "5de1083c-c84f-499c-9f00-575519f244ab"
+  },
+  "type": "payment_intent.created"
+}
+2024-06-23 22:21:25 - Session customer ID: Not set
+2024-06-23 22:21:25 - Webhook event type: payment_intent.created
+2024-06-23 22:21:25 - Received unknown event type: payment_intent.created
+2024-06-23 22:21:25 - Received webhook with payload: {
+  "id": "evt_3PUwud08OHR1fd540VQG4OxY",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174083,
+  "data": {
+    "object": {
+      "id": "pi_3PUwud08OHR1fd540QvKUNHg",
+      "object": "payment_intent",
+      "amount": 26900,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 26900,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUwud08OHR1fd540QvKUNHg_secret_Um06sb7VNxhDRxZkFgDSLYPVD",
+      "confirmation_method": "automatic",
+      "created": 1719174083,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUwud08OHR1fd540Bt7pc66",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUwuQ08OHR1fd54OZ6cdgNa",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_HwWWJEUrvcIk8z",
+    "idempotency_key": "5de1083c-c84f-499c-9f00-575519f244ab"
+  },
+  "type": "payment_intent.succeeded"
+}
+2024-06-23 22:21:25 - Session customer ID: Not set
+2024-06-23 22:21:25 - Webhook event type: payment_intent.succeeded
+2024-06-23 22:21:25 - Received unknown event type: payment_intent.succeeded
+2024-06-23 22:21:25 - Received webhook with payload: {
+  "id": "evt_3PUwud08OHR1fd540FkO7AkX",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174083,
+  "data": {
+    "object": {
+      "id": "ch_3PUwud08OHR1fd540Bt7pc66",
+      "object": "charge",
+      "amount": 26900,
+      "amount_captured": 26900,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": null,
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Hassan Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719174083,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 59,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUwud08OHR1fd540QvKUNHg",
+      "payment_method": "pm_1PUwuQ08OHR1fd54OZ6cdgNa",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 26900,
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "39yaCvojB22Q9qP3",
+          "funding": "credit",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 26900,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KMSH4rMGMgYJwyL6eiM6LBZEiNk-dvuQt6UBFaMZzdPlfGWT8U4sHhCH5Q285Wm1iRb7HEKZmeDzqUMH",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_HwWWJEUrvcIk8z",
+    "idempotency_key": "5de1083c-c84f-499c-9f00-575519f244ab"
+  },
+  "type": "charge.succeeded"
+}
+2024-06-23 22:21:25 - Session customer ID: Not set
+2024-06-23 22:21:25 - Webhook event type: charge.succeeded
+2024-06-23 22:21:25 - Received unknown event type: charge.succeeded
+2024-06-23 22:21:27 - Received webhook with payload: {
+  "id": "evt_3PUwud08OHR1fd540QropKPd",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174086,
+  "data": {
+    "object": {
+      "id": "ch_3PUwud08OHR1fd540Bt7pc66",
+      "object": "charge",
+      "amount": 26900,
+      "amount_captured": 26900,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3PUwud08OHR1fd540DTSedSK",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Hassan Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719174083,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 59,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUwud08OHR1fd540QvKUNHg",
+      "payment_method": "pm_1PUwuQ08OHR1fd54OZ6cdgNa",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 26900,
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "39yaCvojB22Q9qP3",
+          "funding": "credit",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 26900,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KMaH4rMGMgY2ryj3pkY6LBaaMXagMf44B01VbIqE0ZEhwSgzluY92_yitkwYM7QOqKZQ67DYTHlyxe0q",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "previous_attributes": {
+      "balance_transaction": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KMaH4rMGMgZj-OeBZ1I6LBY35pDQtHaCYo8oNZp840TpZ0Dzc7fz69T7ta8sCzUv80oszjutpKn70LJl"
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "charge.updated"
+}
+2024-06-23 22:21:27 - Session customer ID: Not set
+2024-06-23 22:21:27 - Webhook event type: charge.updated
+2024-06-23 22:21:27 - Received unknown event type: charge.updated
+2024-06-23 22:25:51 - Received webhook with payload: {
+  "id": "evt_3PUwyv08OHR1fd5403Tsjqj3",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174350,
+  "data": {
+    "object": {
+      "id": "ch_3PUwyv08OHR1fd540w92ds8G",
+      "object": "charge",
+      "amount": 20200,
+      "amount_captured": 20200,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": null,
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719174350,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 45,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUwyv08OHR1fd540321V1xh",
+      "payment_method": "pm_1PUwys08OHR1fd54YTSRZeHA",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 20200,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 20200,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KM-J4rMGMgagibRrEiA6LBZuxmDYV8L1Z3vf1b6NNybM9F-9Saz0u2_LfUCRgf0JLiaW6hQdqZamFhV9",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_pmc0MBlekMRPUf",
+    "idempotency_key": "89033045-a973-4eca-b193-81496416bebd"
+  },
+  "type": "charge.succeeded"
+}
+2024-06-23 22:25:51 - Session customer ID: Not set
+2024-06-23 22:25:51 - Webhook event type: charge.succeeded
+2024-06-23 22:25:51 - Received unknown event type: charge.succeeded
+2024-06-23 22:25:51 - Received webhook with payload: {
+  "id": "evt_3PUwyv08OHR1fd540RMmEo7v",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174349,
+  "data": {
+    "object": {
+      "id": "pi_3PUwyv08OHR1fd540321V1xh",
+      "object": "payment_intent",
+      "amount": 20200,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUwyv08OHR1fd540321V1xh_secret_UlAS2db6MBHJrmz4mCukJAgbp",
+      "confirmation_method": "automatic",
+      "created": 1719174349,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_pmc0MBlekMRPUf",
+    "idempotency_key": "89033045-a973-4eca-b193-81496416bebd"
+  },
+  "type": "payment_intent.created"
+}
+2024-06-23 22:25:51 - Session customer ID: Not set
+2024-06-23 22:25:52 - Webhook event type: payment_intent.created
+2024-06-23 22:25:52 - Received unknown event type: payment_intent.created
+2024-06-23 22:25:52 - Received webhook with payload: {
+  "id": "evt_3PUwyv08OHR1fd540dP44nz6",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174350,
+  "data": {
+    "object": {
+      "id": "pi_3PUwyv08OHR1fd540321V1xh",
+      "object": "payment_intent",
+      "amount": 20200,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 20200,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUwyv08OHR1fd540321V1xh_secret_UlAS2db6MBHJrmz4mCukJAgbp",
+      "confirmation_method": "automatic",
+      "created": 1719174349,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUwyv08OHR1fd540w92ds8G",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUwys08OHR1fd54YTSRZeHA",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_pmc0MBlekMRPUf",
+    "idempotency_key": "89033045-a973-4eca-b193-81496416bebd"
+  },
+  "type": "payment_intent.succeeded"
+}
+2024-06-23 22:25:52 - Session customer ID: Not set
+2024-06-23 22:25:52 - Webhook event type: payment_intent.succeeded
+2024-06-23 22:25:52 - Received unknown event type: payment_intent.succeeded
+2024-06-23 22:25:54 - Received webhook with payload: {
+  "id": "evt_3PUwyv08OHR1fd540E8UbyU7",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174353,
+  "data": {
+    "object": {
+      "id": "ch_3PUwyv08OHR1fd540w92ds8G",
+      "object": "charge",
+      "amount": 20200,
+      "amount_captured": 20200,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3PUwyv08OHR1fd540dBSS4hp",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719174350,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 45,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUwyv08OHR1fd540321V1xh",
+      "payment_method": "pm_1PUwys08OHR1fd54YTSRZeHA",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 20200,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 20200,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KNGJ4rMGMgahlOnSTFM6LBYirIsSK9JsHY0kYf97jUcFDYTfeKOUw4bKAzO3pcFT0bR4mQwRlWjMNhwD",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "previous_attributes": {
+      "balance_transaction": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KNGJ4rMGMgZ-gU5Ue6E6LBY2NKcjbuvvaSw_tuXLlKjgZEknSDGcj_PusDJs_LWRfeHeonLx9CBhXiVY"
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "charge.updated"
+}
+2024-06-23 22:25:54 - Session customer ID: Not set
+2024-06-23 22:25:54 - Webhook event type: charge.updated
+2024-06-23 22:25:54 - Received unknown event type: charge.updated
+2024-06-23 22:25:59 - Received webhook with payload: {
+  "id": "evt_1PUwz508OHR1fd54owzNVgpO",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174357,
+  "data": {
+    "object": {
+      "id": "cs_test_b17wvIWAOlHFvvUHZY9TJLZL9PqXsdXScyouP4lJjproXtpSAVs34hpKkh",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 20200,
+      "amount_total": 20200,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719174276,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1719260675,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3PUwyv08OHR1fd540321V1xh",
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2024-06-23 22:25:59 - Session customer ID: Not set
+2024-06-23 22:25:59 - Webhook event type: checkout.session.completed
+2024-06-23 22:25:59 - Handling checkout.session.completed for session: cs_test_b17wvIWAOlHFvvUHZY9TJLZL9PqXsdXScyouP4lJjproXtpSAVs34hpKkh
+2024-06-23 22:35:28 - Received webhook with payload: {
+  "id": "evt_3PUx8E08OHR1fd541ddmYRNv",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174926,
+  "data": {
+    "object": {
+      "id": "pi_3PUx8E08OHR1fd541ilTOaUH",
+      "object": "payment_intent",
+      "amount": 15700,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUx8E08OHR1fd541ilTOaUH_secret_Oczo0dTCGzmJvSD8apaYmax74",
+      "confirmation_method": "automatic",
+      "created": 1719174926,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_vVHUHlYw9WwSSZ",
+    "idempotency_key": "46523ddf-1616-4aa5-ae5f-274c64403cec"
+  },
+  "type": "payment_intent.created"
+}
+2024-06-23 22:35:28 - Received webhook with payload: {
+  "id": "evt_1PUx8G08OHR1fd54QUVW7XXV",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174928,
+  "data": {
+    "object": {
+      "id": "cs_test_b1zlMO759u8fI3XwtZWoe6ZZPSLFv1xl0QtiObOBwJpONSWpxEJpGSR5ur",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 15700,
+      "amount_total": 15700,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719174688,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1719261088,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3PUx8E08OHR1fd541ilTOaUH",
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2024-06-23 22:35:28 - Session customer ID: Not set
+2024-06-23 22:35:28 - Session customer ID: Not set
+2024-06-23 22:35:29 - Received webhook with payload: {
+  "id": "evt_3PUx8E08OHR1fd5413gZQ1Ll",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174928,
+  "data": {
+    "object": {
+      "id": "pi_3PUx8E08OHR1fd541ilTOaUH",
+      "object": "payment_intent",
+      "amount": 15700,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 15700,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUx8E08OHR1fd541ilTOaUH_secret_Oczo0dTCGzmJvSD8apaYmax74",
+      "confirmation_method": "automatic",
+      "created": 1719174926,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUx8E08OHR1fd541hcIR73o",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUx8B08OHR1fd54xJHs0ld4",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_vVHUHlYw9WwSSZ",
+    "idempotency_key": "46523ddf-1616-4aa5-ae5f-274c64403cec"
+  },
+  "type": "payment_intent.succeeded"
+}
+2024-06-23 22:35:29 - Session customer ID: Not set
+2024-06-23 22:35:29 - Received webhook with payload: {
+  "id": "evt_3PUx8E08OHR1fd54190QGDKV",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174927,
+  "data": {
+    "object": {
+      "id": "ch_3PUx8E08OHR1fd541hcIR73o",
+      "object": "charge",
+      "amount": 15700,
+      "amount_captured": 15700,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": null,
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719174927,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 28,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUx8E08OHR1fd541ilTOaUH",
+      "payment_method": "pm_1PUx8B08OHR1fd54xJHs0ld4",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 15700,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 15700,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KJCO4rMGMgZeaCloWoo6LBae6Ug9kir2ScgMPnCc1z5c7Mq_VAG8MiXn-H6Ow_PENtyUvTNiRJL1eo5t",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_vVHUHlYw9WwSSZ",
+    "idempotency_key": "46523ddf-1616-4aa5-ae5f-274c64403cec"
+  },
+  "type": "charge.succeeded"
+}
+2024-06-23 22:35:29 - Session customer ID: Not set
+2024-06-23 22:35:31 - Webhook event type: payment_intent.created
+2024-06-23 22:35:31 - Received unknown event type: payment_intent.created
+2024-06-23 22:35:31 - Webhook event type: checkout.session.completed
+2024-06-23 22:35:31 - Received unknown event type: charge.succeeded
+2024-06-23 22:35:31 - Handling checkout.session.completed for session: cs_test_b1zlMO759u8fI3XwtZWoe6ZZPSLFv1xl0QtiObOBwJpONSWpxEJpGSR5ur
+2024-06-23 22:35:31 - Webhook event type: payment_intent.succeeded
+2024-06-23 22:35:31 - Received unknown event type: payment_intent.succeeded
+2024-06-23 22:35:35 - Received webhook with payload: {
+  "id": "evt_3PUx8E08OHR1fd541qudxWX8",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719174930,
+  "data": {
+    "object": {
+      "id": "ch_3PUx8E08OHR1fd541hcIR73o",
+      "object": "charge",
+      "amount": 15700,
+      "amount_captured": 15700,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3PUx8E08OHR1fd541bflwyQt",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719174927,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 28,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUx8E08OHR1fd541ilTOaUH",
+      "payment_method": "pm_1PUx8B08OHR1fd54xJHs0ld4",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 15700,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 15700,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KJKO4rMGMgbyOk44L2o6LBb2CIIUeLWEb41IJP4TjZB1ItcECUhoJH2M-kG4Kiy-dL8ftGcj2lnFmXyN",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "previous_attributes": {
+      "balance_transaction": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KJKO4rMGMgZZNMj7vTI6LBa7jQLM8xQoOSBJQAH7qh0T_pze5NJxNbwe5ZYZPqbs48JARyOIc78bOmE0"
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "charge.updated"
+}
+2024-06-23 22:35:35 - Session customer ID: Not set
+2024-06-23 22:35:44 - Webhook event type: charge.updated
+2024-06-23 22:35:44 - Received unknown event type: charge.updated
+2024-06-23 22:43:44 - Received webhook with payload: {
+  "id": "evt_3PUxGE08OHR1fd541KTrC9C2",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175423,
+  "data": {
+    "object": {
+      "id": "pi_3PUxGE08OHR1fd541peS4GJv",
+      "object": "payment_intent",
+      "amount": 49500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 49500,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUxGE08OHR1fd541peS4GJv_secret_hpVDHMGP9PR3C969Ba7Q3wVcc",
+      "confirmation_method": "automatic",
+      "created": 1719175422,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUxGE08OHR1fd541gRmJ7Bd",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUxGB08OHR1fd54nH7DKVrt",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_mvNMkWkhxz3iYV",
+    "idempotency_key": "be8da676-a0e2-4672-b9cd-0af4a125d3e3"
+  },
+  "type": "payment_intent.succeeded"
+}
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3PUxGE08OHR1fd541peS4GJv",
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2024-06-23 22:43:44 - Session customer ID: Not set
+2024-06-23 22:43:44 - Session customer ID: Not set
+2024-06-23 22:43:45 - Received webhook with payload: {
+  "id": "evt_3PUxGE08OHR1fd541FVzYoFM",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175423,
+  "data": {
+    "object": {
+      "id": "ch_3PUxGE08OHR1fd541gRmJ7Bd",
+      "object": "charge",
+      "amount": 49500,
+      "amount_captured": 49500,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": null,
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719175423,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 64,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUxGE08OHR1fd541peS4GJv",
+      "payment_method": "pm_1PUxGB08OHR1fd54nH7DKVrt",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 49500,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 49500,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KICS4rMGMgZlis7Udn46LBYSQFQ-jOHzYk5W5Fv1D0my__4b0kvN3_3jja1DWjSWh5tMO2clhXWCzzSi",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_mvNMkWkhxz3iYV",
+    "idempotency_key": "be8da676-a0e2-4672-b9cd-0af4a125d3e3"
+  },
+  "type": "charge.succeeded"
+}
+2024-06-23 22:43:45 - Session customer ID: Not set
+2024-06-23 22:43:45 - Webhook event type: payment_intent.succeeded
+2024-06-23 22:43:45 - Received unknown event type: payment_intent.succeeded
+2024-06-23 22:43:45 - Webhook event type: charge.succeeded
+2024-06-23 22:43:45 - Handling checkout.session.completed for session: cs_test_a1imEZz8ojLLkuXToMSdnBi8Xur5St7ujSgHvvpX0jUMMuw4jvKUNsoQUZ
+2024-06-23 22:43:45 - Received unknown event type: charge.succeeded
+2024-06-23 22:43:45 - Transaction updated and cart cleared for session: cs_test_a1imEZz8ojLLkuXToMSdnBi8Xur5St7ujSgHvvpX0jUMMuw4jvKUNsoQUZ
+2024-06-23 22:43:45 - Received webhook with payload: {
+  "id": "evt_3PUxGE08OHR1fd541uLxx2AG",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175422,
+  "data": {
+    "object": {
+      "id": "pi_3PUxGE08OHR1fd541peS4GJv",
+      "object": "payment_intent",
+      "amount": 49500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUxGE08OHR1fd541peS4GJv_secret_hpVDHMGP9PR3C969Ba7Q3wVcc",
+      "confirmation_method": "automatic",
+      "created": 1719175422,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_mvNMkWkhxz3iYV",
+    "idempotency_key": "be8da676-a0e2-4672-b9cd-0af4a125d3e3"
+  },
+  "type": "payment_intent.created"
+}
+2024-06-23 22:43:45 - Session customer ID: Not set
+2024-06-23 22:43:46 - Webhook event type: payment_intent.created
+2024-06-23 22:43:46 - Received unknown event type: payment_intent.created
+2024-06-23 22:43:47 - Received webhook with payload: {
+  "id": "evt_3PUxGE08OHR1fd541kjoTlnX",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175426,
+  "data": {
+    "object": {
+      "id": "ch_3PUxGE08OHR1fd541gRmJ7Bd",
+      "object": "charge",
+      "amount": 49500,
+      "amount_captured": 49500,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3PUxGE08OHR1fd541N2tBiu2",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719175423,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 64,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUxGE08OHR1fd541peS4GJv",
+      "payment_method": "pm_1PUxGB08OHR1fd54nH7DKVrt",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 49500,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 49500,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KIKS4rMGMgbWgFGglOs6LBbL3qclyC02M9rPiXJf-e73jxi-nC1BVhQJta64EiLsBtDXk8oyB5SU4I4F",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "previous_attributes": {
+      "balance_transaction": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KIKS4rMGMgZLD7ylubU6LBZkY3DUbw2NV9RcLxrGUUpuALdeVX2KxWs2nhDJyBPH9NzUFifmKnvkHuHy"
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "charge.updated"
+}
+2024-06-23 22:43:47 - Session customer ID: Not set
+2024-06-23 22:43:47 - Webhook event type: charge.updated
+2024-06-23 22:43:47 - Received unknown event type: charge.updated
+2024-06-23 22:47:30 - Received webhook with payload: {
+  "id": "evt_3PUxJr08OHR1fd541Qof5UvY",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175647,
+  "data": {
+    "object": {
+      "id": "pi_3PUxJr08OHR1fd541LiAJbc5",
+      "object": "payment_intent",
+      "amount": 36000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUxJr08OHR1fd541LiAJbc5_secret_hoXat4xUlThqqJt1DcoueH6EV",
+      "confirmation_method": "automatic",
+      "created": 1719175647,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_JQc0HSgP9RYNc2",
+    "idempotency_key": "921a8a1e-1e1b-4308-aa42-3a5b327334f8"
+  },
+  "type": "payment_intent.created"
+}
+2024-06-23 22:47:30 - Session customer ID: Not set
+2024-06-23 22:47:30 - Received webhook with payload: {
+  "id": "evt_3PUxJr08OHR1fd541ehkoTNB",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175648,
+  "data": {
+    "object": {
+      "id": "ch_3PUxJr08OHR1fd5413DsdQG4",
+      "object": "charge",
+      "amount": 36000,
+      "amount_captured": 36000,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": null,
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719175647,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 61,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUxJr08OHR1fd541LiAJbc5",
+      "payment_method": "pm_1PUxJh08OHR1fd54oO3C8VbR",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 36000,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 36000,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KOCT4rMGMgZCrSteHbU6LBYjTyv4fHGQeYNFkNCInidbiAyEXPIXY2h-Qhm99-NZl8tGa_sgT-Q1QneF",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_JQc0HSgP9RYNc2",
+    "idempotency_key": "921a8a1e-1e1b-4308-aa42-3a5b327334f8"
+  },
+  "type": "charge.succeeded"
+}
+2024-06-23 22:47:30 - Session customer ID: Not set
+2024-06-23 22:47:30 - Webhook event type: payment_intent.created
+2024-06-23 22:47:30 - Received unknown event type: payment_intent.created
+2024-06-23 22:47:30 - Webhook event type: charge.succeeded
+2024-06-23 22:47:30 - Received unknown event type: charge.succeeded
+2024-06-23 22:47:31 - Received webhook with payload: {
+  "id": "evt_3PUxJr08OHR1fd541ZWwXxu2",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175648,
+  "data": {
+    "object": {
+      "id": "pi_3PUxJr08OHR1fd541LiAJbc5",
+      "object": "payment_intent",
+      "amount": 36000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 36000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUxJr08OHR1fd541LiAJbc5_secret_hoXat4xUlThqqJt1DcoueH6EV",
+      "confirmation_method": "automatic",
+      "created": 1719175647,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUxJr08OHR1fd5413DsdQG4",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUxJh08OHR1fd54oO3C8VbR",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_JQc0HSgP9RYNc2",
+    "idempotency_key": "921a8a1e-1e1b-4308-aa42-3a5b327334f8"
+  },
+  "type": "payment_intent.succeeded"
+}
+2024-06-23 22:47:31 - Session customer ID: Not set
+2024-06-23 22:47:31 - Received webhook with payload: {
+  "id": "evt_1PUxJt08OHR1fd54EcRDNhkz",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175649,
+  "data": {
+    "object": {
+      "id": "cs_test_a1zG0W7JvsIsYN8pjabGM8n3FxOIt1szscwxNCByoUiXiJmsOCbLrtLzE1",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 36000,
+      "amount_total": 36000,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719175449,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1719261849,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3PUxJr08OHR1fd541LiAJbc5",
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2024-06-23 22:47:31 - Session customer ID: Not set
+2024-06-23 22:47:31 - Webhook event type: payment_intent.succeeded
+2024-06-23 22:47:31 - Received unknown event type: payment_intent.succeeded
+2024-06-23 22:47:31 - Webhook event type: checkout.session.completed
+2024-06-23 22:47:31 - Handling checkout.session.completed for session: cs_test_a1zG0W7JvsIsYN8pjabGM8n3FxOIt1szscwxNCByoUiXiJmsOCbLrtLzE1
+2024-06-23 22:47:31 - Received webhook with payload: {
+  "id": "evt_3PUxJr08OHR1fd5410ddqcLU",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175651,
+  "data": {
+    "object": {
+      "id": "ch_3PUxJr08OHR1fd5413DsdQG4",
+      "object": "charge",
+      "amount": 36000,
+      "amount_captured": 36000,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3PUxJr08OHR1fd541C2RmCZM",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719175647,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 61,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUxJr08OHR1fd541LiAJbc5",
+      "payment_method": "pm_1PUxJh08OHR1fd54oO3C8VbR",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 36000,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 36000,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KOKT4rMGMgZD6rj0-XY6LBZkeNOt0iPyZNFveH5-zeIU-epgFxK2I87_NCGHCZuf3zilG7ExvngcSOTG",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "previous_attributes": {
+      "balance_transaction": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KOKT4rMGMga8QqzcRJg6LBaw_wfIoFyuFiyP_0DL3dRQ05C3jYmUFb7TP4WP5_QKVL6Ibl6vMb82yWrv"
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "charge.updated"
+}
+2024-06-23 22:47:31 - Session customer ID: Not set
+2024-06-23 22:47:31 - Webhook event type: charge.updated
+2024-06-23 22:47:31 - Received unknown event type: charge.updated
+2024-06-23 22:47:32 - Transaction updated and cart cleared for session: cs_test_a1zG0W7JvsIsYN8pjabGM8n3FxOIt1szscwxNCByoUiXiJmsOCbLrtLzE1
+2024-06-23 22:53:04 - Received webhook with payload: {
+  "id": "evt_3PUxPG08OHR1fd541MYsDEu2",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175983,
+  "data": {
+    "object": {
+      "id": "ch_3PUxPG08OHR1fd541H5D6aES",
+      "object": "charge",
+      "amount": 4500,
+      "amount_captured": 4500,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": null,
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719175983,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 14,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUxPG08OHR1fd5412He0xcP",
+      "payment_method": "pm_1PUxPD08OHR1fd54isJVvvOB",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 4500,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 4500,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KLCW4rMGMgYGSeYjPyM6LBYot1eaEhjyFEz7L9MRzYCIniGGOISBccFmLjSJ_3ZNNejIhHYTB63wbNqv",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_zPe8ibUmz96Cys",
+    "idempotency_key": "5cb0f453-8bf8-4b33-8d8a-00561da68b89"
+  },
+  "type": "charge.succeeded"
+}
+2024-06-23 22:53:04 - Session customer ID: Not set
+2024-06-23 22:53:04 - Webhook event type: charge.succeeded
+2024-06-23 22:53:04 - Received unknown event type: charge.succeeded
+2024-06-23 22:53:04 - Received webhook with payload: {
+  "id": "evt_3PUxPG08OHR1fd541zoBAiNN",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175983,
+  "data": {
+    "object": {
+      "id": "pi_3PUxPG08OHR1fd5412He0xcP",
+      "object": "payment_intent",
+      "amount": 4500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 4500,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUxPG08OHR1fd5412He0xcP_secret_NSvotyvD5CIhDVvG5d2mApzpp",
+      "confirmation_method": "automatic",
+      "created": 1719175982,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUxPG08OHR1fd541H5D6aES",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUxPD08OHR1fd54isJVvvOB",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_zPe8ibUmz96Cys",
+    "idempotency_key": "5cb0f453-8bf8-4b33-8d8a-00561da68b89"
+  },
+  "type": "payment_intent.succeeded"
+}
+2024-06-23 22:53:04 - Session customer ID: Not set
+2024-06-23 22:53:05 - Webhook event type: payment_intent.succeeded
+2024-06-23 22:53:05 - Received unknown event type: payment_intent.succeeded
+2024-06-23 22:53:05 - Received webhook with payload: {
+  "id": "evt_1PUxPI08OHR1fd549fFmZaXE",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175984,
+  "data": {
+    "object": {
+      "id": "cs_test_a1hemzx2d7gtI0rITfFey7NRctUXVnU2wCNoxDfslvrDHNu7CfvmqmqmHf",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 4500,
+      "amount_total": 4500,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719175963,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1719262363,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3PUxPG08OHR1fd5412He0xcP",
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2024-06-23 22:53:05 - Session customer ID: Not set
+2024-06-23 22:53:05 - Webhook event type: checkout.session.completed
+2024-06-23 22:53:05 - Handling checkout.session.completed for session: cs_test_a1hemzx2d7gtI0rITfFey7NRctUXVnU2wCNoxDfslvrDHNu7CfvmqmqmHf
+2024-06-23 22:53:05 - Received webhook with payload: {
+  "id": "evt_3PUxPG08OHR1fd541zLVxsHa",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175982,
+  "data": {
+    "object": {
+      "id": "pi_3PUxPG08OHR1fd5412He0xcP",
+      "object": "payment_intent",
+      "amount": 4500,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUxPG08OHR1fd5412He0xcP_secret_NSvotyvD5CIhDVvG5d2mApzpp",
+      "confirmation_method": "automatic",
+      "created": 1719175982,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_zPe8ibUmz96Cys",
+    "idempotency_key": "5cb0f453-8bf8-4b33-8d8a-00561da68b89"
+  },
+  "type": "payment_intent.created"
+}
+2024-06-23 22:53:05 - Session customer ID: Not set
+2024-06-23 22:53:05 - Webhook event type: payment_intent.created
+2024-06-23 22:53:05 - Received unknown event type: payment_intent.created
+2024-06-23 22:53:05 - Transaction updated and cart cleared for session: cs_test_a1hemzx2d7gtI0rITfFey7NRctUXVnU2wCNoxDfslvrDHNu7CfvmqmqmHf
+2024-06-23 22:53:06 - Received webhook with payload: {
+  "id": "evt_3PUxPG08OHR1fd541LvLhGAC",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719175986,
+  "data": {
+    "object": {
+      "id": "ch_3PUxPG08OHR1fd541H5D6aES",
+      "object": "charge",
+      "amount": 4500,
+      "amount_captured": 4500,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3PUxPG08OHR1fd541LAeh9jU",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719175983,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 14,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUxPG08OHR1fd5412He0xcP",
+      "payment_method": "pm_1PUxPD08OHR1fd54isJVvvOB",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 4500,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 4500,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KLKW4rMGMgav6ErNv-g6LBb-oHSLb0euUaVa_xXIYdRk90jZrgKdXCekYXdq9F5mZfHnBQbpTC0zlLy8",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "previous_attributes": {
+      "balance_transaction": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KLKW4rMGMgZ_J6jHSjw6LBYW17n15q3vo2Bn3BafpbnKKFIwrT3KNSGyvITTQ6p-w4YgIF4_-T6z5cbw"
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "charge.updated"
+}
+2024-06-23 22:53:06 - Session customer ID: Not set
+2024-06-23 22:53:06 - Webhook event type: charge.updated
+2024-06-23 22:53:06 - Received unknown event type: charge.updated
+2024-06-23 23:04:54 - Received webhook with payload: {
+  "id": "evt_1PUxak08OHR1fd54rFnUW81y",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719176694,
+  "data": {
+    "object": {
+      "id": "cs_test_a1mlKrGEbcLJQLR6BWcx8JTBXMa9xDxdgLNZZFKwUwBGybnQytXGnt72Fx",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 200,
+      "amount_total": 200,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719090291,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": null,
+      "customer_email": null,
+      "expires_at": 1719176691,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": null,
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "unpaid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "expired",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.expired"
+}
+2024-06-23 23:04:54 - Session customer ID: Not set
+2024-06-23 23:04:54 - Webhook event type: checkout.session.expired
+2024-06-23 23:04:54 - Handling checkout.session.expired for session: cs_test_a1mlKrGEbcLJQLR6BWcx8JTBXMa9xDxdgLNZZFKwUwBGybnQytXGnt72Fx
+2024-06-23 23:04:54 - Transaction session handled for expired session: cs_test_a1mlKrGEbcLJQLR6BWcx8JTBXMa9xDxdgLNZZFKwUwBGybnQytXGnt72Fx
+2024-06-23 23:36:58 - Received webhook with payload: {
+  "id": "evt_3PUy5j08OHR1fd5413BUREYW",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719178615,
+  "data": {
+    "object": {
+      "id": "pi_3PUy5j08OHR1fd541EeqFkxs",
+      "object": "payment_intent",
+      "amount": 288000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUy5j08OHR1fd541EeqFkxs_secret_HAzCWOG6DWwMqBsrnybLBrv2W",
+      "confirmation_method": "automatic",
+      "created": 1719178615,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_x3ade5YIuAiOrt",
+    "idempotency_key": "490c5b89-0c43-413f-adfb-72ca303436aa"
+  },
+  "type": "payment_intent.created"
+}
+2024-06-23 23:36:58 - Received webhook with payload: {
+  "id": "evt_3PUy5j08OHR1fd541ZUFf6Dn",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719178617,
+  "data": {
+    "object": {
+      "id": "pi_3PUy5j08OHR1fd541EeqFkxs",
+      "object": "payment_intent",
+      "amount": 288000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 288000,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUy5j08OHR1fd541EeqFkxs_secret_HAzCWOG6DWwMqBsrnybLBrv2W",
+      "confirmation_method": "automatic",
+      "created": 1719178615,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUy5j08OHR1fd541iCnuzt6",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUy5f08OHR1fd54GHOpBF5k",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_x3ade5YIuAiOrt",
+    "idempotency_key": "490c5b89-0c43-413f-adfb-72ca303436aa"
+  },
+  "type": "payment_intent.succeeded"
+}
+2024-06-23 23:36:58 - Received webhook with payload: {
+  "id": "evt_3PUy5j08OHR1fd541c9VOuGm",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719178616,
+  "data": {
+    "object": {
+      "id": "ch_3PUy5j08OHR1fd541iCnuzt6",
+      "object": "charge",
+      "amount": 288000,
+      "amount_captured": 288000,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": null,
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719178616,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 11,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUy5j08OHR1fd541EeqFkxs",
+      "payment_method": "pm_1PUy5f08OHR1fd54GHOpBF5k",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 288000,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 288000,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KPmq4rMGMgYTO52q8p06LBYm9BU2si7kKTCfwdZ97nnpJVzg0U-HO_zDsJXE-mqHNsvHsbo7p2jEJmQb",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_x3ade5YIuAiOrt",
+    "idempotency_key": "490c5b89-0c43-413f-adfb-72ca303436aa"
+  },
+  "type": "charge.succeeded"
+}
+2024-06-23 23:36:58 - Session customer ID: Not set
+2024-06-23 23:36:58 - Session customer ID: Not set
+2024-06-23 23:36:58 - Session customer ID: Not set
+2024-06-23 23:36:58 - Webhook event type: payment_intent.created
+2024-06-23 23:36:58 - Received unknown event type: payment_intent.created
+2024-06-23 23:36:58 - Webhook event type: charge.succeeded
+2024-06-23 23:36:58 - Received unknown event type: charge.succeeded
+2024-06-23 23:36:58 - Webhook event type: payment_intent.succeeded
+2024-06-23 23:36:58 - Received unknown event type: payment_intent.succeeded
+2024-06-23 23:37:00 - Received webhook with payload: {
+  "id": "evt_3PUy5j08OHR1fd541Efyt8XE",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719178619,
+  "data": {
+    "object": {
+      "id": "ch_3PUy5j08OHR1fd541iCnuzt6",
+      "object": "charge",
+      "amount": 288000,
+      "amount_captured": 288000,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3PUy5j08OHR1fd541YlGdSOO",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719178616,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 11,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUy5j08OHR1fd541EeqFkxs",
+      "payment_method": "pm_1PUy5f08OHR1fd54GHOpBF5k",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 288000,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 288000,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KPuq4rMGMgZGZByg2Uc6LBZfgP8GkRRCKU-5UjBqnWp6vo4hA5U28QyJatpy0tAcbLiTt2AjB8W4L6Sh",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "previous_attributes": {
+      "balance_transaction": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KPuq4rMGMgZFms6UXzI6LBYyfk0rBKd9gIAQ0fGt52hbQvW5PfYgSW-ZoRW0hWONf9kCLa061OPrIu2X"
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "charge.updated"
+}
+2024-06-23 23:37:00 - Session customer ID: Not set
+2024-06-23 23:37:00 - Webhook event type: charge.updated
+2024-06-23 23:37:00 - Received unknown event type: charge.updated
+2024-06-23 23:37:05 - Received webhook with payload: {
+  "id": "evt_1PUy5t08OHR1fd54O6Iavv4f",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719178624,
+  "data": {
+    "object": {
+      "id": "cs_test_a1RiVBnpvZEQLrBp0Fj6XwKvyM70UNKtmqKSQgqrwdaaL9x8mTKvKxN6Mk",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 288000,
+      "amount_total": 288000,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719178280,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1719264679,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3PUy5j08OHR1fd541EeqFkxs",
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2024-06-23 23:37:05 - Session customer ID: Not set
+2024-06-23 23:37:05 - Webhook event type: checkout.session.completed
+2024-06-23 23:37:05 - Handling checkout.session.completed for session: cs_test_a1RiVBnpvZEQLrBp0Fj6XwKvyM70UNKtmqKSQgqrwdaaL9x8mTKvKxN6Mk
+2024-06-23 23:37:05 - Transaction updated and cart cleared for session: cs_test_a1RiVBnpvZEQLrBp0Fj6XwKvyM70UNKtmqKSQgqrwdaaL9x8mTKvKxN6Mk
+2024-06-23 23:40:13 - Received webhook with payload: {
+  "id": "evt_3PUy8t08OHR1fd540m0bDXvE",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719178813,
+  "data": {
+    "object": {
+      "id": "pi_3PUy8t08OHR1fd540r5MF8GT",
+      "object": "payment_intent",
+      "amount": 1440,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 1440,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUy8t08OHR1fd540r5MF8GT_secret_VPMKFSJSWz4JGZmeksu8f0L2i",
+      "confirmation_method": "automatic",
+      "created": 1719178811,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUy8t08OHR1fd540bi9lHcY",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUy8p08OHR1fd54HEwDfucr",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_g33sFkSFnUWMh0",
+    "idempotency_key": "ba3e28ed-0993-4958-861d-c91e2270bbdc"
+  },
+  "type": "payment_intent.succeeded"
+}
+2024-06-23 23:40:13 - Session customer ID: Not set
+2024-06-23 23:40:13 - Received webhook with payload: {
+  "id": "evt_3PUy8t08OHR1fd540WJp2dzX",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719178811,
+  "data": {
+    "object": {
+      "id": "pi_3PUy8t08OHR1fd540r5MF8GT",
+      "object": "payment_intent",
+      "amount": 1440,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUy8t08OHR1fd540r5MF8GT_secret_VPMKFSJSWz4JGZmeksu8f0L2i",
+      "confirmation_method": "automatic",
+      "created": 1719178811,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_g33sFkSFnUWMh0",
+    "idempotency_key": "ba3e28ed-0993-4958-861d-c91e2270bbdc"
+  },
+  "type": "payment_intent.created"
+}
+2024-06-23 23:40:13 - Session customer ID: Not set
+2024-06-23 23:40:13 - Webhook event type: payment_intent.created
+2024-06-23 23:40:13 - Received unknown event type: payment_intent.created
+2024-06-23 23:40:13 - Webhook event type: payment_intent.succeeded
+2024-06-23 23:40:13 - Received unknown event type: payment_intent.succeeded
+2024-06-23 23:40:14 - Received webhook with payload: {
+  "id": "evt_3PUy8t08OHR1fd5405tt4PFH",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719178813,
+  "data": {
+    "object": {
+      "id": "ch_3PUy8t08OHR1fd540bi9lHcY",
+      "object": "charge",
+      "amount": 1440,
+      "amount_captured": 1440,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": null,
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719178812,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 14,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUy8t08OHR1fd540r5MF8GT",
+      "payment_method": "pm_1PUy8p08OHR1fd54HEwDfucr",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 1440,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 1440,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KL2s4rMGMgbkYPpkY3Q6LBaEz8I7wX-b-2BdhB1vd8OhDTQEi2lG_KxO8e4w-_wKAnATvzJj6G6YwHgn",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_g33sFkSFnUWMh0",
+    "idempotency_key": "ba3e28ed-0993-4958-861d-c91e2270bbdc"
+  },
+  "type": "charge.succeeded"
+}
+2024-06-23 23:40:14 - Session customer ID: Not set
+2024-06-23 23:40:14 - Webhook event type: charge.succeeded
+2024-06-23 23:40:14 - Received unknown event type: charge.succeeded
+2024-06-23 23:40:15 - Received webhook with payload: {
+  "id": "evt_3PUy8t08OHR1fd540txd0G3Y",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719178815,
+  "data": {
+    "object": {
+      "id": "ch_3PUy8t08OHR1fd540bi9lHcY",
+      "object": "charge",
+      "amount": 1440,
+      "amount_captured": 1440,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3PUy8t08OHR1fd540kyDd4WV",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719178812,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 14,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUy8t08OHR1fd540r5MF8GT",
+      "payment_method": "pm_1PUy8p08OHR1fd54HEwDfucr",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 1440,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 1440,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KL-s4rMGMgYegAcCRVY6LBY2PA0wlZvLKiVWYqSfaO7bQ72ouDmYgyChSFthJEFHbAhvmzjp3_4cqnrv",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "previous_attributes": {
+      "balance_transaction": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KL-s4rMGMgYXqpGrnxc6LBac9uU6EIk1bOwph9UimDOQ0uem1Amd4m56rxRLocqBW4GDSHDWRB2Kbztn"
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "charge.updated"
+}
+2024-06-23 23:40:15 - Session customer ID: Not set
+2024-06-23 23:40:15 - Webhook event type: charge.updated
+2024-06-23 23:40:15 - Received unknown event type: charge.updated
+2024-06-23 23:40:23 - Received webhook with payload: {
+  "id": "evt_1PUy9308OHR1fd54L5tewrAl",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719178820,
+  "data": {
+    "object": {
+      "id": "cs_test_a165kySi59yRiQx2ZkLWT6R3GzMU5JTyYa7n4UzwuuaFemb3n2wliKemOS",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 1440,
+      "amount_total": 1440,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719178795,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1719265195,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3PUy8t08OHR1fd540r5MF8GT",
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2024-06-23 23:40:23 - Session customer ID: Not set
+2024-06-23 23:40:23 - Webhook event type: checkout.session.completed
+2024-06-23 23:40:23 - Handling checkout.session.completed for session: cs_test_a165kySi59yRiQx2ZkLWT6R3GzMU5JTyYa7n4UzwuuaFemb3n2wliKemOS
+2024-06-23 23:40:23 - Transaction updated and cart cleared for session: cs_test_a165kySi59yRiQx2ZkLWT6R3GzMU5JTyYa7n4UzwuuaFemb3n2wliKemOS
+2024-06-24 00:02:33 - Received webhook with payload: {
+  "id": "evt_3PUyUV08OHR1fd540gGzEsAc",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180152,
+  "data": {
+    "object": {
+      "id": "ch_3PUyUV08OHR1fd540LAKSll6",
+      "object": "charge",
+      "amount": 1440,
+      "amount_captured": 1440,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": null,
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "cali07497@gmail.com",
+        "name": "Calli abdiaiziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719180152,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 50,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUyUV08OHR1fd540x0evO5W",
+      "payment_method": "pm_1PUyUR08OHR1fd54lgMoGpIm",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 1440,
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 2,
+          "exp_year": 2026,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "39yaCvojB22Q9qP3",
+          "funding": "credit",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 1440,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KPm24rMGMgbhPx7QqCc6LBZVQ22hIq9c4x55hIrz7MuxpvirgbyfrZ9l6yrI2MutKV7FojNPmkw6BxmK",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_Wvb919U3D51bOF",
+    "idempotency_key": "31b8aa5d-17ab-4d43-9202-5efba17591e3"
+  },
+  "type": "charge.succeeded"
+}
+2024-06-24 00:02:33 - Received webhook with payload: {
+  "id": "evt_3PUyUV08OHR1fd540mVYYQl5",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180151,
+  "data": {
+    "object": {
+      "id": "pi_3PUyUV08OHR1fd540x0evO5W",
+      "object": "payment_intent",
+      "amount": 1440,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUyUV08OHR1fd540x0evO5W_secret_An2Tti1ZdZVtZOpOzFMIlhqBw",
+      "confirmation_method": "automatic",
+      "created": 1719180151,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_Wvb919U3D51bOF",
+    "idempotency_key": "31b8aa5d-17ab-4d43-9202-5efba17591e3"
+  },
+  "type": "payment_intent.created"
+}
+2024-06-24 00:02:33 - Received webhook with payload: {
+  "id": "evt_3PUyUV08OHR1fd540OhHpm8V",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180153,
+  "data": {
+    "object": {
+      "id": "pi_3PUyUV08OHR1fd540x0evO5W",
+      "object": "payment_intent",
+      "amount": 1440,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 1440,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUyUV08OHR1fd540x0evO5W_secret_An2Tti1ZdZVtZOpOzFMIlhqBw",
+      "confirmation_method": "automatic",
+      "created": 1719180151,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUyUV08OHR1fd540LAKSll6",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUyUR08OHR1fd54lgMoGpIm",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_Wvb919U3D51bOF",
+    "idempotency_key": "31b8aa5d-17ab-4d43-9202-5efba17591e3"
+  },
+  "type": "payment_intent.succeeded"
+}
+2024-06-24 00:02:33 - Session customer ID: Not set
+2024-06-24 00:02:33 - Session customer ID: Not set
+2024-06-24 00:02:33 - Webhook event type: payment_intent.created
+2024-06-24 00:02:33 - Received unknown event type: payment_intent.created
+2024-06-24 00:02:33 - Webhook event type: charge.succeeded
+2024-06-24 00:02:33 - Received unknown event type: charge.succeeded
+2024-06-24 00:02:34 - Webhook event type: payment_intent.succeeded
+2024-06-24 00:02:34 - Received unknown event type: payment_intent.succeeded
+2024-06-24 00:02:35 - Received webhook with payload: {
+  "id": "evt_3PUyUV08OHR1fd540NNJu5xv",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180155,
+  "data": {
+    "object": {
+      "id": "ch_3PUyUV08OHR1fd540LAKSll6",
+      "object": "charge",
+      "amount": 1440,
+      "amount_captured": 1440,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3PUyUV08OHR1fd540iih2u2H",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "cali07497@gmail.com",
+        "name": "Calli abdiaiziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719180152,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 50,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUyUV08OHR1fd540x0evO5W",
+      "payment_method": "pm_1PUyUR08OHR1fd54lgMoGpIm",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 1440,
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 2,
+          "exp_year": 2026,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "39yaCvojB22Q9qP3",
+          "funding": "credit",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 1440,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KPu24rMGMgbWSmR5ITc6LBaepWUQbSZFtK5FHsuRLOlJGxcAGUwJp0sfFaR72f4nD-9-GNnlbu2kuVeN",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "previous_attributes": {
+      "balance_transaction": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KPu24rMGMgZYgccmPkQ6LBaAEWCE7SxMqJwvtCqne31a7GljVJ3MRqC7uQaCzAZ2265Hm9SPmtEVyA07"
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "charge.updated"
+}
+2024-06-24 00:02:35 - Session customer ID: Not set
+2024-06-24 00:02:35 - Received webhook with payload: {
+  "id": "evt_1PUyUY08OHR1fd54LfsRRxgC",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180154,
+  "data": {
+    "object": {
+      "id": "cs_test_a1OPQWD5xqR3Nx6XNHw4xBmKKVJhpL5BDYAKZAskfrLyHOjoyUVIDJzp7W",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 1440,
+      "amount_total": 1440,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719179901,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "cali07497@gmail.com",
+        "name": "Calli abdiaiziz",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1719266300,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3PUyUV08OHR1fd540x0evO5W",
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2024-06-24 00:02:35 - Session customer ID: Not set
+2024-06-24 00:02:35 - Webhook event type: checkout.session.completed
+2024-06-24 00:02:35 - Handling checkout.session.completed for session: cs_test_a1OPQWD5xqR3Nx6XNHw4xBmKKVJhpL5BDYAKZAskfrLyHOjoyUVIDJzp7W
+2024-06-24 00:02:35 - Webhook event type: charge.updated
+2024-06-24 00:02:35 - Received unknown event type: charge.updated
+2024-06-24 00:02:36 - Transaction updated and cart cleared for session: cs_test_a1OPQWD5xqR3Nx6XNHw4xBmKKVJhpL5BDYAKZAskfrLyHOjoyUVIDJzp7W
+2024-06-24 00:03:44 - Received webhook with payload: {
+  "id": "evt_3PUyVe08OHR1fd540ddhOE33",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180223,
+  "data": {
+    "object": {
+      "id": "pi_3PUyVe08OHR1fd540DRRZBnD",
+      "object": "payment_intent",
+      "amount": 1440,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 1440,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUyVe08OHR1fd540DRRZBnD_secret_bBVzk4b38eBGpemCcvnnYPQwC",
+      "confirmation_method": "automatic",
+      "created": 1719180222,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUyVe08OHR1fd540vgdXvWe",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUyVZ08OHR1fd54CC2x7st7",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_b1mL1AwiFlEZdv",
+    "idempotency_key": "3daf5df7-1154-4b43-9420-b6d85da05b89"
+  },
+  "type": "payment_intent.succeeded"
+}
+2024-06-24 00:03:44 - Session customer ID: Not set
+2024-06-24 00:03:44 - Webhook event type: payment_intent.succeeded
+2024-06-24 00:03:44 - Received unknown event type: payment_intent.succeeded
+2024-06-24 00:03:44 - Received webhook with payload: {
+  "id": "evt_3PUyVe08OHR1fd540Ua7EJU2",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180222,
+  "data": {
+    "object": {
+      "id": "pi_3PUyVe08OHR1fd540DRRZBnD",
+      "object": "payment_intent",
+      "amount": 1440,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUyVe08OHR1fd540DRRZBnD_secret_bBVzk4b38eBGpemCcvnnYPQwC",
+      "confirmation_method": "automatic",
+      "created": 1719180222,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_b1mL1AwiFlEZdv",
+    "idempotency_key": "3daf5df7-1154-4b43-9420-b6d85da05b89"
+  },
+  "type": "payment_intent.created"
+}
+2024-06-24 00:03:44 - Session customer ID: Not set
+2024-06-24 00:03:44 - Received webhook with payload: {
+  "id": "evt_3PUyVe08OHR1fd54073GiaPH",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180223,
+  "data": {
+    "object": {
+      "id": "ch_3PUyVe08OHR1fd540vgdXvWe",
+      "object": "charge",
+      "amount": 1440,
+      "amount_captured": 1440,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": null,
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719180222,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 53,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUyVe08OHR1fd540DRRZBnD",
+      "payment_method": "pm_1PUyVZ08OHR1fd54CC2x7st7",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 1440,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 1440,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KL-34rMGMgaxTSwH2dc6LBZ7FTaHodboZd3tlIvuPZgGCYSctu3UvqQbv-H9xQQqDkjzoMmDBuTohVQc",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_b1mL1AwiFlEZdv",
+    "idempotency_key": "3daf5df7-1154-4b43-9420-b6d85da05b89"
+  },
+  "type": "charge.succeeded"
+}
+2024-06-24 00:03:44 - Session customer ID: Not set
+2024-06-24 00:03:44 - Received webhook with payload: {
+  "id": "evt_1PUyVf08OHR1fd542ylherOX",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180223,
+  "data": {
+    "object": {
+      "id": "cs_test_a1lTLTP5ETMilGeX0Nl1kDdkdD1pZaych1sRLF7l4fqAMwGj2j8QE20pGH",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 1440,
+      "amount_total": 1440,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719180059,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1719266459,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3PUyVe08OHR1fd540DRRZBnD",
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2024-06-24 00:03:44 - Session customer ID: Not set
+2024-06-24 00:03:44 - Webhook event type: payment_intent.created
+2024-06-24 00:03:44 - Received unknown event type: payment_intent.created
+2024-06-24 00:03:44 - Webhook event type: charge.succeeded
+2024-06-24 00:03:44 - Received unknown event type: charge.succeeded
+2024-06-24 00:03:44 - Webhook event type: checkout.session.completed
+2024-06-24 00:03:44 - Handling checkout.session.completed for session: cs_test_a1lTLTP5ETMilGeX0Nl1kDdkdD1pZaych1sRLF7l4fqAMwGj2j8QE20pGH
+2024-06-24 00:03:45 - Transaction updated and cart cleared for session: cs_test_a1lTLTP5ETMilGeX0Nl1kDdkdD1pZaych1sRLF7l4fqAMwGj2j8QE20pGH
+2024-06-24 00:03:46 - Received webhook with payload: {
+  "id": "evt_3PUyVe08OHR1fd540peX4DdO",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180225,
+  "data": {
+    "object": {
+      "id": "ch_3PUyVe08OHR1fd540vgdXvWe",
+      "object": "charge",
+      "amount": 1440,
+      "amount_captured": 1440,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3PUyVe08OHR1fd540HSXcXaz",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "maxamedcabdicasiis910@gmail.com",
+        "name": "Mohamed Abdiaziz",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719180222,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 53,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUyVe08OHR1fd540DRRZBnD",
+      "payment_method": "pm_1PUyVZ08OHR1fd54CC2x7st7",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 1440,
+          "brand": "mastercard",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": null
+          },
+          "country": "US",
+          "exp_month": 6,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "ir8UWGYxIJFOFgWf",
+          "funding": "prepaid",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "5100",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "mastercard",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 1440,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": {
+            "dynamic_last4": null,
+            "link": {
+            },
+            "type": "link"
+          }
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KMG34rMGMgZJFyGF7LA6LBZglp2shZJU8oJUmVxk8cZMtDFRSyvdeDUcbsDuXRGFAMgH2PAq2Y6hx9qL",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "previous_attributes": {
+      "balance_transaction": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KMG34rMGMgbfEYuf60U6LBZOZ0BFNP7dhDus9YECEZ84vI-WJUcnZA0YBIunYj9rw4T7mghoKiolYjPC"
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "charge.updated"
+}
+2024-06-24 00:03:46 - Session customer ID: Not set
+2024-06-24 00:03:46 - Webhook event type: charge.updated
+2024-06-24 00:03:46 - Received unknown event type: charge.updated
+2024-06-24 00:05:49 - Received webhook with payload: {
+  "id": "evt_1PUyXh08OHR1fd54bGDbVVi2",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180349,
+  "data": {
+    "object": {
+      "id": "cs_test_a1GLGOodEDNzrUwVX3ww39pGbmQtLDIkiiOlhE5HPno0qdpdmXxIPbpgWK",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 82080,
+      "amount_total": 82080,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": null,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "http://localhost:8082/osm/pages/cart.php?error=failed to Make payment",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": null,
+      "created": 1719180285,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "cali07497@gmail.com",
+        "name": "Cali oands",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1719266685,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "issuer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": "pi_3PUyXf08OHR1fd541CFRjdhz",
+      "payment_link": null,
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": null,
+      "success_url": "http://localhost:8082/osm/pages/shop.php",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
+2024-06-24 00:05:49 - Session customer ID: Not set
+2024-06-24 00:05:49 - Webhook event type: checkout.session.completed
+2024-06-24 00:05:49 - Handling checkout.session.completed for session: cs_test_a1GLGOodEDNzrUwVX3ww39pGbmQtLDIkiiOlhE5HPno0qdpdmXxIPbpgWK
+2024-06-24 00:05:49 - Transaction updated and cart cleared for session: cs_test_a1GLGOodEDNzrUwVX3ww39pGbmQtLDIkiiOlhE5HPno0qdpdmXxIPbpgWK
+2024-06-24 00:05:49 - Received webhook with payload: {
+  "id": "evt_3PUyXf08OHR1fd541UKh6kOA",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180348,
+  "data": {
+    "object": {
+      "id": "pi_3PUyXf08OHR1fd541CFRjdhz",
+      "object": "payment_intent",
+      "amount": 82080,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 82080,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUyXf08OHR1fd541CFRjdhz_secret_DTKyS4B0xUZYkgo8DOazNN9S1",
+      "confirmation_method": "automatic",
+      "created": 1719180347,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_3PUyXf08OHR1fd5417DUhsLG",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1PUyXa08OHR1fd54lM298YLI",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_flNZ26DtnGlvG4",
+    "idempotency_key": "aa4d7980-70e4-4ce9-97d2-644488520096"
+  },
+  "type": "payment_intent.succeeded"
+}
+2024-06-24 00:05:49 - Session customer ID: Not set
+2024-06-24 00:05:49 - Received webhook with payload: {
+  "id": "evt_3PUyXf08OHR1fd541nBGgUoG",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180347,
+  "data": {
+    "object": {
+      "id": "pi_3PUyXf08OHR1fd541CFRjdhz",
+      "object": "payment_intent",
+      "amount": 82080,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {
+        }
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic_async",
+      "client_secret": "pi_3PUyXf08OHR1fd541CFRjdhz_secret_DTKyS4B0xUZYkgo8DOazNN9S1",
+      "confirmation_method": "automatic",
+      "created": 1719180347,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_flNZ26DtnGlvG4",
+    "idempotency_key": "aa4d7980-70e4-4ce9-97d2-644488520096"
+  },
+  "type": "payment_intent.created"
+}
+2024-06-24 00:05:49 - Session customer ID: Not set
+2024-06-24 00:05:49 - Webhook event type: payment_intent.succeeded
+2024-06-24 00:05:49 - Received unknown event type: payment_intent.succeeded
+2024-06-24 00:05:49 - Webhook event type: payment_intent.created
+2024-06-24 00:05:49 - Received unknown event type: payment_intent.created
+2024-06-24 00:05:50 - Received webhook with payload: {
+  "id": "evt_3PUyXf08OHR1fd541JQtK4vW",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180348,
+  "data": {
+    "object": {
+      "id": "ch_3PUyXf08OHR1fd5417DUhsLG",
+      "object": "charge",
+      "amount": 82080,
+      "amount_captured": 82080,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": null,
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "cali07497@gmail.com",
+        "name": "Cali oands",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719180348,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 24,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUyXf08OHR1fd541CFRjdhz",
+      "payment_method": "pm_1PUyXa08OHR1fd54lM298YLI",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 82080,
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 2,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "39yaCvojB22Q9qP3",
+          "funding": "credit",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 82080,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KLy44rMGMgY1KjWvYu46LBZo2C5JnW7KcDZB0rYAQJHTQV17bFSNnu0iPTiZbgYjX43DowAyMlD0c2HS",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": "req_flNZ26DtnGlvG4",
+    "idempotency_key": "aa4d7980-70e4-4ce9-97d2-644488520096"
+  },
+  "type": "charge.succeeded"
+}
+2024-06-24 00:05:50 - Session customer ID: Not set
+2024-06-24 00:05:50 - Webhook event type: charge.succeeded
+2024-06-24 00:05:50 - Received unknown event type: charge.succeeded
+2024-06-24 00:05:51 - Received webhook with payload: {
+  "id": "evt_3PUyXf08OHR1fd541Dj0B1i4",
+  "object": "event",
+  "api_version": "2024-04-10",
+  "created": 1719180351,
+  "data": {
+    "object": {
+      "id": "ch_3PUyXf08OHR1fd5417DUhsLG",
+      "object": "charge",
+      "amount": 82080,
+      "amount_captured": 82080,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3PUyXf08OHR1fd541FLoN3XM",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "SO",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "cali07497@gmail.com",
+        "name": "Cali oands",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1719180348,
+      "currency": "usd",
+      "customer": null,
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {
+      },
+      "invoice": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 24,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3PUyXf08OHR1fd541CFRjdhz",
+      "payment_method": "pm_1PUyXa08OHR1fd54lM298YLI",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 82080,
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 2,
+          "exp_year": 2025,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "39yaCvojB22Q9qP3",
+          "funding": "credit",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "overcapture": {
+            "maximum_amount_capturable": 82080,
+            "status": "unavailable"
+          },
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "radar_options": {
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KL-44rMGMgZPoDFU7Dk6LBYZ32Is_s0JW0NNEXfFd0115W8JSLYvTF_g4p2YG2HeJSKAtJb4PFozWVV2",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "previous_attributes": {
+      "balance_transaction": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUE1YZWgwOE9IUjFmZDU0KL-44rMGMgYRN8MZbgM6LBa476euFRr-76WoBnVjJ-y9s-Q1ZUElTVNIRWyhSiGTxKoD5n96r9o1KWh0"
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "charge.updated"
+}
+2024-06-24 00:05:51 - Session customer ID: Not set
+2024-06-24 00:05:51 - Webhook event type: charge.updated
+2024-06-24 00:05:51 - Received unknown event type: charge.updated
