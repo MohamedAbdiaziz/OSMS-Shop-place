@@ -49,7 +49,7 @@ include_once('../db/session.php');
                                     <input type="password" id="loginPassword" name="password" placeholder="Enter Password" class="form-control mb-3 p-4" required>
                                     <label class="py-3 d-flex flex-wrap justify-content-between">
                                         <div id="passwordHelpBlock" class="form-text">
-                                            <a href="#" class="text-primary fw-bold"> Forgot Password?</a>
+                                            <a href="forgetpassword.php" class="text-primary fw-bold"> Forgot Password?</a>
                                         </div>
                                     </label>
                                     <div class="d-grid my-3">

@@ -4,7 +4,7 @@ include_once('../db/session.php');
 require_once("../db/DbConnect.php");
 
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = md5($_POST['password']);
 // echo "Hello ".$username.$password;
 // $_SESSION['error'] = "Invalid username or password.";
 //         header("Location: ../pages/login.php");
@@ -20,7 +20,7 @@ try {
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($user && password_verify($password, $user['Password'])) {
+    if ($password === $user['Password']) {
         $_SESSION['customer'] = $user['Username'];
         $_SESSION['customer_name'] = $user['Name'];
         header("Location: ../pages/account.php");

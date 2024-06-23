@@ -16,7 +16,7 @@ if ($password !== $confirmPassword) {
     exit();
 }
 
-$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+$hashedPassword = md5($password);
 
 try {
     $db = new DbConnect();

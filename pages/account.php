@@ -49,9 +49,9 @@ $orders = $objOrder->getOrderById();
                         <h3 class="card-title">Profile</h3>
                     </div>
                     <div class="card-body">
-                        <?php if($customer['profile_image'] != ""){?>
+                        <!-- <?php if($customer['profile_image'] != ""){?>
                             <img src="../images/Category/<?= $customer['profile_image'] ?>" alt="Profile Image" class="img-thumbnail mb-3">
-                        <?php }?>
+                        <?php }?> -->
                         <table class="table table-bordered">
                             <tr>
                                 <th>Name</th>
