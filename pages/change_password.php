@@ -1,4 +1,5 @@
 <?php
+$title = "Change Password";
 include_once('../db/session.php');
 
 if (!isset($_SESSION['customer'])) {

@@ -1,4 +1,5 @@
 <?php 
+$title = "Categories";
 include_once('../db/session.php');
 include_once("../hf/header.php"); ?>
 

@@ -1,4 +1,6 @@
-<?php include_once("../hf/header.php"); 
+<?php
+$title = "Home";
+ include_once("../hf/header.php"); 
 require_once("../classes/category.class.php");
 require_once("../classes/workshop.class.php");?>
 

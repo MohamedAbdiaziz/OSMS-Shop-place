@@ -9,7 +9,7 @@
 <html lang="en">
 
 <head>
-  <title>Waggy - Free eCommerce Pet Shop HTML Website Template</title>
+  <title>Online Optical Shop - <?php echo $title;?></title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -123,50 +123,7 @@
     </div>
   </div> -->
 
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart">
-    <div class="offcanvas-header justify-content-center">
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="order-md-last">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Your cart</span>
-          <span class="badge bg-primary rounded-circle pt-2">3</span>
-        </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Grey Hoodie</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$12</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Dog Food</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$8</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Soft Toy</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$5</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span class="fw-bold">Total (USD)</span>
-            <strong>$20</strong>
-          </li>
-
-        </ul>
-
-        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
-        <a href="cart.php" class="btn w-100 text-center">view all</a>
-      </div>
-    </div>
-  </div>
+  
 
   <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasSearch"
     aria-labelledby="Search">
@@ -196,8 +153,8 @@
         <div class="col-sm-4 col-lg-3 text-center text-sm-start">
           <div class="main-logo">
             <a href="index.html" class="img-fluid">
-              <h1>OSMS </h1>
-              <p style="font-size:  10px;">Optical Shop Management System</p>
+              <h1>OOPS </h1>
+              <p style="font-size:  10px;">Online Optical Shop</p>
             </a>
           </div>
         </div>
@@ -313,7 +270,7 @@
               <li class="nav-item">
                   <a href="shop.php" class="nav-link <?php echo ($current_page == 'shop.php') ? 'active' : ''; ?>">Shop</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                   <a href="about.php" class="nav-link <?php echo ($current_page == 'about.php') ? 'active' : ''; ?>">About us</a>
               </li>
               <li class="nav-item">
@@ -321,7 +278,7 @@
               </li>
               <li class="nav-item">
                   <a href="faqs.php" class="nav-link fw-bold text-dark <?php echo ($current_page == 'faqs.php') ? 'active' : ''; ?>" target="_blank">FAQs</a>
-              </li>
+              </li> -->
           </ul>
 
             <div class="d-none d-lg-flex align-items-end">

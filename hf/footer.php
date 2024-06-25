@@ -1,11 +1,11 @@
 <footer id="footer" class="my-5">
   <div class="container py-5 my-5">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="footer-menu">
-          <img src="../images/logo.png" alt="logo">
+          <h1>OOPS</h1>
           <p class="blog-paragraph fs-6 mt-3">Subscribe to our newsletter to get updates about our grand offers.</p>
-          <div class="social-links">
+          <!-- <div class="social-links">
             <ul class="d-flex list-unstyled gap-2">
               <li class="social">
                 <a href="#">
@@ -34,48 +34,27 @@
               </li>
 
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="footer-menu">
           <h3>Quick Links</h3>
           <ul class="menu-list list-unstyled">
             <li class="menu-item">
-              <a href="#" class="nav-link">Home</a>
+              <a href="./" class="nav-link">Home</a>
             </li>
             <li class="menu-item">
-              <a href="#" class="nav-link">Product</a>
+              <a href="./shop/php" class="nav-link">Product</a>
             </li>
             <li class="menu-item">
-              <a href="#" class="nav-link">Contact </a>
+              <a href="./category.php" class="nav-link">Categories </a>
             </li>
-            <li class="menu-item">
-              <a href="#" class="nav-link">Conatct Us</a>
-            </li>
+            
           </ul>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="footer-menu">
-          <h3>Help Center</h5>
-            <ul class="menu-list list-unstyled">
-              <li class="menu-item">
-                <a href="#" class="nav-link">FAQs</a>
-              </li>
-              <li class="menu-item">
-                <a href="#" class="nav-link">Payment</a>
-              </li>
-              <li class="menu-item">
-                <a href="#" class="nav-link">Returns & Refunds</a>
-              </li>
-              <li class="menu-item">
-                <a href="#" class="nav-link">Checkout</a>
-              </li>
-              
-            </ul>
-        </div>
-      </div>
+      
       
 
     </div>

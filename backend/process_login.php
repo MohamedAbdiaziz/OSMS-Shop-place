@@ -14,7 +14,7 @@ try {
     $db = new DbConnect();
     $dbConn = $db->connect();
 
-    $sql = "SELECT * FROM tblcustomer WHERE Username = :username";
+    $sql = "SELECT * FROM tblcustomer WHERE Username = :username AND Status='Active'";
     $stmt = $dbConn->prepare($sql);
     $stmt->bindParam(':username', $username);
     $stmt->execute();

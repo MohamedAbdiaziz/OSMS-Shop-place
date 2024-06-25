@@ -115,7 +115,7 @@ session_start();
 		}
 	}
 	elseif(isset($_POST['change_password'])){
-		$_SESSION['customer_id'] = "Yussuf488";
+		$_SESSION['customer_id'] = $_SESSION['customer'];
 		$objCustomer = new customer();
 		$objCustomer->setUsername ($_SESSION['customer_id']);
 		$objCustomer->setPassword($_POST['currentPassword']);

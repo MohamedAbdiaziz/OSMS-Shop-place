@@ -1,4 +1,5 @@
 <?php 
+$title = "Category Products"
 include_once('../db/session.php');
 include_once("../hf/header.php"); ?>
 

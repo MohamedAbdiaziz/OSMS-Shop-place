@@ -1,3 +1,4 @@
+<?php $title = "Single Product";?>
 <?php include_once("../hf/header.php");?>
 <?php require_once("../classes/workshop.class.php");?>
 <?php require_once("../classes/cart.class.php");?>

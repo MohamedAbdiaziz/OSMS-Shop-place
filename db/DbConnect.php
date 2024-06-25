@@ -2,7 +2,7 @@
   class DbConnect{
     // session_start();
     private $host = "localhost";
-    private $dbName = "db_testing";
+    private $dbName = "db_osms";
     private $user = "root";
     private $pass = "";
 

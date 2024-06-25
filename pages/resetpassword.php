@@ -1,4 +1,5 @@
 <?php
+$title = "Reset Password"
 include_once('../db/session.php');
 
 include_once("../hf/header.php");

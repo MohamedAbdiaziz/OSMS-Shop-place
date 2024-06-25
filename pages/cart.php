@@ -1,4 +1,5 @@
 <?php 
+$title = "Cart";
 include_once('../db/session.php');
 include_once("../hf/header.php");
 if (!isset($_SESSION['customer'])) {
