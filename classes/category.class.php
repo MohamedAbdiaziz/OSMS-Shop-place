@@ -31,7 +31,7 @@
 		}
 		public function getCategory()
 		{
-			$sql = "SELECT * FROM tblcategory WHERE Status='Active'";
+			$sql = "SELECT * FROM tblcategory WHERE Status='Active' Limit 3";
 			$stmt = $this->dbconn->prepare($sql);
 		    $stmt->execute();
 	        $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);

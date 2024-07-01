@@ -11,6 +11,7 @@ include_once('../db/session.php');
 		private $customer_id;
 		private $amount;
 		private $stripe_session_id;
+		private $description;
 		private $dbconn;
 
 		public function setId($id){$this->id = $id;}
@@ -21,6 +22,9 @@ include_once('../db/session.php');
 
 		public function setAmount($amount){$this->amount = $amount;}
 		public function getAmount(){return $this->amount;}
+
+		public function setDesc($description){$this->description = $description;}
+		public function getDesc(){return $this->description;}
 
 		public function setStripeSessionId($stripe_session_id){$this->stripe_session_id = $stripe_session_id;}
 		public function getStripeSessionId(){return $this->stripe_session_id;}
@@ -134,9 +138,10 @@ include_once('../db/session.php');
 		        $cid = $transaction['customer_id'];
 
 		        // Update transaction status
-		        $sql = "UPDATE transactions SET status = 'completed' WHERE stripe_session_id = :stripe_session_id";
+		        $sql = "UPDATE transactions SET status = 'completed', Description = :description WHERE stripe_session_id = :stripe_session_id";
 		        $stmt = $this->dbconn->prepare($sql);
 		        $stmt->bindParam(':stripe_session_id', $this->stripe_session_id);
+		        $stmt->bindParam(':description', $this->description);
 
 		        if ($stmt->execute()) {
 		             $sql = "DELETE FROM tblcartitem where Customer = :customerID";

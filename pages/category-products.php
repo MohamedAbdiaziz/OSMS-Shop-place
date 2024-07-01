@@ -1,5 +1,5 @@
 <?php 
-$title = "Category Products"
+$title = "Category Products";
 include_once('../db/session.php');
 include_once("../hf/header.php"); ?>
 
@@ -8,6 +8,7 @@ require_once("../classes/workshop.class.php");
 $objProduct = new workshop();
 
 if (isset($_GET['id'])) {
+    $category = $_GET['category'];
     $category_id = intval($_GET['id']);
     $objProduct->setCId($category_id);
     $products = $objProduct->getProductsByCategory();
@@ -20,7 +21,7 @@ if (isset($_GET['id'])) {
 <section id="banner" class="py-3" style="background: #F9F3EC;">
     <div class="container">
         <div class="hero-content py-5 my-3">
-            <h2 class="display-1 mt-3 mb-0">Products in <span class="text-primary">Category</span></h2>
+            <h2 class="display-1 mt-3 mb-0">Products in <span class="text-primary"><?= $category; ?></span></h2>
             <nav class="breadcrumb">
                 <a class="breadcrumb-item nav-link" href="#">Home</a>
                 <a class="breadcrumb-item nav-link" href="#">Shop</a>

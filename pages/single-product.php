@@ -194,9 +194,9 @@ if (isset($_GET['id'])) {
                 <!-- <li class="nav-item">
                     <a class="nav-link text-uppercase" data-bs-toggle="tab" href="#additional-info" role="tab">Additional Information</a>
                 </li> -->
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link text-uppercase" data-bs-toggle="tab" href="#reviews" role="tab">Reviews</a>
-                </li>
+                </li> -->
             </ul>
             <div class="tab-content pt-3">
                 <div class="tab-pane fade show active" id="description" role="tabpanel">
@@ -209,9 +209,9 @@ if (isset($_GET['id'])) {
                         <li><strong>Dimensions:</strong> <?php echo htmlspecialchars($product['dimensions']); ?></li>
                     </ul>
                 </div> -->
-                <div class="tab-pane fade" id="reviews" role="tabpanel">
+                <!-- <div class="tab-pane fade" id="reviews" role="tabpanel">
                     <p>Customer reviews will be displayed here.</p>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

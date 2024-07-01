@@ -6,7 +6,7 @@ require '../vendor/autoload.php';
 require_once '../classes/cart.class.php';
 require_once '../classes/transaction.class.php';
 if (!isset($_SESSION['customer'])) {
-    echo "<script>window.location.href = 'login.php';</script>";
+    echo "<script>window.location.href = '../pages/login.php';</script>";
     exit();
 }
 \Stripe\Stripe::setApiKey('sk_test_51PMXeh08OHR1fd54KU9RT8xau5XfcvVcn4yqoc4aPjZBp0x7v9HxtzuG3556RjQW6NvjG0H8rcgfkQtF1mQ9UEpt002EeA0Cwl');
@@ -53,7 +53,7 @@ try {
         'line_items' => $lineItems,
         'mode' => 'payment',
         'success_url' => 'http://localhost:8082/osm/pages/shop.php',
-        'cancel_url' => 'http://localhost:8082/osm/pages/cart.php?error=failed to Make payment',
+        'cancel_url' => 'http://localhost:8082/osm/pages/cart.php?error=You successfull to Cancel payment',
     ]);
 
     // Store the session ID in the database (you may want to store additional data)
@@ -76,6 +76,8 @@ try {
     $objtrans->AddTransaction($cartItems);
 
     echo json_encode(['id' => $session->id]);
+    // print_r($session);
+    // echo $session->invoice_creation->invoice_data->description;
 } catch (Exception $e) {
     http_response_code(500);
     echo json_encode(['error' => $e->getMessage()]);

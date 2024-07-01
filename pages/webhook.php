@@ -48,12 +48,19 @@ log_message("Webhook event type: " . $event->type);
 switch ($event->type) {
     case 'checkout.session.completed':
         $session = $event->data->object;
+         $payment_intent_id = $session->payment_intent;
+        // $description = $payment_intent->description;
+        // if(empty($description)){
+        //     $description = "Empty";
+        // }
+        
         log_message("Handling checkout.session.completed for session: " . $session->id);
 
         try {
             $objTrans = new Transaction();
             $objCart = new Cart();
             $objTrans->setStripeSessionId($session->id);
+            $objTrans->setDesc($payment_intent_id);
             $objCart->setCid($_SESSION['customer']);
             $objTrans->UpdateTransaction();
             $objCart->revomeAll();

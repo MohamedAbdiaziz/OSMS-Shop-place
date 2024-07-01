@@ -1,7 +1,21 @@
 
+<?php
+  include_once('../db/session.php');
+  
+?>
 
 <?php 
 $title = "Shop";
+if(isset($_SESSION['customer'])){
+  require_once '../classes/cart.class.php';
+  $objCart = new cart();
+  $objCart->setCid($_SESSION['customer']);
+  if(isset($_SESSION['success'])){
+    $objCart->revomeAll();
+    
+  }
+}
+  
 include_once("../hf/header.php"); ?>
 
   <section id="banner" class="py-3" style="background: #F9F3EC;">
@@ -38,10 +52,7 @@ include_once("../hf/header.php"); ?>
             if (isset($_GET['success'])) {
                 echo '<div class="alert alert-success">' . $_GET['success'] . '</div>';
                 unset($_GET['success']);
-                require_once '../classes/cart.class.php';
-                $objCart = new cart();
-                $objCart->setCid("Hassan123@D");
-                $objCart->revomeAll();
+                
 
 
             }
@@ -55,11 +66,13 @@ include_once("../hf/header.php"); ?>
 
           <div class="product-grid row ">
             <?php
-
-              require_once '../classes/customer.class.php';
-              $objCustomer = new customer();
-              $objCustomer->setUsername($_SESSION['customer']);
-              $customer = $objCustomer->getCustomerById();
+              if(isset($_SESSION['customer'])){
+                require_once '../classes/customer.class.php';
+                $objCustomer = new customer();
+                $objCustomer->setUsername($_SESSION['customer']);
+                $customer = $objCustomer->getCustomerById();
+              }
+              
 
               // $_SESSION['customer']=$objCustomer->getUsername();
 

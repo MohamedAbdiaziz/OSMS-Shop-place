@@ -23,7 +23,27 @@ if (!isset($_SESSION['customer'])) {
 
   <section id="cart" class="my-5 py-5">
     <div class="container">
+      <?php
+        // if (isset($_SESSION['success'])) {
+        //     echo '<div class="alert alert-success">' . $_SESSION['success'] . '</div>';
+        //     unset($_SESSION['success']);
+        // }
+        if (isset($_GET['error'])) {
+            echo '<div class="alert alert-danger">' . $_GET['error'] . '</div>';
+            unset($_GET['error']);
+        }
+        
+        // if (isset($_GET['success'])) {
+        //     echo '<div class="alert alert-success">' . $_GET['success'] . '</div>';
+        //     unset($_GET['success']);
+        //     require_once '../classes/cart.class.php';
+        //     $objCart = new cart();
+        //     $objCart->setCid("Hassan123@D");
+        //     $objCart->revomeAll();
 
+
+        // }
+      ?>
       <div class="row g-md-5">
 
         <div class="col-md-8 pe-md-5">

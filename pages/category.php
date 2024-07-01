@@ -33,7 +33,7 @@ $categories = $objcategories->getCategories();
                             <img src="../images/Category/<?php echo htmlspecialchars($category['Image']); ?>" class="card-img-top" alt="<?php echo htmlspecialchars($category['name']); ?>">
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="category-products.php?id=<?php echo $category['id']; ?>"><?php echo $category['name']; ?></a>
+                                    <a href="category-products.php?id=<?php echo $category['id']; ?>&category=<?php echo $category['name'];?>"><?php echo $category['name']; ?></a>
                                 </h4>
                                 <p class="card-text"><?php echo $category['description']; ?></p>
                             </div>

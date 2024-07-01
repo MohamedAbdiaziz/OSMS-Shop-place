@@ -19,7 +19,7 @@ require_once("../classes/workshop.class.php");?>
                 <h2 class="banner-title display-1 fw-normal">Best Design for <span class="text-primary">your
                     frame</span>
                 </h2>
-                <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                <a href="shop.php" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
                   shop now
                   <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
                     <use xlink:href="#arrow-right"></use>
@@ -38,7 +38,7 @@ require_once("../classes/workshop.class.php");?>
                 <h2 class="banner-title display-1 fw-normal">Best Design for <span class="text-primary">your
                     lens</span>
                 </h2>
-                <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                <a href="shop.php" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
                   shop now
                   <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
                     <use xlink:href="#arrow-right"></use>
@@ -78,7 +78,7 @@ require_once("../classes/workshop.class.php");?>
   <section id="products" class="my-5">
     <div class="container my-5 py-5">
         <div class="section-header d-md-flex justify-content-between align-items-center">
-            <h2 class="display-3 fw-normal">Product</h2>
+            <h2 class="display-3 fw-normal">Top Products</h2>
             <div class="mb-4 mb-md-0">
                 <p class="m-0">
                     <button class="filter-button me-4 active" data-filter="*">ALL</button>
@@ -153,7 +153,7 @@ require_once("../classes/workshop.class.php");?>
         <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
             <h2 class="display-3 fw-normal">Best Selling Products</h2>
             <div>
-                <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                <a href="shop.php" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
                     Shop Now
                     <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
                         <use xlink:href="#arrow-right"></use>

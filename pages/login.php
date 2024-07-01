@@ -1,10 +1,15 @@
 
 <?php
+
 $title = "Login & Registration";
 include_once('../db/session.php');
+if(isset($_SESSION['customer'])){
+    header("location: ./account.php");
+}
  include_once("../hf/header.php"); 
     
 ?>
+
 
 <section id="banner" class="py-3" style="background: #F9F3EC;">
     <div class="container">

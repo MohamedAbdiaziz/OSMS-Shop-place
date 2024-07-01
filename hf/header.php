@@ -147,10 +147,13 @@
   </div>
 
   <header>
-    <div class="container py-2">
-      <div class="row py-2 pb-0 pb-sm-4 align-items-center ">
-
-        <div class="col-sm-4 col-lg-3 text-center text-sm-start">
+    <div class="container py-1">
+      <div class="row py-1 pb-0 pb-sm-4 align-items-center ">
+        <!-- <div
+          class="col-sm- col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-4 mt-sm-0 justify-content-center justify-content-sm-end">
+          
+        </div> -->
+        <div class="col-sm-12 col-lg-12 text-center text-sm-start">
           <div class="main-logo">
             <a href="index.html" class="img-fluid">
               <h1>OOPS </h1>
@@ -158,10 +161,7 @@
             </a>
           </div>
         </div>
-        <div
-          class="col-sm-8 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-4 mt-sm-0 justify-content-center justify-content-sm-end">
-          
-        </div>
+        
         <!-- <div class="col-sm-6 offset-sm-2 offset-md-0 col-lg-5 d-none d-lg-block">
           <div class="search-bar border rounded-2 px-3 border-dark-subtle">
             <form id="search-form" class="text-center d-flex align-items-center" action="" method="">
@@ -174,7 +174,7 @@
             </form>
           </div>
         </div> -->
-        <div class="col-sm-6 offset-sm-2 offset-md-0 col-lg-5 d-none d-lg-block">
+        <!-- <div class="col-sm-6 offset-sm-2 offset-md-0 col-lg-5 d-none d-lg-block">
           <div class="search-bar border rounded-2 px-3 border-dark-subtle">
               <form id="search-form" class="text-center d-flex align-items-center" action="./shop.php" method="GET">
                   <input type="text" class="form-control border-0 bg-transparent" name="query" placeholder="Search products by name" />
@@ -185,7 +185,7 @@
                   </button>
               </form>
           </div>
-        </div>
+        </div> -->
 
 
         
@@ -286,8 +286,8 @@
                 <li>
                   <?php  if(!isset($_SESSION['customer'])){?>
 
-                  <a href="login.php" class="mx-3">
-                    <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
+                  <a href="login.php" class="mx-3 ">
+                    <button class="btn btn-outline fg-light">Login</button>
                   </a>
                 <?php }else{?>
                   <a href="account.php" class="mx-3">
