@@ -25,7 +25,7 @@ try {
         $_SESSION['customer_name'] = $user['Name'];
         header("Location: ../pages/account.php");
     } else {
-        $_SESSION['error'] = "Invalid username or password.";
+        $_SESSION['error'] = "Invalid username or password. or not confirm it";
         header("Location: ../pages/login.php");
     }
 } catch (PDOException $e) {
