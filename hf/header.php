@@ -155,7 +155,7 @@
         </div> -->
         <div class="col-sm-12 col-lg-12 text-center text-sm-start">
           <div class="main-logo">
-            <a href="index.html" class="img-fluid">
+            <a href="index.php" class="img-fluid">
               <h1>OOPS </h1>
               <p style="font-size:  10px;">Online Optical Shop</p>
             </a>
@@ -206,7 +206,7 @@
                   <?php  if(!isset($_SESSION['customer'])){?>
 
                   <a href="login.php" class="mx-3">
-                    <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
+                    <button class="btn btn-outline fg-light">Login</button>
                   </a>
                 <?php }else{?>
                   <a href="account.php" class="mx-3">
@@ -221,7 +221,7 @@
                 </li> -->
                 <?php if(isset($_SESSION['customer'])){?>
 
-                <li class="">
+                <li>
                   <?php
                     require_once '../classes/customer.class.php';
                       $objCustomer = new customer();

@@ -72,16 +72,16 @@ if (isset($_GET['id'])) {
                 <div class="product-info">
                     <div class="element-header">
                         <h2 itemprop="name" class="display-6"><?php echo htmlspecialchars($product['ProductName']); ?></h2>
-                        <div class="rating-container d-flex gap-0 align-items-center">
+                        <!-- <div class="rating-container d-flex gap-0 align-items-center">
                             <span class="rating secondary-font">
                                 <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                                 <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                                 <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                                 <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                                 <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
-                                <!-- <?php echo htmlspecialchars($product['rating']); ?> -->
+                                <?php echo htmlspecialchars($product['rating']); ?>
                             </span>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="product-price pt-3 pb-3">
                         <strong class="text-primary display-6 fw-bold">$<?php echo htmlspecialchars($product['Price']); ?></strong>
@@ -97,7 +97,7 @@ if (isset($_GET['id'])) {
                                     $colors = explode(',', $product['Color']);
                                     foreach ($colors as $color) {
                                         echo '<li class="select-item pe-3" data-val="'.htmlspecialchars($color).'" title="'.htmlspecialchars($color).'">';
-                                        echo '<a href="#" class="btn btn-light">'.htmlspecialchars($color).'</a>';
+                                        echo '<a class="btn btn-light">'.htmlspecialchars($color).'</a>';
                                         echo '</li>';
                                     }
                                     ?>
@@ -111,7 +111,7 @@ if (isset($_GET['id'])) {
                                 $sizes = explode(',', $product['Size']);
                                 foreach ($sizes as $size) {
                                     echo '<li data-value="'.htmlspecialchars($size).'" class="select-item pe-3">';
-                                    echo '<a href="#" class="btn btn-light">'.htmlspecialchars($size).'</a>';
+                                    echo '<a class="btn btn-light">'.htmlspecialchars($size).'</a>';
                                     echo '</li>';
                                 }
                                 ?>

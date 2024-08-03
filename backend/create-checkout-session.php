@@ -5,6 +5,8 @@ include_once('../db/session.php');
 require '../vendor/autoload.php';
 require_once '../classes/cart.class.php';
 require_once '../classes/transaction.class.php';
+require_once "send_invoice.php";
+
 if (!isset($_SESSION['customer'])) {
     echo "<script>window.location.href = '../pages/login.php';</script>";
     exit();
@@ -52,6 +54,7 @@ try {
         'payment_method_types' => ['card'],
         'line_items' => $lineItems,
         'mode' => 'payment',
+        'customer_email' => $_SESSION['customer_email'],
         'success_url' => 'http://localhost:8082/osm/pages/shop.php',
         'cancel_url' => 'http://localhost:8082/osm/pages/cart.php?error=You successfull to Cancel payment',
     ]);
@@ -74,6 +77,7 @@ try {
     // echo $objtrans->getAmount();
     // echo $objtrans->getStripeSessionId();
     $objtrans->AddTransaction($cartItems);
+    // send_invoice_email($_SESSION['customer_email'],$cartItems);
 
     echo json_encode(['id' => $session->id]);
     // print_r($session);

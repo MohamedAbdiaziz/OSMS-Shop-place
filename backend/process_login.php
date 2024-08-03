@@ -23,7 +23,8 @@ try {
     if ($password === $user['Password']) {
         $_SESSION['customer'] = $user['Username'];
         $_SESSION['customer_name'] = $user['Name'];
-        header("Location: ../pages/account.php");
+        $_SESSION['customer_email'] = $user['Email'];
+        header("Location: ../pages/");
     } else {
         $_SESSION['error'] = "Invalid username or password. or not confirm it";
         header("Location: ../pages/login.php");

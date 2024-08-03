@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // Content
                 $mail->isHTML(true);                                  // Set email format to HTML
                 $mail->Subject = 'Password Reset Request';
-                $mail->Body    = "Click the following link to reset your password: <a href='$resetLink'>$resetLink</a>";
+                $mail->Body    = "<h1>Username:".$customer['Username']." </h1>Click the following link to reset your password: <a href='$resetLink'>$resetLink</a>";
 
                 $mail->send();
 

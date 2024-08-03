@@ -102,7 +102,7 @@ if (!isset($_SESSION['customer'])) {
                       </button>
                     </span> -->
 
-                    <input type="text" onchange="updateCart(<?= $product['CartID'];?>)" id="quantity_<?= $product['CartID'];?>" name="quantity" class="form-control input-number text-center p-2 mx-1" value="<?=$product['Quantity'];?>">
+                    <input type="number" onchange="updateCart(<?= $product['CartID'];?>)" id="quantity_<?= $product['CartID'];?>" name="quantity" onkeydown="javascript: return event.keyCode == 69 ? false : true" class="form-control input-number min= text-center p-2 mx-1" value="<?=$product['Quantity'];?>">
                     <!-- <span class="input-group-btn">
                       <button type="button" class="quantity-right-plus btn btn-light btn-number" data-type="plus" data-field="">
                         <svg width="16" height="16">
@@ -153,7 +153,7 @@ if (!isset($_SESSION['customer'])) {
                     <td data-title="Subtotal">
                       <span class="price-amount amount text-dark ps-5">
                         <bdi>
-                          <span class="price-currency-symbol">$</span><span id="subtotal_total"><?php echo $subtotal;?></span>
+                          <span class="price-currency-symbol">$</span><span id="subtotal_total"><?php echo number_format($subtotal, 2);?></span>
                         </bdi>
                       </span>
                     </td>

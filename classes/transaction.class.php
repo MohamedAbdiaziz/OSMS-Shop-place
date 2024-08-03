@@ -138,20 +138,17 @@ include_once('../db/session.php');
 		        $cid = $transaction['customer_id'];
 
 		        // Update transaction status
-		        $sql = "UPDATE transactions SET status = 'completed', Description = :description WHERE stripe_session_id = :stripe_session_id";
+		        $sql = "UPDATE transactions SET status = 'completed', Description = :description WHERE stripe_session_id = :stripe_session_id;
+		        DELETE FROM tblcartitem WHERE Customer = :cid";
 		        $stmt = $this->dbconn->prepare($sql);
 		        $stmt->bindParam(':stripe_session_id', $this->stripe_session_id);
 		        $stmt->bindParam(':description', $this->description);
+		        $stmt->bindParam(':cid', $cid);
 
 		        if ($stmt->execute()) {
-		             $sql = "DELETE FROM tblcartitem where Customer = :customerID";
-			        $stmt = $this->dbconn->prepare($sql);
-			        $stmt->bindParam(':customerID', $cid);
-			        
-			        
-			        if(!$stmt->execute()){
-			            throw new Exception("Failed to insert into tblorders");
-			        }
+		             $_SESSION['success'] = "Payment completed";
+		             return true;
+
 		        } else {
 		            throw new Exception('Failed to update transaction status.');
 		        }

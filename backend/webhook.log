@@ -1,0 +1,12 @@
+2024-07-20 23:53:42 - Received webhook with payload: action=removeall
+2024-07-20 23:53:42 - Session customer ID: Mohamed3882
+2024-07-20 23:53:45 - Invalid signature: Unable to extract timestamp and signatures from header
+2024-07-20 23:54:16 - Received webhook with payload: action=removeall
+2024-07-20 23:54:16 - Session customer ID: Mohamed3882
+2024-07-20 23:54:16 - Invalid signature: Unable to extract timestamp and signatures from header
+2024-07-20 23:54:38 - Received webhook with payload: action=removeall
+2024-07-20 23:54:38 - Session customer ID: Mohamed3882
+2024-07-20 23:54:38 - Invalid signature: Unable to extract timestamp and signatures from header
+2024-07-20 23:55:09 - Received webhook with payload: 
+2024-07-20 23:55:09 - Session customer ID: Mohamed3882
+2024-07-20 23:55:09 - Invalid signature: Unable to extract timestamp and signatures from header

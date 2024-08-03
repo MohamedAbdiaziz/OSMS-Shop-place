@@ -44,7 +44,11 @@
     }
     public function get4Products()
     {
-      $sql = "SELECT * FROM tblproduct WHERE Category=$this->cid AND Status='Active' LIMIT 4";
+      $sql = "SELECT * 
+        FROM tblproduct p 
+        JOIN tblstock s ON p.ID = s.Product 
+        WHERE s.Quantity > 0 AND p.Category = $this->cid AND p.Status = 'Active' 
+        LIMIT 4";
       $stmt = $this->dConn->prepare($sql);
       $stmt->execute();
       $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -52,8 +56,9 @@
     }
     public function GetTopSell()
     {
-      $sql = "SELECT ID, ProductName, Price, Image 
-        FROM tblproduct
+      $sql = "SELECT p.ID, p.ProductName, p.Price, p.Image 
+        FROM tblproduct p
+        JOIN tblstock s ON p.ID = s.Product WHERE s.Quantity > 0
         ORDER BY SalesCount DESC
         LIMIT 10";
       $stmt = $this->dConn->prepare($sql);

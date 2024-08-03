@@ -2,6 +2,8 @@
 $title = "Category Products";
 include_once('../db/session.php');
 include_once("../hf/header.php"); ?>
+<?php require_once("../classes/workshop.class.php");?>
+<?php require_once("../classes/cart.class.php");?>
 
 <?php
 require_once("../classes/workshop.class.php");
@@ -46,6 +48,31 @@ if (isset($_GET['id'])) {
                                 </h4>
                                 <h5>$<?php echo $product['Price']; ?></h5>
                                 <!-- <p class="card-text"><?php echo $product['Description']; ?></p> -->
+                                <?php if(isset($_SESSION['customer'])){?>
+                                    <div class="d-flex flex-wrap pt-4">
+                                        <?php
+                                        
+                                        $objCart = new cart();
+                                        $objCart->setCid($_SESSION['customer']);
+                                          $cartItems = $objCart->getAllCartItems();
+                                          $cartProductIds = array_column($cartItems, 'Product');
+                                          $disabled = "";
+                                          if (in_array($product['ID'], $cartProductIds)) {
+                                              $disabled = "disabled";
+                                          }
+                                        ?>
+                                        <button id="cartBtn_<?= $product['ID'];?>" role="button" class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?= $_GET['id'];?>,this.id);" <?php echo $disabled;?>>
+                                          <h5 class="text-uppercase m-0" >Add to Cart</h5>
+                                        </button><!-- 
+                                        <a href="#" class="btn-wishlist px-4 pt-3">
+                                            <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                        </a> -->
+                                    </div>
+                                <?php } else{?>
+                                    <a href="login.php" class="btn me-3 px-4 pt-3 pb-3 bg-info">
+                                          <h5 class="text-uppercase m-0" >Add to Cart</h5>
+                                        </a>
+                                <?php }?>
                             </div>
                         </div>
                     </div>

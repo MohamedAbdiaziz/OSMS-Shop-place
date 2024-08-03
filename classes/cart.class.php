@@ -136,6 +136,37 @@
             return false;
          }
       }
+      public function removeByEmail()
+      {
+         $sql = "DELETE FROM tblcartitem
+            INNER JOIN tblcustomer ON tblcartitem.Customer = tblcustomer.Username
+            WHERE tblcustomer.Email = :cid;
+            ";
+         $stmt = $this->dConn->prepare($sql);
+         
+         $stmt->bindParam(':cid',$this->cid);
+         if($stmt->execute()){
+            return true;
+         }else{
+            return false;
+         }
+      }
+      public function selectByEmail()
+      {
+         $sql = "SELECT * FROM tblcartitem
+            INNER JOIN tblcustomer ON tblcartitem.Customer = tblcustomer.Username
+            WHERE tblcustomer.Email = :cid
+            ";
+         $stmt = $this->dConn->prepare($sql);
+         $stmt->bindParam(':id',$this->id, PDO::PARAM_INT);
+         $stmt->bindParam(':cid',$this->cid);
+         if($stmt->execute()){
+            $cartItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $cartItems;
+         }else{
+            return false;
+         }
+      }
 
       public function revomeAll()
       {

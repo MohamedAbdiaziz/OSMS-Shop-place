@@ -1,9 +1,11 @@
 <?php
 
 include_once('../db/session.php');
-require '../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 require_once '../classes/transaction.class.php';
 require_once '../classes/cart.class.php';
+require_once "../backend/send_invoice.php";
+
 
 \Stripe\Stripe::setApiKey('sk_test_51PMXeh08OHR1fd54KU9RT8xau5XfcvVcn4yqoc4aPjZBp0x7v9HxtzuG3556RjQW6NvjG0H8rcgfkQtF1mQ9UEpt002EeA0Cwl');
 
@@ -61,9 +63,11 @@ switch ($event->type) {
             $objCart = new Cart();
             $objTrans->setStripeSessionId($session->id);
             $objTrans->setDesc($payment_intent_id);
-            $objCart->setCid($_SESSION['customer']);
+            // $objCart->setCid($session->customer_email);
+            // $cartitems = $objCart->selectByEmail();
             $objTrans->UpdateTransaction();
-            $objCart->revomeAll();
+            // send_invoice_email($session->customer_email, $cartitems);
+
             log_message("Transaction updated and cart cleared for session: " . $session->id);
         } catch (Exception $e) {
             log_message("Error handling checkout.session.completed: " . $e->getMessage());

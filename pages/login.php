@@ -76,7 +76,7 @@ if(isset($_SESSION['customer'])){
                                     <input type="email" id="registerEmail" name="email" placeholder="Your Email Address" class="form-control mb-3 p-4" required>
                                     <input type="password" id="registerPassword1" name="password" placeholder="Set Your Password" class="form-control mb-3 p-4" required>
                                     <input type="password" id="registerPassword2" name="confirm_password" placeholder="Retype Your Password" class="form-control mb-3 p-4" required>
-                                    <input type="text" id="registerMobile" name="mobile" placeholder="Your Mobile Number" class="form-control mb-3 p-4" required>
+                                    <input type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" id="registerMobile" name="mobile" placeholder="Your Mobile Number" class="form-control mb-3 p-4" required>
                                     <input type="text" id="registerAddress" name="address" placeholder="Your Address" class="form-control mb-3 p-4" required>
                                     <div class="d-grid my-3">
                                         <button type="submit" class="btn btn-dark btn-lg rounded-1">Sign Up</button>
